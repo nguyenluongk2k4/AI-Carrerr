@@ -6,6 +6,7 @@
 Dockerfile
 docker-compose.yml
 .dockerignore
+docker-entrypoint.sh
 
 # Python
 __pycache__/
@@ -60,7 +61,3 @@ Thumbs.db
 
 # ChromaDB (will be created at runtime)
 chroma_db/
-
-# Environment files (use Docker secrets or docker-compose env instead)
-.env.local
-.env.*.local

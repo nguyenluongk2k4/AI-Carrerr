@@ -16,7 +16,7 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY:-}
       - GEMINI_MODEL=${GEMINI_MODEL:-gemini-2.5-flash}
       - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o-mini}
-      - DATA_FILE=${DATA_FILE:-data.json}
+      - DATA_FILE=/app/data.json
       - CHROMA_DB_PATH=/app/chroma_db
     volumes:
       # Persist ChromaDB data

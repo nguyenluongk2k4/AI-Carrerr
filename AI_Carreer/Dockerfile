@@ -33,5 +33,12 @@ EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
     CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/docs')" || exit 1
 
-# Run the application
+# Copy entrypoint script
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
+
+# Run entrypoint script
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+# Default command
 CMD ["python", "run_api.py"]
