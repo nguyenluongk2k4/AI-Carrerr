@@ -9,7 +9,7 @@ services:
     container_name: ai_career_backend
     restart: unless-stopped
     ports:
-      - "8000:8000"
+      - "8090:8000"
     environment:
       - LLM_PROVIDER=${LLM_PROVIDER:-gemini}
       - GOOGLE_API_KEY=${GOOGLE_API_KEY}
@@ -41,7 +41,7 @@ services:
     container_name: ai_career_frontend
     restart: unless-stopped
     ports:
-      - "80:80"
+      - "8091:80"
     depends_on:
       backend:
         condition: service_healthy
