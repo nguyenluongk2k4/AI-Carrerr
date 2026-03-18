@@ -61,10 +61,6 @@ class AssessmentAnalyzeRequest(BaseModel):
     top_k: int = 6
     debug: bool = False
     selected_combo: Optional[str] = None
-    locations: Optional[List[str]] = None
-    family_condition: Optional[str] = None
-    salary: Optional[str] = None
-    habits: Optional[List[str]] = None
     scores: Optional[Dict[str, float]] = None
 
 
@@ -160,6 +156,8 @@ SUBJECT_CODE_MAP = {
     "Tiếng Anh": "ENG",
     "Lịch sử": "HIS",
     "Địa lý": "GEO",
+    "Tiếng Pháp": "FREN",
+    "GDCD": "CIVIC",
 }
 
 COMBO_SUBJECTS = {
@@ -188,10 +186,147 @@ def _extract_tutor_name(content: str) -> str:
 
 
 def _extract_answer(summary: List[AssessmentSummaryItem], question_id: int) -> Optional[str]:
+    """Extract answer for a specific question ID from summary."""
     for item in summary:
         if item.id == question_id:
             return item.answerKey or item.answerLabel
     return None
+
+
+def _extract_multi_answers(summary: List[AssessmentSummaryItem], question_id: int) -> List[str]:
+    """Extract multi-select answers for Q19 from summary."""
+    for item in summary:
+        if item.id == question_id:
+            # answerKey contains comma-separated values for multi-select
+            if item.answerKey:
+                return [a.strip() for a in item.answerKey.split(",") if a.strip()]
+    return []
+
+
+def _get_interest_type(summary: List[AssessmentSummaryItem]) -> Optional[str]:
+    """
+    Determine interest type from Part 1 (Q1-5).
+    Returns: 'tech', 'business', 'health', or 'creative'
+    """
+    # Count answers by option
+    count = {"A": 0, "B": 0, "C": 0, "D": 0}
+    for q_id in range(1, 6):  # Q1 to Q5
+        answer = _extract_answer(summary, q_id)
+        if answer:
+            key = answer.strip().upper()
+            if key in count:
+                count[key] += 1
+    
+    # Get dominant type
+    max_count = max(count.values())
+    if max_count == 0:
+        return None
+    
+    # Map to interest groups
+    mapping = {"A": "tech", "B": "creative", "C": "business", "D": "tech"}
+    dominant = max(count, key=lambda k: count[k])
+    return mapping.get(dominant)
+
+
+def _get_subject_strength(summary: List[AssessmentSummaryItem]) -> Optional[str]:
+    """
+    Determine subject strength from Part 2 (Q6-11).
+    Returns: 'tech', 'business', 'health', or 'creative'
+    """
+    # Q6 directly indicates subject preference
+    q6_answer = _extract_answer(summary, 6)
+    if q6_answer:
+        key = q6_answer.strip().upper()
+        mapping = {"A": "tech", "B": "business", "C": "business", "D": "business"}
+        return mapping.get(key)
+    
+    # Fallback to Q8 (strengths)
+    q8_answer = _extract_answer(summary, 8)
+    if q8_answer:
+        key = q8_answer.strip().upper()
+        mapping = {"A": "tech", "B": "business", "C": "business", "D": "tech"}
+        return mapping.get(key)
+    
+    return None
+
+
+def _get_financial_bucket(summary: List[AssessmentSummaryItem]) -> Optional[str]:
+    """
+    Determine financial capability from Q12-13.
+    Returns: 'low', 'mid', or 'high'
+    """
+    # Q12: Tuition budget
+    q12_answer = _extract_answer(summary, 12)
+    if q12_answer:
+        key = q12_answer.strip().upper()
+        mapping = {"A": "low", "B": "mid", "C": "high", "D": "high"}
+        return mapping.get(key)
+    
+    # Q13: Family support
+    q13_answer = _extract_answer(summary, 13)
+    if q13_answer:
+        key = q13_answer.strip().upper()
+        mapping = {"A": "high", "B": "mid", "C": "low", "D": "low"}
+        return mapping.get(key)
+    
+    return None
+
+
+def _get_preferred_regions(summary: List[AssessmentSummaryItem]) -> List[str]:
+    """Get preferred regions from Q15."""
+    q15_answer = _extract_answer(summary, 15)
+    if not q15_answer:
+        return []
+    
+    key = q15_answer.strip().upper()
+    mapping = {
+        "A": ["north"],
+        "B": ["central"],
+        "C": ["south"],
+        "D": ["international"],
+        "E": [],  # "Không quan trọng"
+    }
+    return mapping.get(key, [])
+
+
+def _get_career_priority(summary: List[AssessmentSummaryItem]) -> Optional[str]:
+    """
+    Determine career priority from Q16-17.
+    Returns: 'passion', 'income', 'stability', or 'growth'
+    """
+    q16_answer = _extract_answer(summary, 16)
+    if q16_answer:
+        key = q16_answer.strip().upper()
+        mapping = {"A": "passion", "B": "stability", "C": "growth", "D": "income"}
+        return mapping.get(key)
+    return None
+
+
+def _get_english_level(summary: List[AssessmentSummaryItem]) -> Optional[str]:
+    """Get English proficiency level from Q18."""
+    q18_answer = _extract_answer(summary, 18)
+    if not q18_answer:
+        return None
+    
+    key = q18_answer.strip().upper()
+    mapping = {"A": "basic", "B": "intermediate", "C": "advanced"}
+    return mapping.get(key)
+
+
+def _get_study_habits(summary: List[AssessmentSummaryItem]) -> List[str]:
+    """Get study habits from Q19 (multi-select)."""
+    return _extract_multi_answers(summary, 19)
+
+
+def _get_salary_expectation(summary: List[AssessmentSummaryItem]) -> Optional[str]:
+    """Get salary expectation from Q20."""
+    q20_answer = _extract_answer(summary, 20)
+    if not q20_answer:
+        return None
+    
+    key = q20_answer.strip().upper()
+    mapping = {"A": "low", "B": "mid", "C": "high", "D": "very_high"}
+    return mapping.get(key)
 
 
 def _major_group(major_code: str) -> Optional[str]:
@@ -409,49 +544,92 @@ async def assessment_analyze(payload: AssessmentAnalyzeRequest):
             evidence.append(item.content)
 
     selected_combo = (payload.selected_combo or "").upper()
-    family_bucket = _family_bucket(payload.family_condition)
-    interest_key = _extract_answer(payload.summary, 1)
-    subject_key = _extract_answer(payload.summary, 2)
-    interest_group = None
-    subject_group = None
-    if interest_key:
-        interest_group = {"A": "tech", "B": "business", "C": "health", "D": "creative"}.get(
-            interest_key.strip().upper()
-        )
-    if subject_key:
-        subject_group = {"A": "tech", "B": "business", "C": "health", "D": "creative"}.get(
-            subject_key.strip().upper()
-        )
-
+    
+    # Extract user profile from 21 questions
+    interest_group = _get_interest_type(payload.summary)  # From Q1-5
+    subject_group = _get_subject_strength(payload.summary)  # From Q6-11
+    family_bucket = _get_financial_bucket(payload.summary)  # From Q12-13
+    preferred_regions = _get_preferred_regions(payload.summary)  # From Q15
+    career_priority = _get_career_priority(payload.summary)  # From Q16-17
+    english_level = _get_english_level(payload.summary)  # From Q18
+    study_habits = _get_study_habits(payload.summary)  # From Q19 (multi-select)
+    salary_expectation = _get_salary_expectation(payload.summary)  # From Q20
+    
     combo_subjects = COMBO_SUBJECTS.get(selected_combo)
     combo_avg = None
     if payload.scores and combo_subjects:
         vals = [payload.scores.get(subj, 0) for subj in combo_subjects]
         if vals:
             combo_avg = sum(vals) / len(vals)
+    
     matches_raw = []
     for item in grouped.values():
         bonus = 0.0
         major_code = str(item["major"]).upper()
+        
+        # 1. Combo fit (weight: 0.18)
         if selected_combo and selected_combo in MAJOR_COMBO_MAP.get(major_code, []):
             bonus += 0.18
         elif selected_combo:
             bonus -= 0.12
-        if _matches_region(payload.locations, str(item["school"])):
-            bonus += 0.08
+        
+        # 2. Region fit (weight: 0.08)
+        school = str(item["school"])
+        if preferred_regions:
+            if any("không quan trọng" in loc.lower() for loc in preferred_regions):
+                pass  # No penalty
+            elif _matches_region(preferred_regions, school):
+                bonus += 0.08
+            else:
+                bonus -= 0.04
+        
+        # 3. Financial fit (weight: 0.05)
         cost_bucket = _estimate_cost_bucket(str(item.get("cost_text", "")))
         if family_bucket and cost_bucket and family_bucket == cost_bucket:
             bonus += 0.05
+        elif family_bucket and cost_bucket and family_bucket != cost_bucket:
+            bonus -= 0.03
+        
+        # 4. Interest fit (weight: 0.18)
         if interest_group:
             if major_code in MAJOR_GROUPS.get(interest_group, set()):
                 bonus += 0.18
             else:
                 bonus -= 0.08
+        
+        # 5. Subject strength fit (weight: 0.08)
         if subject_group and subject_group != interest_group:
             if major_code in MAJOR_GROUPS.get(subject_group, set()):
                 bonus += 0.08
+        
+        # 6. Combo score (weight: 0.06)
         if combo_avg is not None:
             bonus += (combo_avg / 10.0) * 0.06
+        
+        # 7. English level bonus for international programs (weight: 0.05)
+        if english_level == "advanced" and school in ["FTU", "DAV", "NEU"]:
+            bonus += 0.05
+        elif english_level == "basic" and school in ["FPT"]:
+            bonus += 0.03  # FPT has English prep program
+        
+        # 8. Study habits fit (weight: 0.03)
+        if study_habits:
+            # Self-study habit good for tech majors
+            if any("A" in h for h in study_habits) and major_code in MAJOR_GROUPS.get("tech", set()):
+                bonus += 0.03
+            # Group study good for business majors
+            if any("B" in h for h in study_habits) and major_code in MAJOR_GROUPS.get("business", set()):
+                bonus += 0.03
+            # Practical learning good for creative/tech
+            if any("D" in h for h in study_habits) and major_code in MAJOR_GROUPS.get("tech", set()) | MAJOR_GROUPS.get("creative", set()):
+                bonus += 0.03
+        
+        # 9. Salary expectation alignment (weight: 0.03)
+        if salary_expectation == "very_high" and major_code in ["SE", "IT1", "IB"]:
+            bonus += 0.03
+        elif salary_expectation == "low" and school in ["HAU", "FTU"]:
+            bonus += 0.02  # Lower cost options
+        
         item["score"] = item["score"] + bonus
         matches_raw.append(item)
 

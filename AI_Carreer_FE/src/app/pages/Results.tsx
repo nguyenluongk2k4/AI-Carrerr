@@ -54,23 +54,17 @@ export function Results() {
   const [matches, setMatches] = useState<AssessmentMatch[]>([]);
   const [scores, setScores] = useState<Record<string, number> | null>(null);
   const [selectedCombo, setSelectedCombo] = useState("");
-  const [locations, setLocations] = useState<string[]>([]);
-  const [familyCondition, setFamilyCondition] = useState("");
-  const [salary, setSalary] = useState("");
-  const [habits, setHabits] = useState<string[]>([]);
+  const [multiAnswers, setMultiAnswers] = useState<Record<number, string[]>>({});
 
   const summaryKey = useMemo(() => {
     if (!summary || summary.length === 0) return "";
     return JSON.stringify({
       summary,
       selectedCombo,
-      locations,
-      familyCondition,
-      salary,
-      habits,
+      multiAnswers,
       scores,
     });
-  }, [summary, selectedCombo, locations, familyCondition, salary, habits, scores]);
+  }, [summary, selectedCombo, multiAnswers, scores]);
 
   useEffect(() => {
     const raw = localStorage.getItem("assessmentData");
@@ -79,16 +73,13 @@ export function Results() {
       const parsed = JSON.parse(raw) as {
         summary?: AssessmentSummaryItem[];
         answers?: Record<string, string>;
+        multiAnswers?: Record<number, string[]>;
         scores?: Record<string, number | string>;
         selectedCombo?: string;
         semesterScores?: {
           semester1: Record<string, number | string>;
           semester2: Record<string, number | string>;
         };
-        locations?: string[];
-        familyCondition?: string;
-        salary?: string;
-        habits?: string[];
       };
       if (Array.isArray(parsed.summary) && parsed.summary.length > 0) {
         setSummary(parsed.summary);
@@ -111,17 +102,8 @@ export function Results() {
       if (parsed.selectedCombo) {
         setSelectedCombo(parsed.selectedCombo);
       }
-      if (parsed.locations) {
-        setLocations(parsed.locations);
-      }
-      if (parsed.familyCondition) {
-        setFamilyCondition(parsed.familyCondition);
-      }
-      if (parsed.salary) {
-        setSalary(parsed.salary);
-      }
-      if (parsed.habits) {
-        setHabits(parsed.habits);
+      if (parsed.multiAnswers) {
+        setMultiAnswers(parsed.multiAnswers);
       }
       if (parsed.answers && Object.keys(parsed.answers).length > 0 && !parsed.summary) {
         const fallback = Object.entries(parsed.answers)
@@ -156,8 +138,8 @@ export function Results() {
   }, [scores]);
 
   const weakSubjects = useMemo(() => {
-    return getWeakSubjects(scores, selectedCombo);
-  }, [scores, selectedCombo]);
+    return getWeakSubjects(scores, 7.0);
+  }, [scores]);
 
   const aiLines = useMemo(() => {
     if (!aiResult) return [];
@@ -225,10 +207,6 @@ export function Results() {
             summary,
             top_k: 6,
             selected_combo: selectedCombo,
-            locations,
-            family_condition: familyCondition,
-            salary,
-            habits,
             scores: scores ?? undefined,
             debug: true,
           }),

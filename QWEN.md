@@ -114,9 +114,12 @@ CHROMA_DB_PATH=./chroma_db
 ## Core Features
 
 ### 1. Career Assessment
-- Personality tests
-- Interest evaluation
-- Ability assessment
+- **Part 1**: Sở thích & xu hướng cá nhân (5 questions)
+- **Part 2**: Học tập & Điểm mạnh cá nhân (6 questions)
+- **Part 3**: Điểm học kỳ 2 môn (input form)
+- **Part 4**: Tổ hợp môn phù hợp (auto-calculate)
+- **Part 5**: Tài chính & Kỳ vọng tương lai (10 questions, includes multi-select)
+- Total: 21 questions + scores input
 
 ### 2. Academic Data Input
 - GPA/exam scores

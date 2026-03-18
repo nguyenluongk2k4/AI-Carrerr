@@ -1,161 +1,334 @@
-export type QuizOption = {
+﻿// Assessment Data - Hành Trang Số
+// New question set (21 questions + scores + combo)
+
+// ============ QUESTION DEFINITIONS ============
+
+export interface QuestionOption {
   key: string;
   label: string;
-};
+}
 
-export type QuizQuestion = {
+export interface Question {
   id: number;
   question: string;
-  options: QuizOption[];
-};
+  options: QuestionOption[];
+  isMultiSelect?: boolean; // For Q19
+}
 
-export type Subject = {
-  key: string;
-  label: string;
-};
-
-export type Combo = {
-  code: string;
-  subjects: string[];
-};
-
-export const QUIZ_QUESTIONS: QuizQuestion[] = [
+// Part 1: Sở thích & xu hướng cá nhân (Q1-5)
+export const PART1_QUESTIONS: Question[] = [
   {
     id: 1,
-    question: "🎯 Câu 1/5 — Bạn thích làm việc với điều gì nhất?",
+    question: "Bạn thường cảm thấy hứng thú với hoạt động nào nhất?",
     options: [
-      { key: "A", label: "💻 Máy tính, code, giải thuật" },
-      { key: "B", label: "🗣️ Con người, giao tiếp, kinh doanh" },
-      { key: "C", label: "🩺 Sức khỏe, chăm sóc người khác" },
-      { key: "D", label: "🎨 Nghệ thuật, thiết kế, sáng tạo" },
+      { key: "A", label: "Làm việc với số liệu, phân tích logic" },
+      { key: "B", label: "Sáng tạo nội dung, nghệ thuật, ý tưởng" },
+      { key: "C", label: "Làm việc với con người, giao tiếp" },
+      { key: "D", label: "Thực hành, trải nghiệm thực tế" },
     ],
   },
   {
     id: 2,
-    question: "📚 Câu 2/5 — Môn học bạn tự tin nhất là gì?",
+    question: "Bạn thích học theo cách nào nhất?",
     options: [
-      { key: "A", label: "📐 Toán / Lý / Tin" },
-      { key: "B", label: "✍️ Văn / Anh / Sử - Địa" },
-      { key: "C", label: "🔬 Hóa / Sinh" },
-      { key: "D", label: "🖌️ Vẽ / Mỹ thuật" },
+      { key: "A", label: "Tự học, nghiên cứu độc lập" },
+      { key: "B", label: "Học qua thảo luận, làm việc nhóm" },
+      { key: "C", label: "Học qua trải nghiệm thực tế" },
+      { key: "D", label: "Học theo hướng dẫn rõ ràng" },
     ],
   },
   {
     id: 3,
-    question: "📊 Câu 3/5 — Điểm thi THPT dự kiến (tổng 3 môn)?",
+    question: "Bạn thường đưa ra quyết định dựa trên:",
     options: [
-      { key: "A", label: "⭐ Trên 27 điểm" },
-      { key: "B", label: "✅ 24–27 điểm" },
-      { key: "C", label: "👍 20–24 điểm" },
-      { key: "D", label: "🌱 Dưới 20 điểm" },
+      { key: "A", label: "Lý trí và dữ liệu" },
+      { key: "B", label: "Cảm xúc và giá trị cá nhân" },
+      { key: "C", label: "Ý kiến từ người khác" },
+      { key: "D", label: "Trải nghiệm trước đó" },
     ],
   },
   {
     id: 4,
-    question: "💰 Câu 4/5 — Ngân sách học phí mỗi năm gia đình hỗ trợ được?",
+    question: "Bạn thích môi trường học tập/làm việc như thế nào?",
     options: [
-      { key: "A", label: "💚 Dưới 25 triệu VNĐ/năm" },
-      { key: "B", label: "💛 25–40 triệu VNĐ/năm" },
-      { key: "C", label: "🔶 Trên 40 triệu VNĐ/năm" },
+      { key: "A", label: "Có cấu trúc rõ ràng, ổn định" },
+      { key: "B", label: "Linh hoạt, sáng tạo" },
+      { key: "C", label: "Năng động, nhiều tương tác" },
+      { key: "D", label: "Thử thách, cạnh tranh cao" },
     ],
   },
   {
     id: 5,
-    question: "🎯 Câu 5/5 — Sau ra trường, bạn ưu tiên điều gì nhất?",
+    question: "Bạn quan tâm điều gì nhất khi nghĩ về tương lai?",
     options: [
-      { key: "A", label: "💵 Thu nhập cao ngay sau tốt nghiệp" },
-      { key: "B", label: "🔭 Môi trường nghiên cứu chuyên sâu" },
-      { key: "C", label: "🌏 Làm việc trong môi trường quốc tế" },
-      { key: "D", label: "🖌️ Tự do sáng tạo, thể hiện bản thân" },
+      { key: "A", label: "Thu nhập và sự ổn định" },
+      { key: "B", label: "Được làm điều mình thích" },
+      { key: "C", label: "Được giúp đỡ và kết nối với người khác" },
+      { key: "D", label: "Được thử thách và phát triển bản thân" },
     ],
   },
 ];
 
-export const PERSONAL_QUESTIONS: QuizQuestion[] = [
+// Part 2: Học tập & Điểm mạnh cá nhân (Q6-11)
+export const PART2_QUESTIONS: Question[] = [
   {
     id: 6,
-    question: "🧭 Bạn chịu áp lực học tập/công việc ở mức nào?",
+    question: "Bạn học tốt nhất ở nhóm môn nào?",
     options: [
-      { key: "A", label: "Thấp - cần môi trường ổn định" },
-      { key: "B", label: "Trung bình - cân bằng là tốt nhất" },
-      { key: "C", label: "Cao - áp lực càng cao càng cố gắng" },
+      { key: "A", label: "Toán – Lý – Hóa" },
+      { key: "B", label: "Văn – Sử – Địa" },
+      { key: "C", label: "Ngoại ngữ" },
+      { key: "D", label: "Kết hợp nhiều môn / không rõ" },
     ],
   },
   {
     id: 7,
-    question: "🌐 Mức sẵn sàng học tiếng Anh chuyên sâu?",
+    question: "Khi học một kiến thức mới, bạn thường:",
     options: [
-      { key: "A", label: "Chưa sẵn sàng, cần lộ trình cơ bản" },
-      { key: "B", label: "Sẵn sàng học dần song song" },
-      { key: "C", label: "Rất sẵn sàng, có thể học 100% tiếng Anh" },
+      { key: "A", label: "Hiểu nhanh và nắm bản chất" },
+      { key: "B", label: "Cần thời gian luyện tập để quen" },
+      { key: "C", label: "Cần hướng dẫn cụ thể từng bước" },
+      { key: "D", label: "Khó tiếp thu nếu không thực hành" },
     ],
   },
   {
     id: 8,
-    question: "🤝 Bạn thích phong cách làm việc nào?",
+    question: "Điểm mạnh lớn nhất của bạn trong học tập là gì?",
     options: [
-      { key: "A", label: "Làm việc độc lập, tự chủ" },
-      { key: "B", label: "Làm việc nhóm, phối hợp" },
-      { key: "C", label: "Vai trò dẫn dắt, quản lý" },
+      { key: "A", label: "Tư duy logic, phân tích" },
+      { key: "B", label: "Ghi nhớ và tổng hợp thông tin" },
+      { key: "C", label: "Trình bày, diễn đạt ý tưởng" },
+      { key: "D", label: "Áp dụng kiến thức vào thực tế" },
     ],
   },
   {
     id: 9,
-    question: "🎯 Mục tiêu 3–5 năm tới?",
+    question: "Bạn thường đạt kết quả tốt nhất khi:",
     options: [
-      { key: "A", label: "Đi làm sớm, tích lũy kinh nghiệm" },
-      { key: "B", label: "Học sâu/chuyên môn cao" },
-      { key: "C", label: "Du học/Trải nghiệm quốc tế" },
+      { key: "A", label: "Làm bài kiểm tra cá nhân" },
+      { key: "B", label: "Làm việc nhóm" },
+      { key: "C", label: "Làm dự án/thực hành" },
+      { key: "D", label: "Thuyết trình / trình bày" },
+    ],
+  },
+  {
+    id: 10,
+    question: "Bạn đã từng đạt thành tích nào sau đây?",
+    options: [
+      { key: "A", label: "Học sinh giỏi / điểm cao" },
+      { key: "B", label: "Giải thưởng học thuật / thi cử" },
+      { key: "C", label: "Thành tích hoạt động / CLB" },
+      { key: "D", label: "Chưa có thành tích nổi bật" },
+    ],
+  },
+  {
+    id: 11,
+    question: "Bạn đánh giá mức độ kỷ luật trong học tập của mình:",
+    options: [
+      { key: "A", label: "Rất tốt – luôn có kế hoạch rõ ràng" },
+      { key: "B", label: "Khá – đôi lúc mất tập trung" },
+      { key: "C", label: "Trung bình – phụ thuộc cảm hứng" },
+      { key: "D", label: "Thấp – khó duy trì đều đặn" },
     ],
   },
 ];
 
-export const ALL_QUESTIONS: QuizQuestion[] = [
-  ...QUIZ_QUESTIONS,
-  ...PERSONAL_QUESTIONS,
+// Part 3: Điểm học kỳ (handled by form input, not questions)
+
+// Part 4: Tổ hợp môn (handled by auto-calculation)
+
+// Part 5: Tài chính & Kỳ vọng (Q12-21)
+export const PART5_QUESTIONS: Question[] = [
+  {
+    id: 12,
+    question: "Mức học phí gia đình sẵn sàng chi trả mỗi năm?",
+    options: [
+      { key: "A", label: "Dưới 20 triệu" },
+      { key: "B", label: "20 – 50 triệu" },
+      { key: "C", label: "50 – 100 triệu" },
+      { key: "D", label: "Trên 100 triệu" },
+    ],
+  },
+  {
+    id: 13,
+    question: "Gia đình bạn có sẵn sàng hỗ trợ chi phí học tập dài hạn (4–5 năm) không?",
+    options: [
+      { key: "A", label: "Có thể hỗ trợ hoàn toàn" },
+      { key: "B", label: "Hỗ trợ một phần" },
+      { key: "C", label: "Cần tự chủ phần lớn" },
+      { key: "D", label: "Gặp khó khăn về tài chính" },
+    ],
+  },
+  {
+    id: 14,
+    question: "Bạn có sẵn sàng học xa nhà (chi phí sinh hoạt cao hơn)?",
+    options: [
+      { key: "A", label: "Sẵn sàng" },
+      { key: "B", label: "Cân nhắc tùy điều kiện" },
+      { key: "C", label: "Không muốn" },
+    ],
+  },
+  {
+    id: 15,
+    question: "Bạn mong muốn học tập/làm việc ở khu vực nào?",
+    options: [
+      { key: "A", label: "Miền Bắc" },
+      { key: "B", label: "Miền Trung" },
+      { key: "C", label: "Miền Nam" },
+      { key: "D", label: "Quốc tế" },
+      { key: "E", label: "Không quan trọng" },
+    ],
+  },
+  {
+    id: 16,
+    question: "Khi chọn ngành/trường, bạn ưu tiên yếu tố nào hơn?",
+    options: [
+      { key: "A", label: "Phù hợp đam mê" },
+      { key: "B", label: "Chi phí hợp lý" },
+      { key: "C", label: "Cơ hội việc làm" },
+      { key: "D", label: "Thu nhập tương lai" },
+    ],
+  },
+  {
+    id: 17,
+    question: "Khi đối mặt với khối lượng học tập/công việc lớn, bạn thường phản ứng như thế nào?",
+    options: [
+      { key: "A", label: "Dễ bị quá tải, cần môi trường nhẹ nhàng" },
+      { key: "B", label: "Xử lý ổn nếu có sự cân bằng" },
+      { key: "C", label: "Càng áp lực càng có động lực" },
+    ],
+  },
+  {
+    id: 18,
+    question: "Bạn cảm thấy mình sẵn sàng học tập bằng tiếng Anh ở mức độ nào?",
+    options: [
+      { key: "A", label: "Chưa sẵn sàng, cần bắt đầu từ nền tảng cơ bản" },
+      { key: "B", label: "Có thể học song song, từng bước nâng cao" },
+      { key: "C", label: "Rất sẵn sàng, có thể học hoàn toàn bằng tiếng Anh" },
+    ],
+  },
+  {
+    id: 19,
+    question: "Thói quen học tập của bạn là gì? (Có thể chọn nhiều)",
+    isMultiSelect: true,
+    options: [
+      { key: "A", label: "Tự học đều mỗi ngày" },
+      { key: "B", label: "Học theo nhóm" },
+      { key: "C", label: "Cần người hướng dẫn/mentor" },
+      { key: "D", label: "Thích học qua thực hành" },
+      { key: "E", label: "Thích nghiên cứu chuyên sâu" },
+    ],
+  },
+  {
+    id: 20,
+    question: "Mức lương mong muốn sau khi ra trường của bạn là bao nhiêu?",
+    options: [
+      { key: "A", label: "Dưới 8 triệu/tháng" },
+      { key: "B", label: "8 – 15 triệu/tháng" },
+      { key: "C", label: "15 – 25 triệu/tháng" },
+      { key: "D", label: "Trên 25 triệu/tháng" },
+    ],
+  },
+  {
+    id: 21,
+    question: "Bạn sẵn sàng đánh đổi điều gì để đạt được mức thu nhập mong muốn?",
+    options: [
+      { key: "A", label: "Thời gian học tập dài hơn" },
+      { key: "B", label: "Áp lực công việc cao" },
+      { key: "C", label: "Làm việc xa nhà" },
+      { key: "D", label: "Không muốn đánh đổi nhiều" },
+    ],
+  },
 ];
+
+// Combine all questions
+export const ALL_QUESTIONS: Question[] = [
+  ...PART1_QUESTIONS,
+  ...PART2_QUESTIONS,
+  ...PART5_QUESTIONS,
+];
+
+// ============ SUBJECTS & SCORES ============
+
+export interface Subject {
+  key: string;
+  label: string;
+}
 
 export const SUBJECTS: Subject[] = [
-  { key: "Toán", label: "Toán" },
-  { key: "Vật lý", label: "Vật lý" },
-  { key: "Hóa học", label: "Hóa học" },
-  { key: "Sinh học", label: "Sinh học" },
-  { key: "Ngữ văn", label: "Ngữ văn" },
-  { key: "Tiếng Anh", label: "Tiếng Anh" },
-  { key: "Lịch sử", label: "Lịch sử" },
-  { key: "Địa lý", label: "Địa lý" },
+  { key: "math", label: "Toán" },
+  { key: "physics", label: "Vật lý" },
+  { key: "chemistry", label: "Hóa học" },
+  { key: "literature", label: "Ngữ văn" },
+  { key: "biology", label: "Sinh học" },
+  { key: "history", label: "Lịch sử" },
+  { key: "geography", label: "Địa lý" },
+  { key: "english", label: "Tiếng Anh" },
+  { key: "french", label: "Tiếng Pháp" },
+  { key: "civic_edu", label: "GDCD" },
 ];
 
-export const COMBOS: Combo[] = [
-  { code: "A00", subjects: ["Toán", "Vật lý", "Hóa học"] },
-  { code: "A01", subjects: ["Toán", "Vật lý", "Tiếng Anh"] },
-  { code: "B00", subjects: ["Toán", "Hóa học", "Sinh học"] },
-  { code: "C00", subjects: ["Ngữ văn", "Lịch sử", "Địa lý"] },
-  { code: "D01", subjects: ["Toán", "Ngữ văn", "Tiếng Anh"] },
-  { code: "D07", subjects: ["Toán", "Hóa học", "Tiếng Anh"] },
-  { code: "D14", subjects: ["Ngữ văn", "Lịch sử", "Tiếng Anh"] },
-  { code: "D15", subjects: ["Ngữ văn", "Địa lý", "Tiếng Anh"] },
-];
+// ============ COMBO CALCULATION ============
+
+export interface Combo {
+  code: string;
+  subjects: string[];
+  score: number;
+}
+
+export function getComboScores(scores: Record<string, number>): Combo[] {
+  const combos: Record<string, string[]> = {
+    A00: ["math", "physics", "chemistry"],
+    A01: ["math", "physics", "english"],
+    B00: ["math", "chemistry", "biology"],
+    C00: ["literature", "history", "geography"],
+    D01: ["math", "literature", "english"],
+    D07: ["math", "chemistry", "english"],
+    D14: ["literature", "history", "english"],
+    D15: ["literature", "geography", "english"],
+  };
+
+  const results: Combo[] = [];
+
+  for (const [code, comboSubjects] of Object.entries(combos)) {
+    const total = comboSubjects.reduce((sum, subj) => sum + (scores[subj] || 0), 0);
+    results.push({
+      code,
+      subjects: comboSubjects.map((s) => {
+        const subj = SUBJECTS.find((sub) => sub.key === s);
+        return subj ? subj.label : s;
+      }),
+      score: Number(total.toFixed(2)),
+    });
+  }
+
+  // Sort by score descending
+  results.sort((a, b) => b.score - a.score);
+  return results;
+}
+
+// ============ PRESET OPTIONS ============
 
 export const HABIT_OPTIONS = [
   "Tự học đều mỗi ngày",
   "Học theo nhóm",
-  "Cần mentor/giám sát",
-  "Thích học thực hành",
+  "Cần người hướng dẫn/mentor",
+  "Thích học qua thực hành",
   "Thích nghiên cứu chuyên sâu",
 ];
 
 export const SALARY_OPTIONS = [
-  "10–15 triệu/tháng",
-  "15–25 triệu/tháng",
-  "25–40 triệu/tháng",
-  "Trên 40 triệu/tháng",
+  "Dưới 8 triệu/tháng",
+  "8 – 15 triệu/tháng",
+  "15 – 25 triệu/tháng",
+  "Trên 25 triệu/tháng",
 ];
 
 export const FAMILY_OPTIONS = [
-  "Tiết kiệm",
-  "Trung bình",
-  "Khá/Giỏi",
+  "Có thể hỗ trợ hoàn toàn",
+  "Hỗ trợ một phần",
+  "Cần tự chủ phần lớn",
+  "Gặp khó khăn về tài chính",
 ];
 
 export const LOCATION_OPTIONS = [
@@ -166,25 +339,31 @@ export const LOCATION_OPTIONS = [
   "Không quan trọng",
 ];
 
-export const getComboScores = (scores: Record<string, number>) => {
-  return COMBOS.map((combo) => {
-    const score = combo.subjects.reduce((sum, subject) => {
-      return sum + (scores[subject] ?? 0);
-    }, 0);
-    return { ...combo, score };
-  }).sort((a, b) => b.score - a.score);
-};
+// ============ WEAK SUBJECTS CALCULATION ============
 
-export const getWeakSubjects = (
-  scores: Record<string, number> | null,
-  comboCode: string,
-  count = 3
-) => {
+export function getWeakSubjects(scores: Record<string, number> | null | undefined, threshold: number = 7.0): string[] {
   if (!scores) return [];
-  const combo = COMBOS.find((item) => item.code === comboCode);
-  const pool = combo ? combo.subjects : Object.keys(scores);
-  const ranked = pool
-    .map((subject) => ({ subject, score: scores[subject] ?? 0 }))
-    .sort((a, b) => a.score - b.score);
-  return ranked.slice(0, count).map((item) => item.subject);
-};
+  
+  const subjectLabels: Record<string, string> = {
+    math: "Toán",
+    physics: "Vật lý",
+    chemistry: "Hóa học",
+    literature: "Ngữ văn",
+    biology: "Sinh học",
+    history: "Lịch sử",
+    geography: "Địa lý",
+    english: "Tiếng Anh",
+    french: "Tiếng Pháp",
+    civic_edu: "GDCD",
+  };
+
+  return Object.entries(scores)
+    .filter(([_, score]) => score < threshold)
+    .map(([key]) => subjectLabels[key] || key)
+    .sort((a, b) => (scores[a] || 0) - (scores[b] || 0));
+}
+
+// ============ LEGACY EXPORTS (for compatibility) ============
+
+export const QUIZ_QUESTIONS = ALL_QUESTIONS;
+export const PERSONAL_QUESTIONS = PART5_QUESTIONS;

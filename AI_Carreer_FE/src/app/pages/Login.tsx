@@ -36,7 +36,7 @@ export function Login() {
           <div className="inline-flex items-center justify-center bg-blue-600 p-3 rounded-2xl mb-4">
             <GraduationCap className="size-8 text-white" />
           </div>
-          <h1 className="text-3xl text-blue-700">CareerPath AI</h1>
+          <h1 className="text-3xl text-blue-700">Hành Trang Số</h1>
           <p className="text-gray-500 mt-1">Đăng nhập để tiếp tục</p>
         </div>
 

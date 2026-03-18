@@ -19,14 +19,12 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
-            <div className="bg-blue-600 p-2 rounded-xl">
-              <GraduationCap className="size-6 text-white" />
-            </div>
-            <span className="text-xl font-semibold text-orange-600">CareerPath AI</span>
+            <img src="/logo.png" alt="Hành Trang Số" className="h-9 object-cover" />
+            <span className="text-xl font-semibold text-orange-600">Hành Trang Số</span>
           </Link>
 
           <div className="flex items-center gap-6">
-            <Link
+            {/* <Link
               to="/results"
               className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
                 isActive("/results") ? "bg-blue-100 text-blue-700" : "text-gray-600 hover:text-blue-600"
@@ -34,7 +32,7 @@ export function Navbar() {
             >
               <LayoutDashboard className="size-4" />
               <span>Tổng quan</span>
-            </Link>
+            </Link> */}
 
             <Link
               to="/universities"

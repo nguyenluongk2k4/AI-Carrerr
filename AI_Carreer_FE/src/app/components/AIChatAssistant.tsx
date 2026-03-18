@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { MessageSquare, X, Send, Sparkles, ChevronRight } from "lucide-react";
+import { X, Send, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useNavigate } from "react-router";
 import {
@@ -363,15 +363,33 @@ export function AIChatAssistant() {
       {/* Floating button */}
       <AnimatePresence>
         {!isOpen && (
-          <motion.button
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0 }}
-            onClick={() => setIsOpen(true)}
-            className="fixed bottom-6 right-6 w-16 h-16 bg-blue-600 text-white rounded-full shadow-2xl hover:bg-blue-700 transition-all z-50 flex items-center justify-center"
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0, opacity: 0 }}
+            className="fixed bottom-6 right-6 z-50 flex items-end gap-3"
           >
-            <MessageSquare className="size-7" />
-          </motion.button>
+            {/* Invite text bubble */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4 }}
+              className="mb-2 bg-white rounded-2xl rounded-br-none shadow-xl border border-blue-100 px-4 py-3 max-w-[200px] cursor-pointer"
+              onClick={() => setIsOpen(true)}
+            >
+              <p className="text-sm font-medium text-blue-700">Tư vấn tuyển sinh miễn phí! 🎓</p>
+              <p className="text-xs text-gray-500 mt-0.5">Chat ngay để được hỗ trợ</p>
+              {/* triangle */}
+              <div className="absolute -bottom-2 right-4 w-0 h-0 border-l-8 border-l-transparent border-t-8 border-t-white" />
+            </motion.div>
+
+            <button
+              onClick={() => setIsOpen(true)}
+              className="w-16 h-16 bg-white rounded-full shadow-2xl hover:shadow-blue-200 border-2 border-blue-100 hover:border-blue-300 transition-all flex items-center justify-center overflow-hidden"
+            >
+              <img src="/logo.png" alt="HATASO" className="w-12 h-12 object-contain" />
+            </button>
+          </motion.div>
         )}
       </AnimatePresence>
 
@@ -388,10 +406,12 @@ export function AIChatAssistant() {
             <div className="bg-blue-600 p-4 text-white flex-shrink-0">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Sparkles className="size-5" />
+                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center overflow-hidden flex-shrink-0">
+                    <img src="/logo.png" alt="HATASO" className="w-7 h-7 object-contain" />
+                  </div>
                   <div>
-                    <h3 className="font-semibold text-sm">Cố vấn Hướng nghiệp AI</h3>
-                    <p className="text-xs text-white/70">Thu thập thông tin để gợi ý ngành học</p>
+                    <h3 className="font-semibold text-sm">HATASO</h3>
+                    <p className="text-xs text-white/70">Nhắn tin để được tư vấn hướng nghiệp 👋</p>
                   </div>
                 </div>
                 <button onClick={() => setIsOpen(false)} className="p-1 hover:bg-white/20 rounded-lg">

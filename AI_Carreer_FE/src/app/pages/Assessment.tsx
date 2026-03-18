@@ -4,24 +4,20 @@ import { ChevronRight, ChevronLeft, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import {
   ALL_QUESTIONS,
-  QUIZ_QUESTIONS,
-  PERSONAL_QUESTIONS,
+  PART1_QUESTIONS,
+  PART2_QUESTIONS,
+  PART5_QUESTIONS,
   SUBJECTS,
-  HABIT_OPTIONS,
-  SALARY_OPTIONS,
-  FAMILY_OPTIONS,
-  LOCATION_OPTIONS,
   getComboScores,
 } from "../data/assessment";
-import { CustomTagInput } from "../components/CustomTagInput";
 import { useAuth } from "../utils/useAuth";
 
 const steps = [
-  { id: 1, title: "Sở thích" },
-  { id: 2, title: "Môn tự tin" },
+  { id: 1, title: "Sở thích & xu hướng" },
+  { id: 2, title: "Học tập & Điểm mạnh" },
   { id: 3, title: "Điểm 2 kỳ" },
   { id: 4, title: "Tổ hợp môn" },
-  { id: 5, title: "Ưu tiên" },
+  { id: 5, title: "Tài chính & Kỳ vọng" },
 ];
 
 export function Assessment() {
@@ -39,13 +35,10 @@ export function Assessment() {
       try {
         const data = JSON.parse(saved);
         if (data.answers) setAnswers(data.answers);
+        if (data.multiAnswers) setMultiAnswers(data.multiAnswers);
         if (data.scoresSemester1) setScoresSemester1(data.scoresSemester1);
         if (data.scoresSemester2) setScoresSemester2(data.scoresSemester2);
         if (data.selectedCombo) setSelectedCombo(data.selectedCombo);
-        if (data.habits) setHabits(data.habits);
-        if (data.salary) setSalary(data.salary);
-        if (data.familyCondition) setFamilyCondition(data.familyCondition);
-        if (data.locations) setLocations(data.locations);
         if (data.currentStep) return data.currentStep;
       } catch (e) {
         console.error("Failed to load saved data:", e);
@@ -56,6 +49,7 @@ export function Assessment() {
 
   const [currentStep, setCurrentStep] = useState(loadSavedData);
   const [answers, setAnswers] = useState<Record<number, string>>({});
+  const [multiAnswers, setMultiAnswers] = useState<Record<number, string[]>>({}); // For Q19
   const [scoresSemester1, setScoresSemester1] = useState<Record<string, string>>(
     Object.fromEntries(SUBJECTS.map((subject) => [subject.key, ""]))
   );
@@ -63,25 +57,18 @@ export function Assessment() {
     Object.fromEntries(SUBJECTS.map((subject) => [subject.key, ""]))
   );
   const [selectedCombo, setSelectedCombo] = useState("");
-  const [habits, setHabits] = useState<string[]>([]);
-  const [salary, setSalary] = useState("");
-  const [familyCondition, setFamilyCondition] = useState("");
-  const [locations, setLocations] = useState<string[]>([]);
 
   // Save to localStorage whenever data changes
   useEffect(() => {
     localStorage.setItem("assessment_progress", JSON.stringify({
       currentStep,
       answers,
+      multiAnswers,
       scoresSemester1,
       scoresSemester2,
       selectedCombo,
-      habits,
-      salary,
-      familyCondition,
-      locations,
     }));
-  }, [currentStep, answers, scoresSemester1, scoresSemester2, selectedCombo, habits, salary, familyCondition, locations]);
+  }, [currentStep, answers, multiAnswers, scoresSemester1, scoresSemester2, selectedCombo]);
 
   const numericScores = useMemo(() => {
     const result: Record<string, number> = {};
@@ -100,6 +87,8 @@ export function Assessment() {
   const handleNext = () => {
     if (currentStep < steps.length) {
       setCurrentStep(currentStep + 1);
+      // Scroll to top when moving to next step
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       const summary = [
         ...ALL_QUESTIONS.map((item) => {
@@ -112,6 +101,16 @@ export function Assessment() {
             answerLabel: selectedOption?.label ?? "",
           };
         }),
+        // Handle multi-select for Q19
+        {
+          id: 19,
+          question: "Thói quen học tập",
+          answerKey: multiAnswers[19]?.join(", ") ?? "",
+          answerLabel: multiAnswers[19]?.map(key => {
+            const opt = PART5_QUESTIONS.find(q => q.id === 19)?.options.find(o => o.key === key);
+            return opt?.label ?? key;
+          }).join(", ") ?? "",
+        },
         {
           id: 100,
           question: "Tổng điểm 2 kỳ gần nhất (theo môn)",
@@ -119,7 +118,7 @@ export function Assessment() {
           answerLabel: SUBJECTS.map((subject) => {
             const hk1 = scoresSemester1[subject.key] || 0;
             const hk2 = scoresSemester2[subject.key] || 0;
-            return `${subject.label} (HK1: ${hk1}, HK2: ${hk2})`;
+            return `${subject.label} (Học kỳ 1: ${hk1}, Học kỳ 2: ${hk2})`;
           }).join(", "),
         },
         {
@@ -128,46 +127,19 @@ export function Assessment() {
           answerKey: "",
           answerLabel: selectedCombo,
         },
-        {
-          id: 102,
-          question: "Thói quen học tập",
-          answerKey: "",
-          answerLabel: habits.join(", "),
-        },
-        {
-          id: 103,
-          question: "Mức lương mong muốn",
-          answerKey: "",
-          answerLabel: salary,
-        },
-        {
-          id: 104,
-          question: "Điều kiện gia đình",
-          answerKey: "",
-          answerLabel: familyCondition,
-        },
-        {
-          id: 105,
-          question: "Địa điểm mong muốn",
-          answerKey: "",
-          answerLabel: locations.join(", "),
-        },
       ];
 
       localStorage.setItem(
         "assessmentData",
         JSON.stringify({
           answers,
+          multiAnswers,
           scores: numericScores,
           semesterScores: {
             semester1: scoresSemester1,
             semester2: scoresSemester2,
           },
           selectedCombo,
-          habits,
-          salary,
-          familyCondition,
-          locations,
           summary,
         })
       );
@@ -185,27 +157,24 @@ export function Assessment() {
 
   const isStepComplete = () => {
     switch (currentStep) {
-      case 1:
-        return Boolean(answers[1]);
-      case 2:
-        return Boolean(answers[2]);
-      case 3:
+      case 1: // Part 1: Q1-5
+        return PART1_QUESTIONS.every((q) => Boolean(answers[q.id]));
+      case 2: // Part 2: Q6-11
+        return PART2_QUESTIONS.every((q) => Boolean(answers[q.id]));
+      case 3: // Scores
         return (
           SUBJECTS.every((subject) => scoresSemester1[subject.key] !== "") &&
           SUBJECTS.every((subject) => scoresSemester2[subject.key] !== "")
         );
-      case 4:
+      case 4: // Combo
         return selectedCombo !== "";
-      case 5: {
-        const stepQuestions = [3, 4, 5, ...PERSONAL_QUESTIONS.map((item) => item.id)];
-        return (
-          stepQuestions.every((id) => Boolean(answers[id])) &&
-          habits.length > 0 &&
-          salary !== "" &&
-          familyCondition !== "" &&
-          locations.length > 0
-        );
-      }
+      case 5: // Part 5: Q12-21 (Q19 is multi-select)
+        return PART5_QUESTIONS.every((q) => {
+          if (q.isMultiSelect) {
+            return multiAnswers[q.id] && multiAnswers[q.id].length > 0;
+          }
+          return Boolean(answers[q.id]);
+        });
       default:
         return false;
     }
@@ -214,6 +183,49 @@ export function Assessment() {
   const renderQuizQuestion = (questionId: number) => {
     const question = ALL_QUESTIONS.find((item) => item.id === questionId);
     if (!question) return null;
+    
+    // Handle multi-select for Q19
+    if (question.isMultiSelect) {
+      const currentAnswers = multiAnswers[questionId] || [];
+      return (
+        <div>
+          <h2 className="text-2xl mb-2">Câu hỏi {questionId}</h2>
+          <p className="text-gray-600 mb-6">{question.question}</p>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {question.options.map((option) => {
+              const isSelected = currentAnswers.includes(option.key);
+              return (
+                <button
+                  key={option.key}
+                  onClick={() => {
+                    const newAnswers = isSelected
+                      ? currentAnswers.filter((k) => k !== option.key)
+                      : [...currentAnswers, option.key];
+                    setMultiAnswers({
+                      ...multiAnswers,
+                      [questionId]: newAnswers,
+                    });
+                  }}
+                  className={`p-4 rounded-xl text-left transition-all border-2 ${
+                    isSelected
+                      ? "bg-blue-600 text-white border-blue-600 shadow-lg"
+                      : "bg-gray-50 border-transparent hover:bg-gray-100"
+                  }`}
+                >
+                  <div className="text-sm font-semibold mb-1">{option.key}</div>
+                  <div className="text-sm">{option.label}</div>
+                </button>
+              );
+            })}
+          </div>
+          <p className="text-sm text-gray-500 mt-4">
+            Đã chọn: {currentAnswers.length} đáp án
+          </p>
+        </div>
+      );
+    }
+    
+    // Single select
     const currentAnswer = answers[questionId];
     return (
       <div>
@@ -300,14 +312,30 @@ export function Assessment() {
             transition={{ duration: 0.3 }}
             className="bg-white rounded-2xl shadow-xl p-8 mb-8"
           >
-            {currentStep === 1 && renderQuizQuestion(1)}
-            {currentStep === 2 && renderQuizQuestion(2)}
+            {/* Step 1: Part 1 - Q1 to Q5 */}
+            {currentStep === 1 && (
+              <div className="space-y-8">
+                {PART1_QUESTIONS.map((q) => (
+                  <div key={q.id}>{renderQuizQuestion(q.id)}</div>
+                ))}
+              </div>
+            )}
 
+            {/* Step 2: Part 2 - Q6 to Q11 */}
+            {currentStep === 2 && (
+              <div className="space-y-8">
+                {PART2_QUESTIONS.map((q) => (
+                  <div key={q.id}>{renderQuizQuestion(q.id)}</div>
+                ))}
+              </div>
+            )}
+
+            {/* Step 3: Scores */}
             {currentStep === 3 && (
               <div>
                 <h2 className="text-2xl mb-2">Tổng điểm 2 kỳ gần nhất</h2>
                 <p className="text-gray-600 mb-6">
-                  Nhập điểm HK1 và HK2 cho từng môn (thang 0-10).
+                  Nhập điểm Học kỳ 1 và Học kỳ 2 cho từng môn (thang 0-10).
                 </p>
                 <div className="space-y-4">
                   {SUBJECTS.map((subject) => (
@@ -326,7 +354,7 @@ export function Assessment() {
                           })
                         }
                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="HK1 (0-10)"
+                        placeholder="Học kỳ 1 (0-10)"
                       />
                       <input
                         type="number"
@@ -341,7 +369,7 @@ export function Assessment() {
                           })
                         }
                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="HK2 (0-10)"
+                        placeholder="Học kỳ 2 (0-10)"
                       />
                     </div>
                   ))}
@@ -349,6 +377,7 @@ export function Assessment() {
               </div>
             )}
 
+            {/* Step 4: Combo */}
             {currentStep === 4 && (
               <div>
                 <h2 className="text-2xl mb-2">Tổ hợp môn phù hợp</h2>
@@ -382,58 +411,12 @@ export function Assessment() {
               </div>
             )}
 
+            {/* Step 5: Part 5 - Q12 to Q21 */}
             {currentStep === 5 && (
               <div className="space-y-8">
-                {renderQuizQuestion(3)}
-                {renderQuizQuestion(4)}
-                {renderQuizQuestion(5)}
-                {PERSONAL_QUESTIONS.map((item) => (
-                  <div key={item.id}>{renderQuizQuestion(item.id)}</div>
+                {PART5_QUESTIONS.map((q) => (
+                  <div key={q.id}>{renderQuizQuestion(q.id)}</div>
                 ))}
-
-                <div>
-                  <h3 className="text-xl mb-3">Thói quen học tập</h3>
-                  <CustomTagInput
-                    presets={HABIT_OPTIONS}
-                    selected={habits}
-                    onChange={setHabits}
-                    multi
-                    placeholder="Thêm thói quen khác..."
-                  />
-                </div>
-
-                <div>
-                  <h3 className="text-xl mb-3">Mức lương mong muốn</h3>
-                  <CustomTagInput
-                    presets={SALARY_OPTIONS}
-                    selected={salary ? [salary] : []}
-                    onChange={(vals) => setSalary(vals[vals.length - 1] ?? "")}
-                    multi={false}
-                    placeholder="Nhập mức lương khác..."
-                  />
-                </div>
-
-                <div>
-                  <h3 className="text-xl mb-3">Điều kiện gia đình</h3>
-                  <CustomTagInput
-                    presets={FAMILY_OPTIONS}
-                    selected={familyCondition ? [familyCondition] : []}
-                    onChange={(vals) => setFamilyCondition(vals[vals.length - 1] ?? "")}
-                    multi={false}
-                    placeholder="Mô tả điều kiện gia đình..."
-                  />
-                </div>
-
-                <div>
-                  <h3 className="text-xl mb-3">Địa điểm mong muốn</h3>
-                  <CustomTagInput
-                    presets={LOCATION_OPTIONS}
-                    selected={locations}
-                    onChange={setLocations}
-                    multi
-                    placeholder="Thêm địa điểm khác..."
-                  />
-                </div>
               </div>
             )}
           </motion.div>
