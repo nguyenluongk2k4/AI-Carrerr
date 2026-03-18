@@ -6,7 +6,6 @@
 Dockerfile
 docker-compose.yml
 .dockerignore
-docker-entrypoint.sh
 
 # Python
 __pycache__/
