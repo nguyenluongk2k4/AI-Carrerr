@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { ChevronRight, ChevronLeft, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
@@ -14,6 +14,7 @@ import {
   getComboScores,
 } from "../data/assessment";
 import { CustomTagInput } from "../components/CustomTagInput";
+import { useAuth } from "../utils/useAuth";
 
 const steps = [
   { id: 1, title: "Sở thích" },
@@ -24,8 +25,36 @@ const steps = [
 ];
 
 export function Assessment() {
+  const { user } = useAuth();
   const navigate = useNavigate();
-  const [currentStep, setCurrentStep] = useState(1);
+
+  useEffect(() => {
+    if (!user) navigate("/", { replace: true });
+  }, [user, navigate]);
+
+  // Load saved data from localStorage on mount
+  const loadSavedData = () => {
+    const saved = localStorage.getItem("assessment_progress");
+    if (saved) {
+      try {
+        const data = JSON.parse(saved);
+        if (data.answers) setAnswers(data.answers);
+        if (data.scoresSemester1) setScoresSemester1(data.scoresSemester1);
+        if (data.scoresSemester2) setScoresSemester2(data.scoresSemester2);
+        if (data.selectedCombo) setSelectedCombo(data.selectedCombo);
+        if (data.habits) setHabits(data.habits);
+        if (data.salary) setSalary(data.salary);
+        if (data.familyCondition) setFamilyCondition(data.familyCondition);
+        if (data.locations) setLocations(data.locations);
+        if (data.currentStep) return data.currentStep;
+      } catch (e) {
+        console.error("Failed to load saved data:", e);
+      }
+    }
+    return 1;
+  };
+
+  const [currentStep, setCurrentStep] = useState(loadSavedData);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [scoresSemester1, setScoresSemester1] = useState<Record<string, string>>(
     Object.fromEntries(SUBJECTS.map((subject) => [subject.key, ""]))
@@ -38,6 +67,21 @@ export function Assessment() {
   const [salary, setSalary] = useState("");
   const [familyCondition, setFamilyCondition] = useState("");
   const [locations, setLocations] = useState<string[]>([]);
+
+  // Save to localStorage whenever data changes
+  useEffect(() => {
+    localStorage.setItem("assessment_progress", JSON.stringify({
+      currentStep,
+      answers,
+      scoresSemester1,
+      scoresSemester2,
+      selectedCombo,
+      habits,
+      salary,
+      familyCondition,
+      locations,
+    }));
+  }, [currentStep, answers, scoresSemester1, scoresSemester2, selectedCombo, habits, salary, familyCondition, locations]);
 
   const numericScores = useMemo(() => {
     const result: Record<string, number> = {};
@@ -127,6 +171,8 @@ export function Assessment() {
           summary,
         })
       );
+      // Clear progress data after completing
+      localStorage.removeItem("assessment_progress");
       navigate("/results");
     }
   };

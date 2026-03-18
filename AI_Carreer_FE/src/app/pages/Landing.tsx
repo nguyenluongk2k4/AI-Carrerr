@@ -1,8 +1,11 @@
 import { Link } from "react-router";
-import { Sparkles, Brain, TrendingUp, School, Map, MessageSquare, Target, Award, DollarSign } from "lucide-react";
+import { Sparkles, Brain, TrendingUp, School, Map, MessageSquare, Target, Award, DollarSign, LogIn } from "lucide-react";
 import { motion } from "motion/react";
+import { useAuth } from "../utils/useAuth";
 
 export function Landing() {
+  const { user } = useAuth();
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -25,13 +28,23 @@ export function Landing() {
                 và ghép trường thông minh dựa trên tính cách, sở thích và mục tiêu của bạn.
               </p>
               <div className="flex gap-4">
-                <Link
-                  to="/assessment"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-700 hover:shadow-xl transition-all"
-                >
-                  <Sparkles className="size-5" />
-                  <span>Bắt đầu đánh giá miễn phí</span>
-                </Link>
+                {user ? (
+                  <Link
+                    to="/assessment"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-700 hover:shadow-xl transition-all"
+                  >
+                    <Sparkles className="size-5" />
+                    <span>Bắt đầu đánh giá miễn phí</span>
+                  </Link>
+                ) : (
+                  <Link
+                    to="/login"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-700 hover:shadow-xl transition-all"
+                  >
+                    <LogIn className="size-5" />
+                    <span>Đăng nhập để bắt đầu</span>
+                  </Link>
+                )}
                 <Link
                   to="/results"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-white border-2 border-blue-200 text-blue-600 rounded-xl hover:border-blue-300 transition-all"
@@ -171,13 +184,23 @@ export function Landing() {
           <p className="text-xl text-white/90 mb-8">
             Cùng hàng nghìn học sinh đã tìm được ngành nghề phù hợp
           </p>
-          <Link
-            to="/assessment"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-orange-400 text-white rounded-xl hover:bg-orange-500 hover:shadow-2xl transition-all"
-          >
-            <Sparkles className="size-5" />
-            <span>Bắt đầu hành trình ngay hôm nay</span>
-          </Link>
+          {user ? (
+            <Link
+              to="/assessment"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-orange-400 text-white rounded-xl hover:bg-orange-500 hover:shadow-2xl transition-all"
+            >
+              <Sparkles className="size-5" />
+              <span>Bắt đầu hành trình ngay hôm nay</span>
+            </Link>
+          ) : (
+            <Link
+              to="/login"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-orange-400 text-white rounded-xl hover:bg-orange-500 hover:shadow-2xl transition-all"
+            >
+              <LogIn className="size-5" />
+              <span>Đăng nhập để bắt đầu</span>
+            </Link>
+          )}
         </div>
       </section>
     </div>

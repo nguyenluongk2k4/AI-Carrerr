@@ -14,9 +14,10 @@
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
+    "types": ["vite/client"],
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "src/vite-env.d.ts", "vite.config.ts"]
 }

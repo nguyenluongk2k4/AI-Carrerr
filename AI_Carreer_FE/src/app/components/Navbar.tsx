@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router";
-import { GraduationCap, LayoutDashboard, School, Map, Sparkles, LogOut, Crown, User } from "lucide-react";
+import { GraduationCap, LayoutDashboard, School, Map, Sparkles, LogOut, Crown, User, LogIn } from "lucide-react";
 import { useAuth } from "../utils/useAuth";
 
 export function Navbar() {
@@ -11,7 +11,7 @@ export function Navbar() {
 
   const handleLogout = () => {
     logout();
-    navigate("/login");
+    navigate("/");
   };
 
   return (
@@ -65,26 +65,36 @@ export function Navbar() {
             </Link>
 
             {/* User info */}
-            <div className="flex items-center gap-2 pl-4 border-l border-gray-200">
-              <div className="flex items-center gap-1.5 text-sm text-gray-700">
-                {user?.isPremium ? (
-                  <Crown className="size-4 text-orange-500" />
-                ) : (
-                  <User className="size-4 text-gray-400" />
-                )}
-                <span>{user?.displayName}</span>
-                {user?.isPremium && (
-                  <span className="px-1.5 py-0.5 bg-orange-100 text-orange-600 text-xs rounded-full">Premium</span>
-                )}
+            {user ? (
+              <div className="flex items-center gap-2 pl-4 border-l border-gray-200">
+                <div className="flex items-center gap-1.5 text-sm text-gray-700">
+                  {user?.isPremium ? (
+                    <Crown className="size-4 text-orange-500" />
+                  ) : (
+                    <User className="size-4 text-gray-400" />
+                  )}
+                  <span>{user?.displayName}</span>
+                  {user?.isPremium && (
+                    <span className="px-1.5 py-0.5 bg-orange-100 text-orange-600 text-xs rounded-full">Premium</span>
+                  )}
+                </div>
+                <button
+                  onClick={handleLogout}
+                  className="p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-all"
+                  title="Đăng xuất"
+                >
+                  <LogOut className="size-4" />
+                </button>
               </div>
-              <button
-                onClick={handleLogout}
-                className="p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-all"
-                title="Đăng xuất"
+            ) : (
+              <Link
+                to="/login"
+                className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all"
               >
-                <LogOut className="size-4" />
-              </button>
-            </div>
+                <LogIn className="size-4" />
+                <span>Đăng nhập</span>
+              </Link>
+            )}
           </div>
         </div>
       </div>

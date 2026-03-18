@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  # Backend - FastAPI Python Service
+  backend:
+    build:
+      context: ./AI_Carreer
+      dockerfile: Dockerfile
+    container_name: ai_career_backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - LLM_PROVIDER=${LLM_PROVIDER:-gemini}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - GEMINI_MODEL=${GEMINI_MODEL:-gemini-2.5-flash}
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o-mini}
+      - DATA_FILE=${DATA_FILE:-data.json}
+      - CHROMA_DB_PATH=/app/chroma_db
+    volumes:
+      # Persist ChromaDB data
+      - chroma_db_data:/app/chroma_db
+      # Mount data files for easy updates
+      - ./AI_Carreer/data.json:/app/data.json:ro
+      - ./AI_Carreer/data_2.json:/app/data_2.json:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/docs')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - ai_career_network
+
+  # Frontend - Vite/React served by Nginx
+  frontend:
+    build:
+      context: ./AI_Carreer_FE
+      dockerfile: Dockerfile
+    container_name: ai_career_frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - ai_career_network
+
+volumes:
+  chroma_db_data:
+    driver: local
+    name: ai_career_chroma_db
+
+networks:
+  ai_career_network:
+    driver: bridge
+    name: ai_career_network
