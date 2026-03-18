@@ -33,4 +33,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
     CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/docs')" || exit 1
 
 # Check and build ChromaDB then start API
-CMD ["sh", "-c", "if [ ! -d \"$CHROMA_DB_PATH\" ] || [ -z \"$(ls -A $CHROMA_DB_PATH 2>/dev/null)\" ]; then echo 'Building ChromaDB...' && python embed.py; else echo 'ChromaDB exists, skipping embed.'; fi && echo 'Starting FastAPI...' && python run_api.py"]
+CMD ["sh", "-c", "python embed.py && echo 'Starting FastAPI...' && python run_api.py"]
