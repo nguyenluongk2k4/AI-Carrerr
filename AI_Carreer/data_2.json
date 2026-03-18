@@ -1,0 +1,202 @@
+[
+    {
+        "id": "TUTOR_PHYS_VTA_01",
+        "type": "teaching_method",
+        "content": "Vật lý Thầy Vũ Tuấn Anh (VNA): Nổi tiếng với triết lý 'Thực chiến phòng thi'. Phương pháp của thầy không đi nặng vào chứng minh dông dài mà tập trung cung cấp mẹo giải nhanh, sử dụng máy tính Casio và đặc biệt là kỹ thuật 'Vòng tròn lượng giác đa trục' giúp xử lý các bài dao động cơ, sóng cơ cực kỳ tốc độ."
+    },
+    {
+        "id": "TUTOR_PHYS_VTA_02",
+        "type": "cost_estimate",
+        "content": "Chi phí khóa học của Vật lý Thầy Vũ Tuấn Anh (VNA): Thầy chủ yếu dạy qua hình thức Livestream trong group kín. Combo khóa Live VIP (Live C, T, G) cho cả năm học thường dao động từ 1.500.000 đến 2.000.000 VNĐ. Ngoài ra, bộ sách 'Phác đồ Vật lý' bán kèm có giá khoảng 200.000 - 300.000 VNĐ/cuốn."
+    },
+    {
+        "id": "TUTOR_PHYS_VTA_03",
+        "type": "student_review",
+        "content": "Review từ học sinh của Vật lý Thầy Vũ Tuấn Anh (VNA): 'Thầy dạy cực nhiệt, cháy hết mình và có phong cách hay mắng yêu để tạo động lực (push) học sinh. Tốc độ chữa bài của thầy khá nhanh, nhiều skill độc lạ. Tuy nhiên, nếu bạn mất gốc hoàn toàn, thời gian đầu sẽ hơi ngợp và cần xem lại video nhiều lần.'"
+    },
+    {
+        "id": "TUTOR_PHYS_VTA_04",
+        "type": "study_roadmap",
+        "content": "Lộ trình học của Vật lý Thầy Vũ Tuấn Anh (VNA): Chia làm 3 giai đoạn rõ ràng. Live C (Chuyên đề) rèn kiến thức nền tảng; Live T (Thực chiến đề) rèn kỹ năng giải đề, tốc độ phản xạ; và Live G (Tổng ôn) khoanh vùng trọng tâm, chống sai ngu sát kỳ thi."
+    },
+    {
+        "id": "TUTOR_PHYS_VTA_05",
+        "type": "target_audience",
+        "content": "Vật lý Thầy Vũ Tuấn Anh (VNA) - Đối tượng phù hợp: Học sinh có mục tiêu điểm Lý từ 8.0 trở lên, có khả năng tự học tốt qua màn hình, chịu được áp lực cao và thích phong cách học năng động, thực dụng."
+    },
+    {
+        "id": "TUTOR_MATH_DVD_01",
+        "type": "teaching_method",
+        "content": "Toán Thầy Đỗ Văn Đức: Kết hợp song song giữa 'Tư duy bản chất' và 'Kỹ năng Casio'. Thầy chú trọng việc học sinh phải hiểu rõ gốc rễ của công thức toán học trước khi cung cấp các thủ thuật giải nhanh, giúp học sinh không bị 'tủ đè' khi Bộ GD&ĐT đổi cách ra đề."
+    },
+    {
+        "id": "TUTOR_MATH_DVD_02",
+        "type": "cost_estimate",
+        "content": "Chi phí khóa học của Toán Thầy Đỗ Văn Đức: Các khóa luyện thi Toán online trọn gói (gồm sách và tài liệu PDF) thường có giá khoảng 1.200.000 đến 1.800.000 VNĐ/khóa/năm, mức giá rất dễ tiếp cận so với mặt bằng chung."
+    },
+    {
+        "id": "TUTOR_MATH_DVD_03",
+        "type": "student_review",
+        "content": "Review từ học sinh của Toán Thầy Đỗ Văn Đức: 'Thầy Đức cực kỳ hiền lành, điềm đạm và giảng siêu kỹ. Đội ngũ trợ giảng (mentor) hỗ trợ giải đáp bài tập trong group hoạt động rất năng nổ. Tài liệu thầy biên soạn có lời giải chi tiết đến từng dòng, rất dễ tự học.'"
+    },
+    {
+        "id": "TUTOR_MATH_DVD_04",
+        "type": "study_roadmap",
+        "content": "Lộ trình học của Toán Thầy Đỗ Văn Đức: Tổ chức theo mô hình S-C-O. Khóa S (Nền tảng): Quét sạch chuyên đề SGK; Khóa C (Luyện đề): Cọ xát bộ đề chuẩn cấu trúc; Khóa O (Vận dụng cao): Chuyên trị các câu phân loại điểm 9, 10 ở cuối đề thi."
+    },
+    {
+        "id": "TUTOR_MATH_DVD_05",
+        "type": "target_audience",
+        "content": "Toán Thầy Đỗ Văn Đức - Đối tượng phù hợp: Phù hợp với mọi phổ điểm, đặc biệt là các bạn từ mức 6-7 muốn bứt phá lên mức 9+ một cách bài bản, chậm mà chắc, không thích phong cách dạy quá dồn dập."
+    },
+    {
+        "id": "TUTOR_ENG_TA_01",
+        "type": "teaching_method",
+        "content": "Tiếng Anh Cô Trang Anh: Chuyên trị mất gốc bằng việc xây dựng lại hệ thống ngữ pháp và cày từ vựng với khối lượng khổng lồ. Đặc sản của cô là các bài tập 'nhồi' từ vựng theo chủ đề và thi thử bấm giờ liên tục để học sinh quen với áp lực."
+    },
+    {
+        "id": "TUTOR_ENG_TA_02",
+        "type": "cost_estimate",
+        "content": "Chi phí khóa học của Tiếng Anh Cô Trang Anh: Chi phí theo học cô Trang Anh thường linh hoạt. Học sinh có thể chỉ mua sách (khoảng 150.000 - 250.000 VNĐ/cuốn) và học qua livestream miễn phí. Các khóa học chuyên sâu (Pro 3M, Pro 3MPLUS) có giá từ 600.000 đến 1.500.000 VNĐ."
+    },
+    {
+        "id": "TUTOR_ENG_TA_03",
+        "type": "student_review",
+        "content": "Review từ học sinh của Tiếng Anh Cô Trang Anh: 'Cô dạy vô cùng tâm huyết, nổi tiếng với chuỗi livestream thức dậy lúc 5h sáng để cùng học sinh học bài. Khối lượng bài tập của cô cực kỳ nặng (điển hình là cuốn 3000, 4000 câu từ vựng). Nếu lười thì không thể theo nổi.'"
+    },
+    {
+        "id": "TUTOR_ENG_TA_04",
+        "type": "study_roadmap",
+        "content": "Lộ trình học của Tiếng Anh Cô Trang Anh: Bắt đầu từ Tổng ôn Ngữ pháp (xây nền) -> Cày bộ 3000 Câu Từ vựng/Đọc điền Đọc hiểu -> Vào khóa Luyện đề Thực chiến bám sát cấu trúc đề minh họa của Bộ GD&ĐT."
+    },
+    {
+        "id": "TUTOR_ENG_TA_05",
+        "type": "target_audience",
+        "content": "Tiếng Anh Cô Trang Anh - Đối tượng phù hợp: Tuyệt vời cho những bạn bị mất gốc tiếng Anh, thiếu tính kỷ luật cần một giáo viên sát sao đốc thúc, và những bạn thi khối D cần vốn từ vựng phong phú để lấy điểm 9+."
+    },
+    {
+        "id": "TUTOR_LIT_PMN_01",
+        "type": "teaching_method",
+        "content": "Ngữ Văn Thầy Phạm Minh Nhật (Anh Tũn): Thầy đi đầu trong việc phá bỏ cách học văn đọc chép truyền thống. Thầy ứng dụng Sơ đồ tư duy (Mindmap), công thức hóa các dạng mở bài/kết bài đa năng và lồng ghép kể chuyện lịch sử hài hước để học sinh nhớ tác phẩm ngay trên lớp."
+    },
+    {
+        "id": "TUTOR_LIT_PMN_02",
+        "type": "cost_estimate",
+        "content": "Chi phí khóa học của Ngữ Văn Thầy Phạm Minh Nhật: Khóa học offline tại Hà Nội khoảng 800.000 - 1.000.000 VNĐ/tháng. Đối với khóa học online (Video quay sẵn hoặc Livestream), giá combo cho cả lộ trình thi đại học khoảng 1.500.000 đến 2.500.000 VNĐ."
+    },
+    {
+        "id": "TUTOR_LIT_PMN_03",
+        "type": "student_review",
+        "content": "Review từ học sinh của Ngữ Văn Thầy Phạm Minh Nhật: 'Lớp học của thầy lúc nào cũng ngập tiếng cười, thầy nắm bắt tâm lý học trò rất giỏi. Văn của thầy rất thực tế, không bị bay bổng sến súa. Tuy nhiên, một số bạn nhận xét phong cách này hợp để lấy điểm 8 hơn là đào sâu hàn lâm để thi học sinh giỏi lấy điểm 9+.'"
+    },
+    {
+        "id": "TUTOR_LIT_PMN_04",
+        "type": "study_roadmap",
+        "content": "Lộ trình học của Ngữ Văn Thầy Phạm Minh Nhật: Khóa Cốt lõi (Giảng chi tiết nội dung, nghệ thuật 14 tác phẩm) -> Khóa Kỹ năng (Luyện viết đoạn Nghị luận xã hội 200 chữ) -> Khóa Thực chiến (Học tủ, đoán đề và rèn kỹ năng trình bày mặt giấy)."
+    },
+    {
+        "id": "TUTOR_LIT_PMN_05",
+        "type": "target_audience",
+        "content": "Ngữ Văn Thầy Phạm Minh Nhật - Đối tượng phù hợp: Cực kỳ phù hợp với học sinh khối A, A1, B lười học Văn cần phương pháp nhanh-gọn-nhẹ để chống liệt hoặc gánh điểm 7.5 - 8.0, và các bạn khối C, D cần nền tảng an toàn."
+    },
+    {
+        "id": "TUTOR_CHEM_VKN_01",
+        "type": "teaching_method",
+        "content": "Hóa Học Thầy Vũ Khắc Ngọc (Hocmai): Phương pháp giảng dạy chuẩn mực, đi sâu vào bản chất Hóa học thay vì chỉ dùng mẹo. Nổi tiếng với hệ thống phương pháp giải đặc thù: Quy đổi, Bảo toàn khối lượng, Bảo toàn electron giúp chia nhỏ các bài Hóa vô cơ phức tạp thành các hệ phương trình đơn giản."
+    },
+    {
+        "id": "TUTOR_CHEM_VKN_02",
+        "type": "cost_estimate",
+        "content": "Chi phí khóa học của Hóa Học Thầy Vũ Khắc Ngọc: Đăng ký qua nền tảng Hocmai.vn, mức giá cho các khóa đơn lẻ rơi vào khoảng 800.000 đến 1.200.000 VNĐ. Combo giải pháp trọn gói (PEN) có giá ưu đãi khoảng 2.000.000 - 2.500.000 VNĐ/năm."
+    },
+    {
+        "id": "TUTOR_CHEM_VKN_03",
+        "type": "student_review",
+        "content": "Review từ học sinh của Hóa Học Thầy Vũ Khắc Ngọc: 'Thầy có giọng giảng ấm, phong cách đĩnh đạc và phân tích đề bài cực kỳ logic. Kho tài liệu và ngân hàng câu hỏi của nền tảng đi kèm rất khổng lồ. Nhược điểm là đôi khi kiến thức hơi hàn lâm với các bạn lười tư duy.'"
+    },
+    {
+        "id": "TUTOR_CHEM_VKN_04",
+        "type": "study_roadmap",
+        "content": "Lộ trình học của Hóa Học Thầy Vũ Khắc Ngọc: Hệ thống PEN nổi tiếng. PEN-C (Trang bị toàn bộ kiến thức theo chuyên đề) -> PEN-I (Luyện giải các đề thi tiêu chuẩn) -> PEN-M (Ôn tập chọn lọc, bứt phá điểm số tối đa trong tháng cuối)."
+    },
+    {
+        "id": "TUTOR_CHEM_VKN_05",
+        "type": "target_audience",
+        "content": "Hóa Học Thầy Vũ Khắc Ngọc - Đối tượng phù hợp: Học sinh khối A, B có tính tự giác cao, có mục tiêu thi vào các trường đại học top đầu (Y Dược, Bách Khoa, KHTN) đòi hỏi nền tảng tư duy hóa học cực kỳ vững chắc."
+    },
+    {
+        "id": "TUTOR_BIO_TN_01",
+        "type": "teaching_method",
+        "content": "Sinh học Thầy Thịnh Nam: Trùm luyện thi khối B. Phương pháp giảng dạy của thầy cực kỳ nổi tiếng trong việc sơ đồ hóa các cơ chế di truyền phức tạp. Thay vì bắt học sinh học thuộc lòng SGK, thầy cung cấp bộ công thức giải nhanh độc quyền giúp xử lý các bài tập phả hệ, di truyền quần thể hóc búa chỉ trong chưa tới 1 phút."
+    },
+    {
+        "id": "TUTOR_BIO_TN_02",
+        "type": "cost_estimate",
+        "content": "Chi phí khóa học của Sinh học Thầy Thịnh Nam: Thầy thường mở các khóa học online qua website cá nhân hoặc nền tảng đối tác. Combo luyện thi toàn diện (từ nền tảng đến luyện đề) có giá dao động từ 1.200.000 đến 1.800.000 VNĐ. Sách in màu 'Tuyệt đỉnh luyện đề Sinh học' có giá khoảng 250.000 VNĐ."
+    },
+    {
+        "id": "TUTOR_BIO_TN_03",
+        "type": "student_review",
+        "content": "Review từ học sinh của Sinh học Thầy Thịnh Nam: 'Thầy giảng bài rất cuốn, giọng trầm ấm và hệ thống kiến thức cực kỳ logic. Đặc biệt phần bài tập Vận dụng cao (VDC) được thầy bóc tách từng lớp rất dễ hiểu. Trong group kín, đội ngũ trợ giảng (mentor) trả lời thắc mắc gần như 24/7.'"
+    },
+    {
+        "id": "TUTOR_BIO_TN_04",
+        "type": "study_roadmap",
+        "content": "Lộ trình học của Sinh học Thầy Thịnh Nam: Khởi động sớm từ hè với Khóa Nền tảng (quét toàn bộ lý thuyết 12) -> Khóa Chuyên sâu (tập trung vào các dạng bài tập khó, tính toán nhiều) -> Khóa Luyện đề thực chiến (chống sai ngu lý thuyết và phân bổ thời gian)."
+    },
+    {
+        "id": "TUTOR_BIO_TN_05",
+        "type": "target_audience",
+        "content": "Sinh học Thầy Thịnh Nam - Đối tượng phù hợp: Học sinh khối B00 có tham vọng đỗ vào các trường Y Dược top đầu (Y Hà Nội, Y Dược TP.HCM), chịu được khối lượng bài tập lớn và cần điểm Sinh học từ 8.5 đến 10."
+    },
+    {
+        "id": "TUTOR_HIS_HF_01",
+        "type": "teaching_method",
+        "content": "Lịch sử Cô Lê Thu Hương (Hương Fiona): Nổi tiếng với phương pháp 'Học Lịch sử bằng từ khóa (Keyword)'. Cô giúp học sinh loại bỏ hoàn toàn việc tụng kinh học vẹt các đoạn văn dài ngoẵng bằng cách gắn các sự kiện thành một 'trục thời gian', liên kết chặt chẽ giữa lịch sử thế giới và lịch sử Việt Nam."
+    },
+    {
+        "id": "TUTOR_HIS_HF_02",
+        "type": "cost_estimate",
+        "content": "Chi phí khóa học của Lịch sử Cô Lê Thu Hương: Các khóa Livestream trong group kín của cô thường có mức học phí rất dễ chịu, khoảng 800.000 - 1.200.000 VNĐ cho cả lộ trình thi đại học. Bộ sách Sơ đồ tư duy Lịch sử cực hot của cô có giá khoảng 150.000 - 200.000 VNĐ."
+    },
+    {
+        "id": "TUTOR_HIS_HF_03",
+        "type": "student_review",
+        "content": "Review từ học sinh của Lịch sử Cô Lê Thu Hương: 'Giọng cô rất truyền cảm, học Sử như nghe kể chuyện nên không bao giờ buồn ngủ. Sách và tài liệu của cô thiết kế cực kỳ đẹp, bắt mắt, nhìn là muốn học. Cô cũng hay tổ chức thi thử trên web để học sinh cọ xát.'"
+    },
+    {
+        "id": "TUTOR_HIS_HF_04",
+        "type": "study_roadmap",
+        "content": "Lộ trình học của Lịch sử Cô Lê Thu Hương: Quét sạch kiến thức SGK qua Mindmap -> Khóa Trọng điểm (tập trung vào các giai đoạn lịch sử hay thi như 1919-1945, 1945-1954) -> Khóa Thực chiến luyện đề (rèn kỹ năng tránh các từ khóa 'bẫy' của Bộ GD&ĐT)."
+    },
+    {
+        "id": "TUTOR_HIS_HF_05",
+        "type": "target_audience",
+        "content": "Lịch sử Cô Lê Thu Hương - Đối tượng phù hợp: Mọi đối tượng học sinh khối C00, D14, đặc biệt là những bạn cực kỳ ghét việc phải học thuộc lòng máy móc nhưng vẫn muốn đạt điểm 8+ môn Sử."
+    },
+    {
+        "id": "TUTOR_GEO_VT_01",
+        "type": "teaching_method",
+        "content": "Địa lý Thầy Vũ Hải Tùng (Thầy Tùng Địa lý): Biến môn Địa thành môn khoa học logic cực kỳ nhàn hạ. Đặc sản của thầy là 'Kỹ năng diệt gọn Atlat Địa lý Việt Nam' và 'Nhận diện biểu đồ không cần đọc số liệu'. Thầy dạy bản chất các hiện tượng tự nhiên/kinh tế để học sinh tự suy luận ra đáp án."
+    },
+    {
+        "id": "TUTOR_GEO_VT_02",
+        "type": "cost_estimate",
+        "content": "Chi phí khóa học của Địa lý Thầy Vũ Hải Tùng: Khóa học trọn gói từ cơ bản đến nâng cao (thường dạy qua Livestream kết hợp Web học tập) có giá dao động từ 900.000 đến 1.500.000 VNĐ. Sách 'Xử lý nhanh trắc nghiệm Địa lý' do thầy biên soạn được tặng kèm hoặc bán với giá ưu đãi."
+    },
+    {
+        "id": "TUTOR_GEO_VT_03",
+        "type": "student_review",
+        "content": "Review từ học sinh của Địa lý Thầy Vũ Hải Tùng: 'Thầy Tùng có phong cách dạy siêu hài hước, thực tế và rất hay tương tác với học sinh. Học thầy xong kỹ năng tra Atlat lên thần, vào phòng thi cứ mở Atlat ra là thấy đáp án, không tốn nơ-ron thần kinh để nhớ lý thuyết suông.'"
+    },
+    {
+        "id": "TUTOR_GEO_VT_04",
+        "type": "study_roadmap",
+        "content": "Lộ trình học của Địa lý Thầy Vũ Hải Tùng: Chuyên đề Kỹ năng (Atlat, Biểu đồ, Bảng số liệu) -> Chuyên đề Địa lý Tự nhiên & Dân cư -> Chuyên đề Các ngành & Vùng kinh tế -> Tổng ôn thực chiến luyện 50 đề chuẩn cấu trúc Bộ GD&ĐT."
+    },
+    {
+        "id": "TUTOR_GEO_VT_05",
+        "type": "target_audience",
+        "content": "Địa lý Thầy Vũ Hải Tùng - Đối tượng phù hợp: Học sinh khối C00 muốn lấy điểm 9-10 môn Địa để gánh các môn khác, hoặc học sinh thi tổ hợp Khoa học Xã hội chỉ cần môn Địa để xét tốt nghiệp mà không tốn nhiều thời gian ôn tập."
+    }
+]

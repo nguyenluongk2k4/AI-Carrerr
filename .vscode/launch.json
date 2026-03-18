@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "AI_Carreer API",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/AI_Carreer/run_api.py",
+      "cwd": "${workspaceFolder}/AI_Carreer",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/AI_Carreer/.env"
+    }
+  ]
+}

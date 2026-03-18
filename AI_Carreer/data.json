@@ -1,0 +1,452 @@
+[
+    {
+        "id": "GAP_FPT_SE_02",
+        "type": "gap_analysis",
+        "content": "Điểm học bạ cần đạt TOP 30% SchoolRank. Nút thắt lớn nhất thường là ngoại ngữ vì giáo trình 100% tiếng Anh. Nếu chưa có nền tảng tư duy logic và tiếng Anh cơ bản, bạn sẽ mất rất nhiều thời gian ở giai đoạn dự bị."
+    },
+    {
+        "id": "COST_FPT_SE_02",
+        "type": "cost_estimate",
+        "content": "Học phí chuyên ngành khoảng 28.7 triệu VNĐ/kỳ (tổng 9 kỳ là 258.3 triệu VNĐ). Nếu phải học từ mức tiếng Anh thấp nhất (6 mức), chi phí dự bị cộng thêm khoảng 68 triệu VNĐ. Tổng ngân sách 4 năm rơi vào 260 - 330 triệu VNĐ."
+    },
+    {
+        "id": "REVIEW_FPT_SE_02",
+        "type": "student_review",
+        "content": "Thực hành liên tục, code nhiều hơn lý thuyết. Sinh viên được đẩy đi thực tập thực tế (OJT) tại doanh nghiệp ngay từ năm 3. Áp lực deadline nhóm rất lớn, đòi hỏi kỹ năng làm việc tập thể cao."
+    },
+    {
+        "id": "ROADMAP_FPT_SE_02",
+        "type": "study_roadmap",
+        "content": "Lớp 12 cần duy trì học bạ để chắc suất TOP 30%. Từ tháng 1 đến tháng 4, luyện giải đề toán logic và viết văn nghị luận xã hội để thi học bổng. Có thể tự học trước HTML/CSS hoặc Python cơ bản để giảm ngợp khi nhập học."
+    },
+    {
+        "id": "SCHOLARSHIP_FPT_SE_01",
+        "type": "scholarship_info",
+        "content": "Kỳ thi học bổng tháng 5 hàng năm với các mức từ 10% đến 100% học phí toàn khóa. Hình thức thi gồm Toán logic và Viết luận."
+    },
+    {
+        "id": "FALLBACK_FPT_SE_01",
+        "type": "fallback_option",
+        "content": "Nếu trượt học bổng hoặc tài chính không đủ, có thể cân nhắc hệ Cao đẳng FPT Polytechnic (học phí rẻ hơn, thời gian học ngắn, tính thực hành vẫn cao)."
+    },
+    {
+        "id": "CAREER_FPT_SE_01",
+        "type": "career_salary",
+        "content": "Lập trình viên (Dev), Kỹ sư cầu nối (BrSE), Chuyên viên kiểm thử (Tester). Mức lương khởi điểm trung bình 10 - 15 triệu VNĐ/tháng."
+    },
+    {
+        "id": "CAMPUS_FPT_SE_01",
+        "type": "campus_life",
+        "content": "Cơ sở Hòa Lạc có không gian xanh, KTX hiện đại. Đặc sản là sinh viên phải học võ Vovinam và nhạc cụ dân tộc. Câu lạc bộ phong phú, môi trường tự do."
+    },
+    {
+        "id": "ADMISSION_FPT_SE_01",
+        "type": "admission_rules",
+        "content": "Ưu tiên xét tuyển bằng chứng nhận SchoolRank (TOP 30% học bạ hoặc điểm thi THPT). Cho phép nộp thẳng chứng chỉ ngoại ngữ quy đổi."
+    },
+    {
+        "id": "GAP_HUST_IT1_02",
+        "type": "gap_analysis",
+        "content": "Ngành lấy điểm cao bậc nhất cả nước. Trở ngại lớn nhất không phải là giải Toán nhanh, mà là tư duy đọc hiểu khoa học và xử lý số liệu. Điểm Toán dưới 9.0 là một báo động đỏ."
+    },
+    {
+        "id": "COST_HUST_IT1_02",
+        "type": "cost_estimate",
+        "content": "Hệ đại trà khoảng 26 - 30 triệu VNĐ/năm (104 - 120 triệu VNĐ/4 năm). Hệ Tiên tiến, Chất lượng cao từ 45 - 65 triệu VNĐ/năm (180 - 260 triệu VNĐ/4 năm)."
+    },
+    {
+        "id": "REVIEW_HUST_IT1_02",
+        "type": "student_review",
+        "content": "Môi trường học thuật đỉnh cao đi kèm áp lực đồng trang lứa (peer pressure) cực gắt. Đề thi khó, đòi hỏi khả năng tự nghiên cứu sâu. Sống sót qua 4 năm, tư duy thuật toán sẽ cực kỳ sắc bén."
+    },
+    {
+        "id": "ROADMAP_HUST_IT1_02",
+        "type": "study_roadmap",
+        "content": "Dồn 70% thời gian luyện cấu trúc bài thi Đánh giá tư duy (TSA). Rèn kỹ năng đọc các văn bản khoa học kỹ thuật và suy luận logic thay vì chỉ luyện mẹo trắc nghiệm THPT."
+    },
+    {
+        "id": "SCHOLARSHIP_HUST_IT1_01",
+        "type": "scholarship_info",
+        "content": "Học bổng Khuyến khích học tập xét theo từng kỳ (dành cho top GPA xuất sắc). Ngoài ra, sinh viên IT nhận được rất nhiều học bổng tài trợ trực tiếp từ các tập đoàn công nghệ."
+    },
+    {
+        "id": "FALLBACK_HUST_IT1_01",
+        "type": "fallback_option",
+        "content": "Ngành Kỹ thuật Máy tính (IT2) hoặc Toán Tin (MI1) của Bách Khoa, hoặc ngành CNTT tại Đại học Công nghệ (VNU-UET)."
+    },
+    {
+        "id": "CAREER_HUST_IT1_01",
+        "type": "career_salary",
+        "content": "Kỹ sư Trí tuệ nhân tạo, Nhà khoa học dữ liệu, Kỹ sư phần mềm. Lương khởi điểm rất cao, từ 12 - 20+ triệu VNĐ/tháng."
+    },
+    {
+        "id": "CAMPUS_HUST_IT1_01",
+        "type": "campus_life",
+        "content": "KTX Bách Khoa có chi phí cực rẻ nhưng cơ sở vật chất ở mức cơ bản. Thư viện Tạ Quang Bửu là 'thánh địa' ôn thi. Sinh viên nam chiếm đa số, phong trào thể thao mạnh."
+    },
+    {
+        "id": "ADMISSION_HUST_IT1_01",
+        "type": "admission_rules",
+        "content": "Chỉ tiêu chủ yếu dành cho điểm thi Đánh giá tư duy (TSA) và Xét tuyển tài năng (IELTS + giải HSG). Chỉ tiêu bằng điểm thi THPT vô cùng ít ỏi."
+    },
+    {
+        "id": "GAP_FTU_IB_02",
+        "type": "gap_analysis",
+        "content": "Nếu không có chứng chỉ IELTS 6.5+ hoặc giải Học sinh giỏi cấp Tỉnh, bạn gần như đánh mất 70% cơ hội. Điểm thi THPT thuần túy đòi hỏi mức trần (gần 29 điểm/3 môn), không có chỗ cho sai sót."
+    },
+    {
+        "id": "COST_FTU_IB_02",
+        "type": "cost_estimate",
+        "content": "Hệ đại trà 25 triệu VNĐ/năm. Hệ Chất lượng cao khoảng 45 triệu VNĐ/năm. Hệ Tiên tiến khoảng 70 triệu VNĐ/năm."
+    },
+    {
+        "id": "REVIEW_FTU_IB_02",
+        "type": "student_review",
+        "content": "Văn hóa chạy sự kiện (events) và tham gia CLB đôi khi còn áp đảo cả việc học trên lớp. Rất dễ bị ngợp nếu bạn là người hướng nội. Rèn luyện tốt kỹ năng thuyết trình, tiếng Anh và tư duy nhạy bén."
+    },
+    {
+        "id": "ROADMAP_FTU_IB_02",
+        "type": "study_roadmap",
+        "content": "Bắt buộc hoàn thành IELTS mục tiêu 7.0 trước tháng 12 năm lớp 12. Sau đó dồn toàn lực cày 3 môn khối A00, A01 hoặc D01 để điểm mỗi môn trên 9 nhằm đạt ngưỡng Xét tuyển kết hợp."
+    },
+    {
+        "id": "SCHOLARSHIP_FTU_IB_01",
+        "type": "scholarship_info",
+        "content": "Học bổng Khuyến khích học tập cạnh tranh khủng khiếp (GPA thường phải trên 3.8/4.0 và điểm rèn luyện xuất sắc)."
+    },
+    {
+        "id": "FALLBACK_FTU_IB_01",
+        "type": "fallback_option",
+        "content": "Ngành Kinh tế quốc tế (FTU), Học viện Ngoại giao (DAV), hoặc các chương trình liên kết quốc tế của chính FTU."
+    },
+    {
+        "id": "CAREER_FTU_IB_01",
+        "type": "career_salary",
+        "content": "Chuyên viên Xuất nhập khẩu, Quản trị viên tập sự (Management Trainee) tại các tập đoàn đa quốc gia MNCs, Tư vấn chiến lược. Lương khởi điểm 10 - 18 triệu VNĐ."
+    },
+    {
+        "id": "CAMPUS_FTU_IB_01",
+        "type": "campus_life",
+        "content": "Khuôn viên Chùa Láng khá nhỏ, KTX rất giới hạn nên sinh viên chủ yếu trọ ngoài. 'Đặc sản' là hàng chục câu lạc bộ quy mô hoạt động như các công ty thu nhỏ."
+    },
+    {
+        "id": "ADMISSION_FTU_IB_01",
+        "type": "admission_rules",
+        "content": "Các phương thức Xét tuyển sớm (kết hợp bạ + giải HSG, kết hợp IELTS + THPT) đóng vai trò chủ đạo."
+    },
+    {
+        "id": "GAP_NEU_LOGISTICS_02",
+        "type": "gap_analysis",
+        "content": "Tỷ lệ chọi của ngành này thuộc top đầu NEU. Thiếu ngoại ngữ đồng nghĩa với việc tụt hậu so với 60% thí sinh khác. Khả năng chịu áp lực và tư duy hệ thống là bắt buộc."
+    },
+    {
+        "id": "COST_NEU_LOGISTICS_02",
+        "type": "cost_estimate",
+        "content": "Hệ chuẩn duy trì 20 - 25 triệu VNĐ/năm (80 - 100 triệu VNĐ/khóa). Hệ học bằng tiếng Anh hoặc Tiên tiến rơi vào khoảng 40 - 65 triệu VNĐ/năm."
+    },
+    {
+        "id": "REVIEW_NEU_LOGISTICS_02",
+        "type": "student_review",
+        "content": "Học rất nặng về tối ưu hóa tuyến đường, luật thương mại quốc tế và các chứng từ hải quan (Incoterms). Tính thực tiễn cao nhưng khối lượng tài liệu đọc (đa phần bằng tiếng Anh) là khổng lồ."
+    },
+    {
+        "id": "ROADMAP_NEU_LOGISTICS_02",
+        "type": "study_roadmap",
+        "content": "Lấy chứng chỉ IELTS sớm. Tham gia thêm kỳ thi Đánh giá năng lực (HSA) của ĐHQG Hà Nội để mở rộng phổ điểm xét tuyển. Luyện giải đề thực chiến bấm giờ để không sai những câu cơ bản."
+    },
+    {
+        "id": "SCHOLARSHIP_NEU_LOGISTICS_01",
+        "type": "scholarship_info",
+        "content": "Các suất học bổng từ các doanh nghiệp Logistics lớn (như Gemadept, Viettel Post) thường xuyên rót về khoa, bên cạnh học bổng thường niên của trường."
+    },
+    {
+        "id": "FALLBACK_NEU_LOGISTICS_01",
+        "type": "fallback_option",
+        "content": "Ngành Thương mại điện tử (NEU) hoặc ngành Logistics tại Đại học Giao thông Vận tải (UTC) / Đại học Thương mại (TMU)."
+    },
+    {
+        "id": "CAREER_NEU_LOGISTICS_01",
+        "type": "career_salary",
+        "content": "Chuyên viên phân tích chuỗi cung ứng, Chuyên viên Mua hàng (Procurement), Điều phối viên vận tải. Lương khởi điểm từ 9 - 14 triệu VNĐ."
+    },
+    {
+        "id": "CAMPUS_NEU_LOGISTICS_01",
+        "type": "campus_life",
+        "content": "Nổi tiếng với Tòa nhà Thế kỷ (A2) check-in sang chảnh. KTX khang trang, sạch sẽ. Môi trường năng động với vô vàn sự kiện giải trí và học thuật quy mô lớn."
+    },
+    {
+        "id": "ADMISSION_NEU_LOGISTICS_01",
+        "type": "admission_rules",
+        "content": "Đẩy mạnh ưu tiên xét tuyển kết hợp. Bắt đầu thu hẹp đáng kể tỷ lệ xét điểm thi THPT truyền thống."
+    },
+    {
+        "id": "GAP_VNU_UET_IT_01",
+        "type": "gap_analysis",
+        "content": "Phải có nền tảng Toán, Lý vững chắc. Nếu bạn chỉ học lệch môn Tin mà hổng Toán/Lý, bạn sẽ gặp khó ở bài thi ĐGNL (HSA) của ĐHQGHN cũng như giai đoạn học đại cương."
+    },
+    {
+        "id": "COST_VNU_UET_IT_01",
+        "type": "cost_estimate",
+        "content": "Áp dụng cơ chế tự chủ, học phí hiện dao động từ 30 đến 35 triệu VNĐ/năm. Tổng ngân sách 4 năm khoảng 120 - 140 triệu VNĐ. Được xem là mức đầu tư 'Value for Money' cực tốt."
+    },
+    {
+        "id": "REVIEW_VNU_UET_IT_01",
+        "type": "student_review",
+        "content": "Chú trọng rất sâu vào nền tảng cốt lõi của Khoa học Máy tính (Core CS). Môi trường phù hợp với những bạn thích nghiên cứu sâu, ít xô bồ. Giảng viên rất gần gũi và sẵn sàng kéo sinh viên vào lab nghiên cứu sớm."
+    },
+    {
+        "id": "ROADMAP_VNU_UET_IT_01",
+        "type": "study_roadmap",
+        "content": "Ưu tiên hàng đầu là ôn thi kỳ thi ĐGNL (HSA) của ĐHQGHN. Dành thời gian cày sâu phần Tư duy định lượng và Khoa học tự nhiên. Lộ trình THPT cần tối đa hóa điểm Toán và Lý."
+    },
+    {
+        "id": "SCHOLARSHIP_VNU_UET_IT_01",
+        "type": "scholarship_info",
+        "content": "Rất nhiều học bổng từ đối tác công nghệ (Toshiba, Samsung) và quỹ học bổng Vừ A Dính. Dễ xin tài trợ nếu có báo cáo nghiên cứu khoa học tốt."
+    },
+    {
+        "id": "FALLBACK_VNU_UET_IT_01",
+        "type": "fallback_option",
+        "content": "Hệ thống thông tin (UET), Học viện Công nghệ Bưu chính Viễn thông (PTIT), hoặc IT hệ thường của Bách Khoa."
+    },
+    {
+        "id": "CAREER_VNU_UET_IT_01",
+        "type": "career_salary",
+        "content": "Lập trình viên hệ thống, Kỹ sư R&D, Nghiên cứu viên. Mức lương khởi điểm ổn định từ 10 - 15 triệu VNĐ/tháng."
+    },
+    {
+        "id": "CAMPUS_VNU_UET_IT_01",
+        "type": "campus_life",
+        "content": "Học chung khuôn viên Xuân Thủy với các trường thành viên của ĐHQG. Sinh viên có thể ở KTX Ngoại ngữ hoặc Mễ Trì. Nhịp sống sinh viên bớt hối hả hơn so với khối trường Kinh tế."
+    },
+    {
+        "id": "ADMISSION_VNU_UET_IT_01",
+        "type": "admission_rules",
+        "content": "Ưu ái lớn cho thí sinh có điểm HSA của ĐHQGHN cao. Vẫn duy trì xét tuyển theo khối A00, A01 truyền thống và xét tuyển thẳng HSG Quốc gia."
+    },
+    {
+        "id": "GAP_HMU_MED_01",
+        "type": "gap_analysis",
+        "content": "Ngành Y khoa tại Đại học Y Hà Nội đòi hỏi điểm số gần như tuyệt đối ở tổ hợp B00 (Toán, Hóa, Sinh). Rào cản không chỉ nằm ở trí tuệ mà còn ở sức bền thể chất và sự kiên trì. Nếu bạn không sẵn sàng cho 6 năm học nặng nề và nhiều năm trực viện sau đó, khoảng cách này là không thể san lấp."
+    },
+    {
+        "id": "COST_HMU_MED_01",
+        "type": "cost_estimate",
+        "content": "Học phí đã tăng mạnh theo lộ trình tự chủ, hiện tại ngành Y khoa rơi vào khoảng 55.2 triệu VNĐ/năm. Tổng chi phí học phí cho 6 năm đại học sẽ hơn 330 triệu VNĐ, chưa tính tiền mua giáo trình y khoa, dụng cụ thực hành và chi phí sinh hoạt đắt đỏ tại trung tâm Hà Nội."
+    },
+    {
+        "id": "REVIEW_HMU_MED_01",
+        "type": "student_review",
+        "content": "Môi trường học tập cực kỳ khắc nghiệt. Việc thi chạy trạm, thức trắng đêm ôn thi hay đi trực tại bệnh viện là chuyện thường ngày. Tuy nhiên, được học từ những giáo sư, bác sĩ đầu ngành và khoác lên mình chiếc áo blouse của Y Hà Nội là một niềm tự hào vô giá."
+    },
+    {
+        "id": "ROADMAP_HMU_MED_01",
+        "type": "study_roadmap",
+        "content": "Từ lớp 10 phải xác định cày sâu 3 môn Toán, Hóa, Sinh. Lớp 12 luyện đề vận dụng cao liên tục, đặt mục tiêu mỗi môn phải đạt 9.5+. Ngoài ra, hãy chuẩn bị chứng chỉ tiếng Anh quốc tế để có cơ hội học các chương trình tiên tiến hoặc tham khảo tài liệu nước ngoài."
+    },
+    {
+        "id": "SCHOLARSHIP_HMU_MED_01",
+        "type": "scholarship_info",
+        "content": "Trường có quỹ học bổng khuyến khích học tập cho sinh viên xuất sắc mỗi kỳ. Ngoài ra, có nhiều quỹ học bổng tư nhân và tổ chức y tế hỗ trợ sinh viên y khoa có hoàn cảnh khó khăn nhưng thành tích học tập tốt."
+    },
+    {
+        "id": "FALLBACK_HMU_MED_01",
+        "type": "fallback_option",
+        "content": "Nếu thiếu điểm, có thể xét tuyển vào Y học dự phòng, Răng Hàm Mặt, Điều dưỡng hoặc chọn Y khoa tại các trường địa phương có điểm chuẩn thấp hơn như Y Dược Thái Bình, Y Hải Phòng."
+    },
+    {
+        "id": "CAREER_HMU_MED_01",
+        "type": "career_salary",
+        "content": "Trở thành Bác sĩ đa khoa, có thể học tiếp lên Bác sĩ nội trú. Mức lương khởi điểm tại viện công có thể không cao (khoảng 7-10 triệu VNĐ) nhưng thu nhập sẽ tăng vọt sau khi có chứng chỉ hành nghề và làm tại các viện tư hoặc phòng khám."
+    },
+    {
+        "id": "CAMPUS_HMU_MED_01",
+        "type": "campus_life",
+        "content": "Khuôn viên trên phố Tôn Thất Tùng, đối diện Bệnh viện Đại học Y. KTX ưu tiên sinh viên ngoại tỉnh. Các câu lạc bộ học thuật và tình nguyện hiến máu hoạt động cực kỳ mạnh mẽ."
+    },
+    {
+        "id": "ADMISSION_HMU_MED_01",
+        "type": "admission_rules",
+        "content": "Phương thức xét tuyển chủ yếu dựa trên điểm thi THPT quốc gia khối B00. Có ưu tiên cộng điểm hoặc xét tuyển kết hợp đối với thí sinh có chứng chỉ ngoại ngữ quốc tế (IELTS/DELF)."
+    },
+    {
+        "id": "GAP_DAV_IR_01",
+        "type": "gap_analysis",
+        "content": "Quan hệ quốc tế tại Học viện Ngoại giao yêu cầu nền tảng ngoại ngữ xuất sắc và kiến thức xã hội, địa chính trị sâu rộng. Không có IELTS từ 7.0 trở lên, bạn sẽ rất vất vả để cạnh tranh một suất vào trường, cũng như theo kịp các tài liệu chuyên ngành."
+    },
+    {
+        "id": "COST_DAV_IR_01",
+        "type": "cost_estimate",
+        "content": "Học phí tại Học viện Ngoại giao dao động khoảng 4.4 triệu VNĐ/tháng (tương đương 44 triệu VNĐ/năm). Ngân sách 4 năm rơi vào khoảng 176 triệu VNĐ. Chi phí này khá cao so với mặt bằng chung các trường công lập khối xã hội."
+    },
+    {
+        "id": "REVIEW_DAV_IR_01",
+        "type": "student_review",
+        "content": "Môi trường quy tụ 'con nhà người ta', sinh viên vô cùng tự tin và giỏi ngoại ngữ. Bạn sẽ có nhiều cơ hội làm tình nguyện viên, phiên dịch cho các hội nghị quốc tế cấp cao. Tuy nhiên, áp lực đồng trang lứa là không hề nhỏ."
+    },
+    {
+        "id": "ROADMAP_DAV_IR_01",
+        "type": "study_roadmap",
+        "content": "Bắt buộc hoàn thành chứng chỉ IELTS mục tiêu 7.0 - 7.5 từ năm lớp 11. Duy trì điểm GPA THPT môn Toán, Văn, Anh trên 9.0 để tăng cơ hội xét tuyển kết hợp. Trau dồi thêm kỹ năng tranh biện (debate)."
+    },
+    {
+        "id": "SCHOLARSHIP_DAV_IR_01",
+        "type": "scholarship_info",
+        "content": "Có cơ hội tiếp cận nhiều chương trình trao đổi sinh viên, học bổng ngắn hạn từ các đại sứ quán và tổ chức quốc tế tại Việt Nam, đặc biệt nếu bạn có thành tích hoạt động ngoại khóa nổi bật."
+    },
+    {
+        "id": "FALLBACK_DAV_IR_01",
+        "type": "fallback_option",
+        "content": "Ngành Truyền thông quốc tế, Ngôn ngữ Anh tại DAV hoặc các ngành tương đương tại Đại học KHXH&NV, Học viện Báo chí và Tuyên truyền."
+    },
+    {
+        "id": "CAREER_DAV_IR_01",
+        "type": "career_salary",
+        "content": "Cán bộ ngoại giao, Chuyên viên truyền thông, Điều phối viên cho các tổ chức phi chính phủ (NGO) hoặc tập đoàn đa quốc gia. Lương khởi điểm trung bình 10 - 15 triệu VNĐ/tháng."
+    },
+    {
+        "id": "CAMPUS_DAV_IR_01",
+        "type": "campus_life",
+        "content": "Tọa lạc tại 'quận đại học' Chùa Láng, cơ sở vật chất mới được xây dựng lại cực kỳ khang trang, hiện đại. Campus không quá rộng nhưng rất có gu và mang không khí quốc tế."
+    },
+    {
+        "id": "ADMISSION_DAV_IR_01",
+        "type": "admission_rules",
+        "content": "Trường có xu hướng ưu tiên xét tuyển sớm dựa trên chứng chỉ quốc tế (IELTS/TOEFL) kết hợp với học bạ THPT xuất sắc. Tỷ lệ xét thuần điểm thi THPT giảm dần."
+    },
+    {
+        "id": "GAP_PTIT_SEC_01",
+        "type": "gap_analysis",
+        "content": "An toàn thông tin tại Học viện Công nghệ Bưu chính Viễn thông yêu cầu tư duy logic nhạy bén và đam mê phá vỡ/bảo mật hệ thống. Nếu bạn chỉ thích viết code tạo ra ứng dụng thông thường, bạn có thể bị nản bởi các kiến thức về mã hóa, lỗ hổng mạng."
+    },
+    {
+        "id": "COST_PTIT_SEC_01",
+        "type": "cost_estimate",
+        "content": "Học phí PTIT ở mức trung bình khá, dao động từ 25 - 29 triệu VNĐ/năm cho hệ đại trà. Tổng chi phí 4.5 năm học khoảng 110 - 130 triệu VNĐ, một mức giá hợp lý cho nhóm ngành công nghệ."
+    },
+    {
+        "id": "REVIEW_PTIT_SEC_01",
+        "type": "student_review",
+        "content": "Cơ sở vật chất ổn định, thầy cô thực tế vì trường trực thuộc Bộ TT&TT. Sinh viên PTIT rất mạnh về thực chiến, thường xuyên lập team đi thi đấu và giành giải cao tại các cuộc thi bắt lỗi bảo mật (CTF) quốc gia và quốc tế."
+    },
+    {
+        "id": "ROADMAP_PTIT_SEC_01",
+        "type": "study_roadmap",
+        "content": "Tập trung ôn thi điểm cao khối A00, A01. Ngay từ lớp 12, có thể tham gia các diễn đàn bảo mật cơ bản hoặc thử sức với các bài tập CTF cấp độ người mới (Newbie) trên mạng để làm quen với tư duy hacker mũ trắng."
+    },
+    {
+        "id": "SCHOLARSHIP_PTIT_SEC_01",
+        "type": "scholarship_info",
+        "content": "Học bổng khuyến khích từ trường và đặc biệt là sự tài trợ từ các tập đoàn viễn thông lớn như VNPT, Viettel, FPT cho những sinh viên năm cuối có đồ án xuất sắc."
+    },
+    {
+        "id": "FALLBACK_PTIT_SEC_01",
+        "type": "fallback_option",
+        "content": "Ngành Mạng máy tính và Truyền thông dữ liệu (PTIT), hoặc ngành An toàn thông tin tại Học viện Kỹ thuật Mật mã."
+    },
+    {
+        "id": "CAREER_PTIT_SEC_01",
+        "type": "career_salary",
+        "content": "Chuyên viên an ninh mạng, Kỹ sư bảo mật (Pentester), Giám sát an toàn thông tin (SOC). Cơn khát nhân lực ngành này đang rất lớn, lương khởi điểm từ 15 - 25 triệu VNĐ/tháng."
+    },
+    {
+        "id": "CAMPUS_PTIT_SEC_01",
+        "type": "campus_life",
+        "content": "Cơ sở Hà Đông rộng rãi, thoáng mát, KTX đáp ứng tốt nhu cầu sinh viên. Phong trào văn nghệ, CLB không quá ồn ào nhưng các nhóm học thuật thì hoạt động cực kỳ sôi nổi."
+    },
+    {
+        "id": "ADMISSION_PTIT_SEC_01",
+        "type": "admission_rules",
+        "content": "Trường áp dụng kết hợp nhiều phương thức: Xét điểm thi THPT khối A00, A01; Xét điểm thi ĐGNL (HSA); và Xét tuyển thẳng đối với HSG, thí sinh có chứng chỉ IELTS."
+    },
+    {
+        "id": "GAP_UEH_MKT_01",
+        "type": "gap_analysis",
+        "content": "Ngành Marketing tại Đại học Kinh tế TP.HCM (UEH) yêu cầu sự linh hoạt, sáng tạo và tư duy nắm bắt xu hướng (trend) nhanh nhạy. Nếu bạn là người quá khuôn mẫu, ngại giao tiếp và sợ áp lực số liệu, đây không phải là ngành dành cho bạn."
+    },
+    {
+        "id": "COST_UEH_MKT_01",
+        "type": "cost_estimate",
+        "content": "Học phí hệ chuẩn của UEH hiện tại khoảng 34 triệu VNĐ/năm. Các chương trình học bằng tiếng Anh hoặc bán thời gian bằng tiếng Anh sẽ cao hơn, từ 45 - 50 triệu VNĐ/năm. Tổng ngân sách khoảng 140 - 200 triệu VNĐ/khóa."
+    },
+    {
+        "id": "REVIEW_UEH_MKT_01",
+        "type": "student_review",
+        "content": "Môi trường học tập cực kỳ thực chiến, chạy deadline chạy dự án ngập đầu. Các CLB chuyên môn như Margroup là nơi rèn luyện kỹ năng đỉnh cao. Sinh viên UEH nổi tiếng năng động, ra trường bắt nhịp công việc cực nhanh."
+    },
+    {
+        "id": "ROADMAP_UEH_MKT_01",
+        "type": "study_roadmap",
+        "content": "Thiếu IELTS là một bất lợi lớn. Cần hoàn thành sớm chứng chỉ tiếng Anh, đồng thời giữ điểm GPA 3 năm cấp 3 thật đẹp để xét học bạ. Nắm chắc kiến thức khối A00, A01, D01 và luyện thi kỳ thi ĐGNL của ĐHQG-HCM."
+    },
+    {
+        "id": "SCHOLARSHIP_UEH_MKT_01",
+        "type": "scholarship_info",
+        "content": "UEH có mạng lưới đối tác doanh nghiệp khổng lồ. Rất nhiều học bổng từ các tập đoàn FMCG, ngân hàng dành cho sinh viên có thành tích học tập và hoạt động ngoại khóa xuất sắc."
+    },
+    {
+        "id": "FALLBACK_UEH_MKT_01",
+        "type": "fallback_option",
+        "content": "Quản trị kinh doanh, Thương mại điện tử (UEH) hoặc Marketing tại Đại học Tài chính - Marketing (UFM), Đại học Mở TP.HCM."
+    },
+    {
+        "id": "CAREER_UEH_MKT_01",
+        "type": "career_salary",
+        "content": "Chuyên viên Marketing (Digital/Trade Marketing), Quản lý thương hiệu (Brand Manager), Copywriter. Lương khởi điểm từ 10 - 18 triệu VNĐ, thăng tiến nhanh theo năng lực."
+    },
+    {
+        "id": "CAMPUS_UEH_MKT_01",
+        "type": "campus_life",
+        "content": "UEH có nhiều cơ sở trải khắp TP.HCM. Cơ sở vật chất hiện đại, đặc biệt là cơ sở B (Quận 10) và cơ sở mới ở Nam thành phố (Bình Chánh). Văn hóa sinh viên cởi mở, thực dụng và hướng tới hiệu quả."
+    },
+    {
+        "id": "ADMISSION_UEH_MKT_01",
+        "type": "admission_rules",
+        "content": "Ưu tiên phương thức xét tuyển Học sinh Giỏi, xét tuyển bằng chứng chỉ tiếng Anh quốc tế quy đổi và điểm thi Đánh giá năng lực do ĐHQG-HCM tổ chức."
+    },
+    {
+        "id": "GAP_HAU_ARCH_01",
+        "type": "gap_analysis",
+        "content": "Kiến trúc tại Đại học Kiến trúc Hà Nội (HAU) bắt buộc phải có năng khiếu vẽ mỹ thuật (Khối V00). Nếu bạn có tư duy hình học không gian tốt nhưng không rèn luyện kỹ năng vẽ tĩnh vật, đầu tượng từ sớm, cửa vào trường là con số 0."
+    },
+    {
+        "id": "COST_HAU_ARCH_01",
+        "type": "cost_estimate",
+        "content": "Học phí trường khá mềm, khoảng 18 - 20 triệu VNĐ/năm. Tuy nhiên, 'chi phí chìm' rất tốn kém: mua họa cụ, màu vẽ, cắt mô hình, in ấn bản vẽ đồ án định kỳ. Cần chuẩn bị thêm ngân sách khoảng 10-15 triệu/năm cho vật liệu học tập."
+    },
+    {
+        "id": "REVIEW_HAU_ARCH_01",
+        "type": "student_review",
+        "content": "Đặc sản của sinh viên HAU là 'chạy đồ án' và thức xuyên đêm (cú đêm). Môi trường mang đậm chất nghệ sĩ, bụi bặm nhưng cũng đầy áp lực sáng tạo. Thầy cô thường chấm bài khắt khe để rèn tư duy thẩm mỹ."
+    },
+    {
+        "id": "ROADMAP_HAU_ARCH_01",
+        "type": "study_roadmap",
+        "content": "Bắt buộc phải đi học vẽ tại các lò luyện thi từ năm lớp 10 hoặc 11. Phân bổ thời gian: 50% luyện Vẽ mỹ thuật, 50% ôn Toán, Lý (hoặc Văn) để gánh điểm. Không được để các môn văn hóa liệt hoặc điểm quá thấp."
+    },
+    {
+        "id": "SCHOLARSHIP_HAU_ARCH_01",
+        "type": "scholarship_info",
+        "content": "Có các học bổng từ hội cựu sinh viên thành đạt, hội kiến trúc sư, và các công ty chuyên về vật liệu xây dựng, thiết kế nội thất trao tặng hàng năm."
+    },
+    {
+        "id": "FALLBACK_HAU_ARCH_01",
+        "type": "fallback_option",
+        "content": "Ngành Thiết kế nội thất, Quy hoạch vùng và đô thị (HAU), hoặc Khoa Kiến trúc của Đại học Xây dựng Hà Nội (HUCE)."
+    },
+    {
+        "id": "CAREER_HAU_ARCH_01",
+        "type": "career_salary",
+        "content": "Kiến trúc sư công trình, Thiết kế nội/ngoại thất, Diễn họa 3D. Lương khởi điểm khoảng 10 - 15 triệu VNĐ, có cơ hội nhận dự án riêng (freelance) sớm để tăng thu nhập."
+    },
+    {
+        "id": "CAMPUS_HAU_ARCH_01",
+        "type": "campus_life",
+        "content": "Khuôn viên nằm trên đường Nguyễn Trãi, Thanh Xuân. Trường có kiến trúc độc đáo, xưởng vẽ rộng. Phong cách thời trang của sinh viên Kiến trúc cực kỳ cá tính và khác biệt."
+    },
+    {
+        "id": "ADMISSION_HAU_ARCH_01",
+        "type": "admission_rules",
+        "content": "Xét tuyển dựa trên tổng điểm thi môn văn hóa (Toán, Lý hoặc Toán, Văn) từ kỳ thi THPT kết hợp với điểm thi môn năng khiếu (Vẽ mỹ thuật) do chính HAU tổ chức."
+    }
+]
