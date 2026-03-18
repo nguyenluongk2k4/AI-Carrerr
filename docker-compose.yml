@@ -6,6 +6,8 @@ services:
     build:
       context: ./AI_Carreer
       dockerfile: Dockerfile
+      cache_from:
+        - ai_career_backend:latest
     container_name: ai_career_backend
     restart: unless-stopped
     ports:
@@ -38,6 +40,8 @@ services:
     build:
       context: ./AI_Carreer_FE
       dockerfile: Dockerfile
+      cache_from:
+        - ai_career_frontend:latest
     container_name: ai_career_frontend
     restart: unless-stopped
     ports:
