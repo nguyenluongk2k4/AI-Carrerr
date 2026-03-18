@@ -32,5 +32,5 @@ EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
     CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/docs')" || exit 1
 
-# Check and build ChromaDB then start API
-CMD ["sh", "-c", "python embed.py && echo 'Starting FastAPI...' && python run_api.py"]
+# Check if ChromaDB exists, if not build it, then start API
+CMD ["sh", "-c", "if [ ! -f \"$CHROMA_DB_PATH/chroma.sqlite3\" ]; then echo 'ChromaDB not found, building...' && python embed.py; else echo 'ChromaDB exists, skipping.'; fi && python run_api.py"]
