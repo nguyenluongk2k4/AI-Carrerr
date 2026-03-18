@@ -120,23 +120,20 @@ def save_to_chromadb(chunks: list[Document], embeddings: HuggingFaceEmbeddings) 
     """Embed và lưu toàn bộ chunks vào ChromaDB persistent."""
     print(f"[4/4] Đang embed và lưu vào ChromaDB tại '{CHROMA_DB_PATH}' ...")
 
-    # Xóa DB cũ nếu có
+    # Create directory if it doesn't exist
+    os.makedirs(CHROMA_DB_PATH, exist_ok=True)
+    
+    # Try to delete old DB if exists (skip if mounted volume)
     if os.path.exists(CHROMA_DB_PATH):
         import shutil
         try:
             shutil.rmtree(CHROMA_DB_PATH)
             print(f"       → Đã xóa ChromaDB cũ.")
-        except PermissionError:
-            print("=" * 55)
-            print("[LỖI] Không thể xóa ChromaDB cũ vì file đang được sử dụng.")
-            print("👉 Nguyên nhân: Có thể `chatbot.py` đang chạy ở một terminal khác.")
-            print("👉 Giải pháp: Hãy tìm và tắt `chatbot.py` (nhấn Ctrl+C) rồi chạy lại lệnh này.")
-            print("=" * 55)
-            sys.exit(1)
-        except Exception as e:
-            print(f"[LỖI] Không thể xóa ChromaDB cũ: {e}")
-            sys.exit(1)
-
+        except (PermissionError, OSError) as e:
+            # Skip deletion if volume is mounted (Docker case)
+            print(f"       → Skipping deletion (mounted volume): {e}")
+            pass
+    
     vectorstore = Chroma.from_documents(
         documents=chunks,
         embedding=embeddings,
