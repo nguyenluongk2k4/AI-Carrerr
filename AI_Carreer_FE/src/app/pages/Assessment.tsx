@@ -70,6 +70,23 @@ export function Assessment() {
     }));
   }, [currentStep, answers, multiAnswers, scoresSemester1, scoresSemester2, selectedCombo]);
 
+  // Scroll to first question when step changes
+  useEffect(() => {
+    // Force scroll after step change
+    const scrollTimeout = setTimeout(() => {
+      const element = document.getElementById(`step-${currentStep}`);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        console.log('Scrolled to step', currentStep);
+      } else {
+        console.log('Step element not found:', currentStep);
+        // Fallback to top of page
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 100);
+    return () => clearTimeout(scrollTimeout);
+  }, [currentStep]);
+
   const numericScores = useMemo(() => {
     const result: Record<string, number> = {};
     for (const subject of SUBJECTS) {
@@ -87,8 +104,6 @@ export function Assessment() {
   const handleNext = () => {
     if (currentStep < steps.length) {
       setCurrentStep(currentStep + 1);
-      // Scroll to top when moving to next step
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       const summary = [
         ...ALL_QUESTIONS.map((item) => {
@@ -314,7 +329,7 @@ export function Assessment() {
           >
             {/* Step 1: Part 1 - Q1 to Q5 */}
             {currentStep === 1 && (
-              <div className="space-y-8">
+              <div id="step-1" className="space-y-8">
                 {PART1_QUESTIONS.map((q) => (
                   <div key={q.id}>{renderQuizQuestion(q.id)}</div>
                 ))}
@@ -323,7 +338,7 @@ export function Assessment() {
 
             {/* Step 2: Part 2 - Q6 to Q11 */}
             {currentStep === 2 && (
-              <div className="space-y-8">
+              <div id="step-2" className="space-y-8">
                 {PART2_QUESTIONS.map((q) => (
                   <div key={q.id}>{renderQuizQuestion(q.id)}</div>
                 ))}
@@ -332,7 +347,7 @@ export function Assessment() {
 
             {/* Step 3: Scores */}
             {currentStep === 3 && (
-              <div>
+              <div id="step-3">
                 <h2 className="text-2xl mb-2">Tổng điểm 2 kỳ gần nhất</h2>
                 <p className="text-gray-600 mb-6">
                   Nhập điểm Học kỳ 1 và Học kỳ 2 cho từng môn (thang 0-10).
@@ -379,7 +394,7 @@ export function Assessment() {
 
             {/* Step 4: Combo */}
             {currentStep === 4 && (
-              <div>
+              <div id="step-4">
                 <h2 className="text-2xl mb-2">Tổ hợp môn phù hợp</h2>
                 <p className="text-gray-600 mb-6">
                   Dựa trên điểm 2 kỳ, hệ thống gợi ý tổ hợp môn nên ưu tiên.
@@ -413,7 +428,7 @@ export function Assessment() {
 
             {/* Step 5: Part 5 - Q12 to Q21 */}
             {currentStep === 5 && (
-              <div className="space-y-8">
+              <div id="step-5" className="space-y-8">
                 {PART5_QUESTIONS.map((q) => (
                   <div key={q.id}>{renderQuizQuestion(q.id)}</div>
                 ))}
