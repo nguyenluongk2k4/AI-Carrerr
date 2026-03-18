@@ -198,7 +198,7 @@ export function Assessment() {
   const renderQuizQuestion = (questionId: number) => {
     const question = ALL_QUESTIONS.find((item) => item.id === questionId);
     if (!question) return null;
-    
+
     // Handle multi-select for Q19
     if (question.isMultiSelect) {
       const currentAnswers = multiAnswers[questionId] || [];
@@ -227,7 +227,6 @@ export function Assessment() {
                       : "bg-gray-50 border-transparent hover:bg-gray-100"
                   }`}
                 >
-                  <div className="text-sm font-semibold mb-1">{option.key}</div>
                   <div className="text-sm">{option.label}</div>
                 </button>
               );
@@ -239,7 +238,7 @@ export function Assessment() {
         </div>
       );
     }
-    
+
     // Single select
     const currentAnswer = answers[questionId];
     return (
@@ -262,7 +261,6 @@ export function Assessment() {
                   : "bg-gray-50 border-transparent hover:bg-gray-100"
               }`}
             >
-              <div className="text-sm font-semibold mb-1">{option.key}</div>
               <div className="text-sm">{option.label}</div>
             </button>
           ))}
