@@ -20,6 +20,9 @@ import { DiscResult } from "./pages/DiscResult";
 import { AbilityTest } from "./pages/AbilityTest";
 import { AbilityRunnerFixed } from "./pages/AbilityRunnerFixed";
 import { Profile } from "./pages/Profile";
+import { CareerProcess } from "./pages/CareerProcess";
+import { UsageGuide } from "./pages/UsageGuide";
+import { Faq } from "./pages/Faq";
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +36,9 @@ export const router = createBrowserRouter([
       { path: "premium", Component: Premium },
       { path: "universities", Component: Universities },
       { path: "roadmap", Component: Roadmap },
+      { path: "process", Component: CareerProcess },
+      { path: "guide", Component: UsageGuide },
+      { path: "faq", Component: Faq },
       { path: "mbti-test", Component: MbtiTest },
       { path: "disc-test", Component: DiscTest },
       { path: "intel-test", Component: IntelTest },
