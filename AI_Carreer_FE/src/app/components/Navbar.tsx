@@ -30,37 +30,37 @@ const navItems: NavItemConfig[] = [
       { label: "Kiểm tra tính cách D.I.S.C", to: "/disc-test" },
     ],
   },
-  { label: "Quy trình hướng nghiệp" },
-  {
-    label: "Tài liệu",
-    items: [
-      "Tìm Hiểu Ngành Nghề",
-      "Người nổi tiếng + Gương sáng học sinh",
-      "Thông tin doanh nghiệp",
-      "Hệ thống các đơn vị đào tạo",
-      "Giới thiệu các nhóm tính cách",
-      "Giới thiệu các loại hình thông minh",
-      "Xu hướng phát triển ngành nghề theo thời kỳ 4.0",
-    ],
-  },
-  {
-    label: "Khóa học",
-    items: [
-      "Định Vị Bản Thân",
-      "Hướng Nghiệp",
-      "Thuyết Trình Đỉnh Cao",
-      "Teamwork Đỉnh Cao",
-      "Làm Chủ Cảm Xúc",
-      "Quản Lý Thời Gian",
-      "Khóa học tổng hợp",
-    ],
-  },
-  { label: "Tư liệu môn học" },
-  { label: "Đăng ký tư vấn" },
-  {
-    label: "Tin tức",
-    items: ["Tin hoạt động", "Hình ảnh", "Video"],
-  },
+  { label: "Các trường đại học", to:"/universities" },
+  // {
+  //   label: "Tài liệu",
+  //   items: [
+  //     "Tìm Hiểu Ngành Nghề",
+  //     "Người nổi tiếng + Gương sáng học sinh",
+  //     "Thông tin doanh nghiệp",
+  //     "Hệ thống các đơn vị đào tạo",
+  //     "Giới thiệu các nhóm tính cách",
+  //     "Giới thiệu các loại hình thông minh",
+  //     "Xu hướng phát triển ngành nghề theo thời kỳ 4.0",
+  //   ],
+  // },
+  // {
+  //   label: "Khóa học",
+  //   items: [
+  //     "Định Vị Bản Thân",
+  //     "Hướng Nghiệp",
+  //     "Thuyết Trình Đỉnh Cao",
+  //     "Teamwork Đỉnh Cao",
+  //     "Làm Chủ Cảm Xúc",
+  //     "Quản Lý Thời Gian",
+  //     "Khóa học tổng hợp",
+  //   ],
+  // },
+  // { label: "Tư liệu môn học" },
+  // { label: "Đăng ký tư vấn" },
+  // {
+  //   label: "Tin tức",
+  //   items: ["Tin hoạt động", "Hình ảnh", "Video"],
+  // },
   // {
   //   label: "Hỗ trợ",
   //   items: ["Hướng dẫn sử dụng", "Câu hỏi thường gặp", "Gói cước sử dụng", "Đăng ký tư vấn", "Học bổng Spro+"],
@@ -144,11 +144,11 @@ export function Navbar() {
             <div className="flex flex-1 flex-col gap-1 text-sm text-slate-700">
               <div className="flex items-center gap-2 text-orange-600 font-semibold">
                 <Phone className="size-4" />
-                <span>0963.595.319</span>
+                <span>0123.456.789</span>
               </div>
               <div className="flex items-center gap-2 text-slate-600">
                 <Mail className="size-4" />
-                <span>hotro@novai.vn</span>
+                <span>hotro.hanhtrangso@gmail.com</span>
               </div>
             </div>
 

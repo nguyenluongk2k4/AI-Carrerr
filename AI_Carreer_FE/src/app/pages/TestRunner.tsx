@@ -43,7 +43,7 @@ export function TestRunner() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [timeLeft, setTimeLeft] = useState(40 * 60);
 
-  const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
+  const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "/api";
 
   const title = useMemo(() => {
     const key = (testType || "").toLowerCase();
@@ -75,7 +75,7 @@ export function TestRunner() {
       try {
         setLoading(true);
         setError("");
-        const res = await fetch(`http://localhost:8000/tests/${testType}`, {
+        const res = await fetch(`${API_BASE}/tests/${testType}`, {
           signal: controller.signal,
         });
         if (!res.ok) {

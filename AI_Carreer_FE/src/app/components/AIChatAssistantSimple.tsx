@@ -3,7 +3,7 @@ import { X, Send } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useAuth } from "../utils/useAuth";
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
+const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "/api";
 
 type Message = {
   sender: "user" | "ai";

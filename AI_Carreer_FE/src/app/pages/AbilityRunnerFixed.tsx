@@ -4,7 +4,7 @@ import { ResultsFooterCta } from "../components/ResultsFooterCta";
 import { useAuth } from "../utils/useAuth";
 import { saveResult } from "../utils/saveResult";
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
+const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "/api";
 
 const SUBJECT_LABELS: Record<string, string> = {
   dialy: "Địa lý",

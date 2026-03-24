@@ -24,7 +24,7 @@ type AssessmentMatch = {
   evidence: string[];
 };
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
+const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "/api";
 
 const LoadingIndicator = ({ label = "Đang tải dữ liệu..." }: { label?: string }) => (
   <div className="flex items-center gap-3 text-gray-600">

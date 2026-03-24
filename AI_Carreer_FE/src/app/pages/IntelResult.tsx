@@ -23,7 +23,7 @@ export function IntelResult() {
   const [desc, setDesc] = useState("");
   const [descStatus, setDescStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
   const [saveStatus, setSaveStatus] = useState<"idle" | "saving" | "saved" | "error">("idle");
-  const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
+  const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "/api";
 
   const formatDesc = (text: string) => {
     const cleaned = text

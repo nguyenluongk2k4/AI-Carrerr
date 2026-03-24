@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
+const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "/api";
 
 export async function saveResult(username: string, testType: string, result: unknown) {
   const response = await fetch(`${API_BASE}/results/save`, {

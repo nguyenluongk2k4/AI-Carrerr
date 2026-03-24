@@ -4,7 +4,7 @@ import { useAuth } from "../utils/useAuth";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
+const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "/api";
 
 type ResultsPayload = {
   username: string;

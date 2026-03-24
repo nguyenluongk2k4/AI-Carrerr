@@ -5,7 +5,7 @@ import { useAuth } from "../utils/useAuth";
 import { ResultsDetailModalTrigger, ResultsFooterCta } from "../components/ResultsFooterCta";
 import { saveResult } from "../utils/saveResult";
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
+const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "/api";
 
 type MbtiAxisScore = {
   axis: string;
