@@ -92,7 +92,7 @@ const slashNavItems: NavItemConfig[] = [
     items: [
       { label: "Hướng dẫn sử dụng", to: "/guide" },
       { label: "Câu hỏi thường gặp", to: "/faq" },
-      "Gói cước sử dụng",
+      { label: "Gói cước sử dụng", to: "/pricing" },
     ],
   },
 ];

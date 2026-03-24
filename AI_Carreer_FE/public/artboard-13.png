@@ -1,0 +1,1351 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>NOVAEDU - GIÁO DỤC ĐẾN TỪ TƯƠNG LAI</title>
+    <meta name="description" content="NovaEdu là tổ chức giáo dục cung cấp giải pháp về nhân sự, quản trị và chiến lược. NovaEdu giúp học viên rút ngắn được đường đến thành công từ 5 - 7 năm">
+    <meta name="author" content="NOVAEDU - GIÁO DỤC ĐẾN TỪ TƯƠNG LAI">
+    <meta name="keywords" content="Novaedu, Giới thiệu, Giáo dục">
+    <link rel="canonical" href="https://novaedu.vn/"/>
+    <meta property="og:locale" content="vi_VN"/>
+    <meta property="og:url" content="https://novaedu.vn/" />
+    <meta property="og:title" content="NOVAEDU - GIÁO DỤC ĐẾN TỪ TƯƠNG LAI" />
+    <meta property="og:site_name" content="NOVAEDU - GIÁO DỤC ĐẾN TỪ TƯƠNG LAI" />
+    <meta property="og:description" content="NovaEdu là tổ chức giáo dục cung cấp giải pháp về nhân sự, quản trị và chiến lược. NovaEdu giúp học viên rút ngắn được đường đến thành công từ 5 - 7 năm" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://novaedu.vn/uploads/anh-mac-dinh.jpg" />
+    <meta property="og:image:secure_url" content="https://novaedu.vn/uploads/anh-mac-dinh.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <!-- Twitter Card để nền tảng khác cũng theo -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="NOVAEDU - GIÁO DỤC ĐẾN TỪ TƯƠNG LAI"/>
+    <meta name="twitter:description" content="NovaEdu là tổ chức giáo dục cung cấp giải pháp về nhân sự, quản trị và chiến lược. NovaEdu giúp học viên rút ngắn được đường đến thành công từ 5 - 7 năm"/>
+    <meta name="twitter:image" content="https://novaedu.vn/uploads/anh-mac-dinh.jpg"/>
+    <!-- (Tuỳ chọn, legacy) -->
+    <link rel="image_src" href="https://novaedu.vn/uploads/anh-mac-dinh.jpg"/>
+    
+    <meta name="zalo-platform-site-verification" content="JF2S2CVK1bCmrAy8jCTqK4J4e7-eid8cEJKn" />
+    <link rel="shortcut icon" href="/uploads/favicon.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://novaedu.vn/frontend/asset/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="https://novaedu.vn/frontend/asset/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://novaedu.vn/frontend/asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://novaedu.vn/frontend/asset/css/style.css">
+    <link rel="stylesheet" href="https://novaedu.vn/frontend/asset/css/linh.css">
+    <link rel="stylesheet" href="https://novaedu.vn/frontend/asset/css/dung.css">
+    
+    <link rel="stylesheet" href="https://novaedu.vn/frontend/asset/css/animation.css">
+    <link rel="stylesheet" href="https://novaedu.vn/frontend/asset/css/home-banner.css">
+    <link rel="stylesheet" href="https://novaedu.vn/frontend/asset/js/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://novaedu.vn/frontend/asset/js/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://novaedu.vn/frontend/asset/js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://novaedu.vn/frontend/asset/js/jquery-3.3.1.min.js"></script>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0&appId=1671691146256680" nonce="PnJ9WG7H">
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-N69F5H7D');
+    </script>
+    <!-- End Google Tag Manager -->
+    <style>
+        @media  only screen and (max-width: 600px) {
+            .container-menu-brand .site-navbar-top {
+               height: 0;
+        padding: 0;
+    }
+    .container-menu-brand .site-navbar-top2 {
+        height: auto;
+    }
+        .menu-brand2 {
+        display: block;
+    }
+    .site-navbar-top {
+        padding:5px;
+    }
+    .menu-brand{
+        padding:0px !important
+    }
+    .menu-brand ul li {
+    padding: 0 3px;
+    width: 23%;
+    }
+    .menu-brand p {
+        text-align: start;
+        padding: 0 3px;
+    }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N69F5H7D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- -------------------------------menu--------------------------- -->
+    <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+</div>
+<div class="site-navbar-wrap container-menu-brand">
+    
+    <div class="site-navbar site-navbar-target js-sticky-header main-menu-page ">
+        <div class="container">
+            <div class="row align-items-center ">
+                <div class="col-2 logo-nova">
+                  <a href="https://novaedu.vn">
+                        <img src="https://novaedu.vn/frontend/asset/images/logo_ver_new.png" alt="">
+                </a>
+                </div>
+                <div class="col-9">
+                    <nav class="site-navigation text-right" role="navigation">
+                        <div class="container">
+                            <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
+                                    class="site-menu-toggle js-menu-toggle " style="color: black;"><span
+                                        class="icon-menu h3"></span></a>
+                                    </div>
+                            <ul class="site-menu main-menu js-clone-nav d-none d-lg-block"> 
+                                <li class="active"><a href="https://novaedu.vn" class="nav-link"><i class="fa-solid fa-house" style="font-size: 18px;"></i></a></li>                              
+                                 <li><a href="https://novaedu.vn/gioi-thieu" class="nav-link">GIỚI THIỆU</a></li>
+                                <li class="has-children">
+                                    <a href="https://novaedu.vn/hoptac" class="nav-link">HỢP TÁC</a>
+                                    <ul class="dropdown arrow-top"> 
+                                         <li><a href="https://novaedu.vn/hoptac" class="nav-link">Hợp tác cùng NovaEdu</a></li>
+                                          <li><a href="https://hoptac.novateen.vn" class="nav-link">Hợp tác cùng NovaTeen</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li><a href="https://novaedu.vn/giang-vien" class="nav-link">CHUYÊN GIA</a></li>
+                                <li class="has-children">
+                                    
+                                    <a href="#" class="nav-link">TIN TỨC</a>
+                                    <ul class="dropdown arrow-top"> 
+                                                                                <li><a href="https://novaedu.vn/tin-hoat-dong" class="nav-link">Tin hoạt động</a></li>
+                                                                                <li><a href="https://novaedu.vn/tin-tuyen-dung" class="nav-link">Tin tuyển dụng</a></li>
+                                                                            </ul>
+                                </li>
+                                <li><a href="https://novabook.vn/" class="nav-link" target="_blank" title="Novabook">SÁCH</a></li>
+                                <li class="has-children">
+                                    <a href="#" class="nav-link">THƯ VIỆN</a>
+                                    <ul class="dropdown arrow-top">
+                                        <li><a href="https://novaedu.vn/photos" class="nav-link">Hình ảnh</a></li>
+                                        <li><a href="https://novaedu.vn/video-clip" class="nav-link">Videos</a></li>
+                                        <li><a href="https://novaedu.vn/tai-lieu-tham-khao" class="nav-link">Tài liệu tham khảo</a></li>    
+                                        
+                                    </ul>
+                                </li>
+                                <li><a href="https://novaedu.vn/contact" class="nav-link">LIÊN HỆ</a></li>
+                                
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            <div class="col-1 container-search-home dropdown dropleft">
+                    <button type="button" class=" dropdown-toggle btn-drop_se" data-toggle="dropdown">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div class="dropdown-menu " id="drop_menu_se">
+                        <form action="https://novaedu.vn/search_new" method="get">
+                              <input type="hidden" name="_token" value="ogXbe860hKkbN0o0u62Cp1G0UEw4wtg7dZxbzB0n">
+                            <input type="search" class="in_search" name="keywords" id="search-input" required placeholder="Tìm kiếm ....">
+                            <!-- <input type="submit" class="inse_btn" name="btm" value="Tìm kiếm"> -->
+                            <button type="submit" class="inse_btn" name="btn" > <i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="site-navbar-top site-navbar-top2 container">
+        <div class="">
+            <div class="menu-brand menu-brand2 p-2">
+               <p class="m-0">Hệ sinh thái Novaedu:</p>
+               <ul class="menu-brand-item m-0">
+                    <li><a target="_blank" href="https://novae.vn/">novae.vn</a></li>
+                    <li><a target="_blank" href="https://novaspro.vn/">novaspro.vn</a></li>
+                    <li><a target="_blank" href="https://novaboss.vn/">novaboss.vn</a></li>
+                    <li><a target="_blank" href="https://novateen.vn/">novateen.vn</a></li>
+                    <li><a target="_blank" href="https://novajob.vn/">novajob.vn</a></li>
+                    <li><a target="_blank" href="https://novaup.vn/">novaup.vn</a></li>
+                    <li><a target="_blank" href="https://dean1665.vn/">dean1665.vn</a></li>
+                    <li><a target="_blank" href="https://novashark.vn/">novashark.vn</a></li>
+                    <li><a target="_blank" href="https://techfestvietnam.vn/">techfestvietnam.vn</a></li>
+               </ul>
+            </div>
+        </div>
+    </div>
+</div>    <!-- -------------------------------end - menu--------------------------- -->
+        <!-- Start Banner Area -->
+<div class="rbt-banner-area rbt-banner-1">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 pb--120 pt--70">
+                        <div class="content">
+                            <div class="inner">
+                                <div class="rbt-new-badge rbt-new-badge-one">
+                                    <span class="rbt-new-badge-icon">🏆</span>Giáo dục đến từ tương lai
+                                </div>
+
+                                <h1 class="title">
+                                <span style="color:#F37435;">NOVA</span><span style="color:#70B54B;">EDU.VN</span>
+                                </h1>
+                                <p class="description">
+                                NovaEdu là Công ty công nghệ giáo dục, chuyên cung cấp các giải pháp toàn diện về đào tạo tân tiến, định hướng nghề nghiệp, cung ứng nguồn nhân lực chất lượng cao và tạo môi trường cho khởi nghiệp.
+                                </p>
+                                <!-- <h2 class="run"><span class="txt-rotate" data-rotate="[ &quot;Xây dựng Website&quot;, &quot;Thiết kế Branding&quot;, &quot;Content Marketing&quot;, &quot;SEO tổng thể&quot;, &quot;Facebook Ads&quot;, &quot;Google Ads&quot;, &quot;Digital Marketing&quot;]"><span class="wrap">Content Marketing</span></span></h2>
+                                
+                                -->
+                            </div>
+                            <div class="shape-wrapper" id="scene">
+                                
+                                <img src="https://novaedu.vn/frontend/asset/images/home/banner-home-2.png" alt="Hero Image">
+                                <!-- <div class="hero-bg-shape-1 layer" data-depth="0.4">
+                                    <img src="https://novaedu.vn/frontend/asset/images/bg/shape-01.png" alt="Hero Image Background Shape">
+                                </div>
+                                <div class="hero-bg-shape-2 layer" data-depth="0.4">
+                                    <img src="https://novaedu.vn/frontend/asset/images/bg/shape-01.png" alt="Hero Image Background Shape">
+                                </div> -->
+                            </div>
+
+                            <div class="banner-card  swiper rbt-dot-bottom-center banner-swiper-active">
+                                <div class="swiper-wrapper">
+                                                                    <!-- Start Single Card  -->
+                                    <div class="swiper-slide">
+                                        <div class="rbt-card variation-01 rbt-hover">
+                                            <div class="rbt-card-img">
+                                                <a href="https://novaedu.vn/Tin-tuc/dao-tao-top-15-du-an-khoi-nghiep-xuat-sac-cua-so-gddt-tp-ho-chi-minh-tham-du-cuoc-thi-sv-startup-lan-thu-viii-1059.html">
+                                                    <img src="https://novaedu.vn/uploads/news/1770348806_1.png" alt="✨ Đào tạo TOP 15 Dự án khởi nghiệp xuất sắc của Sở GDĐT TP. Hồ Chí Minh tham dự Cuộc thi SV_STARTUP lần thứ VIII ✨">
+                                                </a>
+                                            </div>
+                                            <div class="rbt-card-body">
+                                                <!-- <ul class="rbt-meta">
+                                                    <li><i class="fa-solid fa-clock"></i>2026-02-06 03:33:26</li>
+                                                    <li><i class="fa-solid fa-users"></i>by Admin</li>
+                                                </ul> -->
+                                                <h4 class="rbt-card-title"><a href="https://novaedu.vn/Tin-tuc/dao-tao-top-15-du-an-khoi-nghiep-xuat-sac-cua-so-gddt-tp-ho-chi-minh-tham-du-cuoc-thi-sv-startup-lan-thu-viii-1059.html">✨ Đào tạo TOP 15 Dự án khởi nghiệp xuất sắc của Sở GDĐT TP. Hồ Chí Minh tham dự Cuộc thi SV_STARTUP lần thứ VIII ✨</a>
+                                                </h4>
+                                                <div class="rbt-card-text"><p>Nhằm n&acirc;ng cao chất lượng dự &aacute;n trước khi bước v&agrave;o v&ograve;ng thi cấp Quốc gia Cuộc thi &ldquo;Học sinh, sinh vi&ecirc;n với &yacute; tưởng khởi nghiệp&rdquo; lần thứ VIII (SV_STARTUP VIII), do Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o tạo chủ tr&igrave;. NovaEdu đ&atilde; đồng h&agrave;nh c&ugrave;ng Sở GDĐT TP. Hồ Ch&iacute; Minh, tổ chức tập huấn cho TOP 15 dự &aacute;n khởi nghiệp ti&ecirc;u biểu được lựa chọn tham gia cuộc thi.</p></div>
+                                                <div class="rbt-card-bottom">
+                                                    <a class="rbt-btn-link" href="https://novaedu.vn/Tin-tuc/dao-tao-top-15-du-an-khoi-nghiep-xuat-sac-cua-so-gddt-tp-ho-chi-minh-tham-du-cuoc-thi-sv-startup-lan-thu-viii-1059.html">Xem thêm<i
+                                                            class="fa-solid fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Single Card  -->
+                                                                        <!-- Start Single Card  -->
+                                    <div class="swiper-slide">
+                                        <div class="rbt-card variation-01 rbt-hover">
+                                            <div class="rbt-card-img">
+                                                <a href="https://novaedu.vn/Tin-tuc/novaedu-dong-hanh-cung-cuoc-thi-hoc-sinh-sinh-vien-voi-y-tuong-khoi-nghiep-cua-so-giao-duc-va-dao-tao-thanh-pho-ho-chi-minh-1058.html">
+                                                    <img src="https://novaedu.vn/uploads/news/1770290983_2.png" alt="✨ NovaEdu đồng hành cùng Cuộc thi “Học sinh, sinh viên với ý tưởng khởi nghiệp” của Sở Giáo dục và Đào tạo Thành Phố Hồ Chí Minh✨">
+                                                </a>
+                                            </div>
+                                            <div class="rbt-card-body">
+                                                <!-- <ul class="rbt-meta">
+                                                    <li><i class="fa-solid fa-clock"></i>2026-02-05 11:29:43</li>
+                                                    <li><i class="fa-solid fa-users"></i>by Admin</li>
+                                                </ul> -->
+                                                <h4 class="rbt-card-title"><a href="https://novaedu.vn/Tin-tuc/novaedu-dong-hanh-cung-cuoc-thi-hoc-sinh-sinh-vien-voi-y-tuong-khoi-nghiep-cua-so-giao-duc-va-dao-tao-thanh-pho-ho-chi-minh-1058.html">✨ NovaEdu đồng hành cùng Cuộc thi “Học sinh, sinh viên với ý tưởng khởi nghiệp” của Sở Giáo dục và Đào tạo Thành Phố Hồ Chí Minh✨</a>
+                                                </h4>
+                                                <div class="rbt-card-text"><p>S&aacute;ng ng&agrave;y 04/02/2026 tại Trường Đại học Quốc tế Hồng B&agrave;ng (TP.HCM) đ&atilde; diễn ra Lễ trao giải Cuộc thi &ldquo;Học sinh, sinh vi&ecirc;n với &yacute; tưởng khởi nghiệp&rdquo; năm học 2025&ndash;2026 &mdash; s&acirc;n chơi s&aacute;ng tạo quy m&ocirc; lớn d&agrave;nh cho học sinh, học vi&ecirc;n v&agrave; sinh vi&ecirc;n tr&ecirc;n địa b&agrave;n th&agrave;nh phố, do Sở Gi&aacute;o dục v&agrave; Đ&agrave;o tạo TP.HCM tổ chức.</p></div>
+                                                <div class="rbt-card-bottom">
+                                                    <a class="rbt-btn-link" href="https://novaedu.vn/Tin-tuc/novaedu-dong-hanh-cung-cuoc-thi-hoc-sinh-sinh-vien-voi-y-tuong-khoi-nghiep-cua-so-giao-duc-va-dao-tao-thanh-pho-ho-chi-minh-1058.html">Xem thêm<i
+                                                            class="fa-solid fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Single Card  -->
+                                                                        <!-- Start Single Card  -->
+                                    <div class="swiper-slide">
+                                        <div class="rbt-card variation-01 rbt-hover">
+                                            <div class="rbt-card-img">
+                                                <a href="https://novaedu.vn/Tin-tuc/novaedu-x-nuae-khai-giang-mon-hoc-ky-nang-khoi-nghiep-danh-cho-sinh-vien-nam-nhat-truong-dh-su-pham-nghe-thuat-trung-uong-1057.html">
+                                                    <img src="https://novaedu.vn/uploads/news/1770086466_4.png" alt="💥💥 [NOVAEDU X NUAE] KHAI GIẢNG MÔN HỌC KỸ NĂNG KHỞI NGHIỆP DÀNH CHO SINH VIÊN NĂM NHẤT, TRƯỜNG ĐH SƯ PHẠM NGHỆ THUẬT TRUNG ƯƠNG">
+                                                </a>
+                                            </div>
+                                            <div class="rbt-card-body">
+                                                <!-- <ul class="rbt-meta">
+                                                    <li><i class="fa-solid fa-clock"></i>2026-02-03 02:41:06</li>
+                                                    <li><i class="fa-solid fa-users"></i>by Admin</li>
+                                                </ul> -->
+                                                <h4 class="rbt-card-title"><a href="https://novaedu.vn/Tin-tuc/novaedu-x-nuae-khai-giang-mon-hoc-ky-nang-khoi-nghiep-danh-cho-sinh-vien-nam-nhat-truong-dh-su-pham-nghe-thuat-trung-uong-1057.html">💥💥 [NOVAEDU X NUAE] KHAI GIẢNG MÔN HỌC KỸ NĂNG KHỞI NGHIỆP DÀNH CHO SINH VIÊN NĂM NHẤT, TRƯỜNG ĐH SƯ PHẠM NGHỆ THUẬT TRUNG ƯƠNG</a>
+                                                </h4>
+                                                <div class="rbt-card-text"><p dir="ltr">✨ Ng&agrave;y 02 th&aacute;ng 02 năm 2026, m&ocirc;n học &ldquo;Kỹ năng Khởi nghiệp&rdquo; do NOVAEDU phối hợp tổ chức c&ugrave;ng Trường Đại học Sư phạm Nghệ thuật Trung ương (NUAE) đ&atilde; mang đến cho sinh vi&ecirc;n một buổi học đầy cảm hứng với chủ đề &ldquo;Định vị bản th&acirc;n&rdquo;.</p></div>
+                                                <div class="rbt-card-bottom">
+                                                    <a class="rbt-btn-link" href="https://novaedu.vn/Tin-tuc/novaedu-x-nuae-khai-giang-mon-hoc-ky-nang-khoi-nghiep-danh-cho-sinh-vien-nam-nhat-truong-dh-su-pham-nghe-thuat-trung-uong-1057.html">Xem thêm<i
+                                                            class="fa-solid fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Single Card  -->
+                                                                        <!-- Start Single Card  -->
+                                    <div class="swiper-slide">
+                                        <div class="rbt-card variation-01 rbt-hover">
+                                            <div class="rbt-card-img">
+                                                <a href="https://novaedu.vn/Tin-tuc/nova-x-hou-khai-tam-mon-hoc-phat-trien-ky-nang-nghe-nghiep-khoa-t1-2026-ai-trong-kinh-doanh-so-co-hoi-nghe-nghiep-cua-sinh-vien-kinh-te-1056.html">
+                                                    <img src="https://novaedu.vn/uploads/news/1768100152_19.png" alt="🔥 [NOVA x HOU] KHAI TÂM MÔN HỌC “PHÁT TRIỂN KỸ NĂNG NGHỀ NGHIỆP” – KHOÁ T1/2026 🔥  🌐 AI trong kinh doanh số - Cơ hội nghề nghiệp của sinh viên kinh tế 🌐">
+                                                </a>
+                                            </div>
+                                            <div class="rbt-card-body">
+                                                <!-- <ul class="rbt-meta">
+                                                    <li><i class="fa-solid fa-clock"></i>2026-01-11 02:55:52</li>
+                                                    <li><i class="fa-solid fa-users"></i>by Admin</li>
+                                                </ul> -->
+                                                <h4 class="rbt-card-title"><a href="https://novaedu.vn/Tin-tuc/nova-x-hou-khai-tam-mon-hoc-phat-trien-ky-nang-nghe-nghiep-khoa-t1-2026-ai-trong-kinh-doanh-so-co-hoi-nghe-nghiep-cua-sinh-vien-kinh-te-1056.html">🔥 [NOVA x HOU] KHAI TÂM MÔN HỌC “PHÁT TRIỂN KỸ NĂNG NGHỀ NGHIỆP” – KHOÁ T1/2026 🔥  🌐 AI trong kinh doanh số - Cơ hội nghề nghiệp của sinh viên kinh tế 🌐</a>
+                                                </h4>
+                                                <div class="rbt-card-text"><p>📅 S&aacute;ng ng&agrave;y 08/01/2026, chương tr&igrave;nh Khai t&acirc;m m&ocirc;n học &ldquo;Ph&aacute;t triển kỹ năng nghề nghiệp&rdquo; sẽ ch&iacute;nh thức diễn ra, đ&aacute;nh dấu cột mốc khởi đầu đầy cảm hứng cho gần 400 sinh vi&ecirc;n ng&agrave;nh Quản trị kinh doanh v&agrave; Thương mại điện tử &ndash; Khoa Kinh tế, Trường Đại học Mở H&agrave; Nội.</p></div>
+                                                <div class="rbt-card-bottom">
+                                                    <a class="rbt-btn-link" href="https://novaedu.vn/Tin-tuc/nova-x-hou-khai-tam-mon-hoc-phat-trien-ky-nang-nghe-nghiep-khoa-t1-2026-ai-trong-kinh-doanh-so-co-hoi-nghe-nghiep-cua-sinh-vien-kinh-te-1056.html">Xem thêm<i
+                                                            class="fa-solid fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Single Card  -->
+                                                                        <!-- Start Single Card  -->
+                                    <div class="swiper-slide">
+                                        <div class="rbt-card variation-01 rbt-hover">
+                                            <div class="rbt-card-img">
+                                                <a href="https://novaedu.vn/Tin-tuc/recap-ruc-ro-team-building-doi-moi-sang-tao-but-pha-thanh-cong-1055.html">
+                                                    <img src="https://novaedu.vn/uploads/news/1764480639_22.png" alt="🎯 [RECAP RỰC RỠ] – TEAM BUILDING: “ĐỔI MỚI SÁNG TẠO – BỨT PHÁ THÀNH CÔNG” 🎯">
+                                                </a>
+                                            </div>
+                                            <div class="rbt-card-body">
+                                                <!-- <ul class="rbt-meta">
+                                                    <li><i class="fa-solid fa-clock"></i>2025-11-30 05:30:39</li>
+                                                    <li><i class="fa-solid fa-users"></i>by Admin</li>
+                                                </ul> -->
+                                                <h4 class="rbt-card-title"><a href="https://novaedu.vn/Tin-tuc/recap-ruc-ro-team-building-doi-moi-sang-tao-but-pha-thanh-cong-1055.html">🎯 [RECAP RỰC RỠ] – TEAM BUILDING: “ĐỔI MỚI SÁNG TẠO – BỨT PHÁ THÀNH CÔNG” 🎯</a>
+                                                </h4>
+                                                <div class="rbt-card-text"><p>V&agrave;o ng&agrave;y 28/11/2025 tại Ph&ugrave; Đổng Green Park, gần 90 sinh vi&ecirc;n ưu t&uacute; của học phần Ph&aacute;t triển Kỹ năng nghề nghiệp &ndash; kh&oacute;a 9/2025, Khoa Kinh tế &ndash; Trường Đại học Mở H&agrave; Nội đ&atilde; c&ugrave;ng NovaEdu trải qua một ng&agrave;y Team Building kh&ocirc;ng thể n&agrave;o qu&ecirc;n!</p></div>
+                                                <div class="rbt-card-bottom">
+                                                    <a class="rbt-btn-link" href="https://novaedu.vn/Tin-tuc/recap-ruc-ro-team-building-doi-moi-sang-tao-but-pha-thanh-cong-1055.html">Xem thêm<i
+                                                            class="fa-solid fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Single Card  -->
+                                                                    </div>
+                                <div class="rbt-swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Banner Area -->    <div class="container-brand-home">
+        <div class="brand-home reveal">
+            <div class="container box-brand-home">
+                <div class="section-title text-center mb--50">
+                    <span class="subtitle bg-coral-opacity">Hệ sinh thái</span>
+                    <h2 class="title">Hệ sinh thái của <span style="color:#F37435;">NOVA</span><span
+                        style="color:#70B54B;">EDU</span></h2>
+                </div>
+                <div class="list-brand-home">
+                                            <div class="home-brand-item common-shadow  box_vid" >
+                            <div class="text-center home-brand-item-img">
+                                <a href="https://novaspro.vn/" target="_blank"><img
+                                        src="https://novaedu.vn/uploads/brands/1719387894_SPRO.png" alt="NOVASPRO"></a>
+                            </div>
+                            <p class="mt-3">Thương hiệu chương trình đào tạo của Novaedu</p>
+                            <!-- <div class="text-center">
+                                <a href="https://novaspro.vn/" target="_blank">Xem thêm <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div> -->
+                            <div class="rbt-card-bottom text-center ">
+                                <a class="rbt-btn-link" target="_blank" href="https://novaspro.vn/">Xem thêm<i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                                            <div class="home-brand-item common-shadow  box_vid" >
+                            <div class="text-center home-brand-item-img">
+                                <a href="https://novae.vn/" target="_blank"><img
+                                        src="https://novaedu.vn/uploads/brands/1719387923_Egai.png" alt="NOVA EGUIDE"></a>
+                            </div>
+                            <p class="mt-3">Thương hiệu hệ thống hướng nghiệp online của Novaedu</p>
+                            <!-- <div class="text-center">
+                                <a href="https://novae.vn/" target="_blank">Xem thêm <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div> -->
+                            <div class="rbt-card-bottom text-center ">
+                                <a class="rbt-btn-link" target="_blank" href="https://novae.vn/">Xem thêm<i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                                            <div class="home-brand-item common-shadow  box_vid" >
+                            <div class="text-center home-brand-item-img">
+                                <a href="https://novaboss.vn/" target="_blank"><img
+                                        src="https://novaedu.vn/uploads/brands/1719387965_Boss.png" alt="NOVA BOSS"></a>
+                            </div>
+                            <p class="mt-3">Thương hiệu chương trình đào tạo đặc biệt theo chủ trương đề án 1665 của Thủ tướng Chính phủ</p>
+                            <!-- <div class="text-center">
+                                <a href="https://novaboss.vn/" target="_blank">Xem thêm <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div> -->
+                            <div class="rbt-card-bottom text-center ">
+                                <a class="rbt-btn-link" target="_blank" href="https://novaboss.vn/">Xem thêm<i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                                            <div class="home-brand-item common-shadow  box_vid" >
+                            <div class="text-center home-brand-item-img">
+                                <a href="https://novateen.vn/" target="_blank"><img
+                                        src="https://novaedu.vn/uploads/brands/1719387981_Teen.png" alt="NOVA TEEN"></a>
+                            </div>
+                            <p class="mt-3">Thương hiệu các chương trình đào tạo dành cho học sinh các cấp của Novaedu</p>
+                            <!-- <div class="text-center">
+                                <a href="https://novateen.vn/" target="_blank">Xem thêm <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div> -->
+                            <div class="rbt-card-bottom text-center ">
+                                <a class="rbt-btn-link" target="_blank" href="https://novateen.vn/">Xem thêm<i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                                            <div class="home-brand-item common-shadow  box_vid" >
+                            <div class="text-center home-brand-item-img">
+                                <a href="https://novabook.vn/" target="_blank"><img
+                                        src="https://novaedu.vn/uploads/brands/1719387991_Book.png" alt="NOVA BOOK"></a>
+                            </div>
+                            <p class="mt-3">Thương hiệu sách của Novaedu</p>
+                            <!-- <div class="text-center">
+                                <a href="https://novabook.vn/" target="_blank">Xem thêm <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div> -->
+                            <div class="rbt-card-bottom text-center ">
+                                <a class="rbt-btn-link" target="_blank" href="https://novabook.vn/">Xem thêm<i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                                            <div class="home-brand-item common-shadow  box_vid" >
+                            <div class="text-center home-brand-item-img">
+                                <a href="https://novaup.vn/" target="_blank"><img
+                                        src="https://novaedu.vn/uploads/brands/1719388003_UP.png" alt="NOVAUP"></a>
+                            </div>
+                            <p class="mt-3">Thương hiệu cung cấp bất động sản giáo dục của Novaedu</p>
+                            <!-- <div class="text-center">
+                                <a href="https://novaup.vn/" target="_blank">Xem thêm <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div> -->
+                            <div class="rbt-card-bottom text-center ">
+                                <a class="rbt-btn-link" target="_blank" href="https://novaup.vn/">Xem thêm<i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                                            <div class="home-brand-item common-shadow  box_vid" >
+                            <div class="text-center home-brand-item-img">
+                                <a href="https://novajob.vn/" target="_blank"><img
+                                        src="https://novaedu.vn/uploads/brands/1719388015_job.png" alt="NOVAJOB"></a>
+                            </div>
+                            <p class="mt-3">Thương hiệu hệ thống kết nối việc làm của Novaedu</p>
+                            <!-- <div class="text-center">
+                                <a href="https://novajob.vn/" target="_blank">Xem thêm <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div> -->
+                            <div class="rbt-card-bottom text-center ">
+                                <a class="rbt-btn-link" target="_blank" href="https://novajob.vn/">Xem thêm<i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                                            <div class="home-brand-item common-shadow  box_vid" >
+                            <div class="text-center home-brand-item-img">
+                                <a href="https://dean1665.vn/" target="_blank"><img
+                                        src="https://novaedu.vn/uploads/brands/1698227471_đean.png" alt="DEAN1665"></a>
+                            </div>
+                            <p class="mt-3">Cổng thông tin chính thức của bộ GD&amp;ĐT</p>
+                            <!-- <div class="text-center">
+                                <a href="https://dean1665.vn/" target="_blank">Xem thêm <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div> -->
+                            <div class="rbt-card-bottom text-center ">
+                                <a class="rbt-btn-link" target="_blank" href="https://dean1665.vn/">Xem thêm<i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                                            <div class="home-brand-item common-shadow  box_vid" >
+                            <div class="text-center home-brand-item-img">
+                                <a href="https://novashark.vn" target="_blank"><img
+                                        src="https://novaedu.vn/uploads/brands/1719388070_sharrk.png" alt="Novashark"></a>
+                            </div>
+                            <p class="mt-3">NovaShark sàn gọi vốn hàng đầu Việt Nam</p>
+                            <!-- <div class="text-center">
+                                <a href="https://novashark.vn" target="_blank">Xem thêm <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div> -->
+                            <div class="rbt-card-bottom text-center ">
+                                <a class="rbt-btn-link" target="_blank" href="https://novashark.vn">Xem thêm<i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start About Area  -->
+    <div class="rbt-about-area bg-color-white rbt-section-gapTop pb_md--80 pb_sm--80 about-style-1">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 reveal">
+                    <div class="thumbnail-wrapper">
+                        <div class="thumbnail image-1">
+                            <div class="video-popup-wrapper">
+                                <img data-parallax='{"x": 0, "y": -20}'
+                                    src="https://novaedu.vn/frontend/asset/images/home/test1.png" alt="Education Images"
+                                    style="transform:translate3d(0px, 41.147px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(0px, 41.147px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); ">
+
+                                <a class="rbt-btn rounded-player-2 popup-video position-to-top with-animation"
+                                    href="https://www.youtube.com/watch?v=sCJunphEExA&t=74s" target="_blank">
+                                    <span class="play-icon"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal">
+                    <div class="inner pl--50 pl_sm--0 pl_md--0">
+                        <div class="section-title text-start">
+                            <span class="subtitle bg-coral-opacity">Về chúng tôi</span>
+                            <h2 class="title">Giới thiệu về NovaEDU</h2>
+                        </div>
+
+                        <p class="description mt--30">Công ty Cổ phần Công nghệ Giáo dục Nova (NovaEdu) được sáng lập bởi
+                            Founder & CEO Đỗ Mạnh Hùng, cùng sự đồng hành của các chuyên gia đào tạo và giảng viên uy tín
+                            trong và ngoài nước - những người tâm huyết với sự nghiệp phát triển nguồn nhân lực Việt Nam.
+                        </p>
+
+                        <!-- Start Feature List  -->
+
+                        <div class="rbt-feature-wrapper mt--20 ml_dec_20">
+                            <div class="rbt-feature feature-style-2 rbt-radius">
+                                <div class="icon bg-pink-opacity">
+                                    
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h6 class="feature-title">Tầm nhìn</h6>
+                                    <p class="feature-description">Trở thành doanh nghiệp hàng đầu Việt Nam trong lĩnh vực
+                                        Giáo dục và Đào tạo, ứng dụng công nghệ, cung cấp các giải pháp nâng cao chất lượng
+                                        nguồn nhân lực và hỗ trợ cộng đồng doanh nghiệp phát triển, nâng tầm sức mạnh.</p>
+                                </div>
+                            </div>
+
+                            <div class="rbt-feature feature-style-2 rbt-radius">
+                                <div class="icon bg-primary-opacity">
+                                    <i class="fa-solid fa-hand-fist"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h6 class="feature-title">Sứ mệnh</h6>
+                                    <p class="feature-description">Kiến tạo hệ sinh thái bao gồm các nền tảng và giải pháp
+                                        đào tạo nhằm tạo ra các thế hệ nhân lực mới và doanh nhân thời đại mới, góp phần
+                                        thúc đẩy cộng đồng doanh nghiệp phát triển lên một tầm cao mới.</p>
+                                </div>
+                            </div>
+                            <div class="rbt-feature feature-style-2 rbt-radius">
+                                <div class="icon bg-pink-opacity">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h6 class="feature-title">Giá trị cốt lõi</h6>
+                                    <p class="feature-description">Tâm đắc - Kiên trì - Sáng tạo - Triệt để - Thần tốc.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About Area  -->
+    <!-- Start Counterup Area  -->
+    <div class="rbt-counterup-area bg-color-extra2 rbt-section-gapBottom rbt-section-gapTop">
+        <div class="container reveal">
+            <div class="row mb--50">
+                <div class="col-lg-12">
+                    <div class="section-title text-center">
+                        <span class="subtitle bg-primary-opacity">THÀNH TỰU</span>
+                        <h2 class="title">Những con số nổi bật</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 hanger-line">
+                <!-- Start Single Counter  -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="rbt-counterup rbt-hover-03 border-bottom-gradient bg-ga1">
+                        <div class="top-circle-shape"></div>
+                        <div class="inner">
+                            <div class="rbt-round-icon">
+                                <img src="https://novaedu.vn/frontend/asset/images/home/counter-01.png"
+                                    alt="Icons Images">
+                            </div>
+                            <div class="content">
+                                <h3 class="counter"><span class="odometer"  id="countDisplay1">1000000</span>
+                                </h3>
+                                <span class="subtitle">Học sinh - Sinh viên</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Counter  -->
+
+                <!-- Start Single Counter  -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt--60 mt_md--30 mt_sm--30 mt_mobile--60">
+                    <div class="rbt-counterup rbt-hover-03 border-bottom-gradient bg-ga">
+                        <div class="top-circle-shape"></div>
+                        <div class="inner">
+                            <div class="rbt-round-icon">
+                                <img src="https://novaedu.vn/frontend/asset/images/home/counter-02.png"
+                                    alt="Icons Images">
+                            </div>
+                            <div class="content">
+                                <h3 class="counter"><span class="odometer"  id="countDisplay2">100</span>
+                                </h3>
+                                <span class="subtitle">Khóa học</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Counter  -->
+
+                <!-- Start Single Counter  -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt_md--60 mt_sm--60">
+                    <div class="rbt-counterup rbt-hover-03 border-bottom-gradient bg-ga1">
+                        <div class="top-circle-shape"></div>
+                        <div class="inner">
+                            <div class="rbt-round-icon">
+                                <img src="https://novaedu.vn/frontend/asset/images/home/counter-03.png"
+                                    alt="Icons Images">
+                            </div>
+                            <div class="content">
+                                <h3 class="counter"><span class="odometer"  id="countDisplay3">200</span>
+                                </h3>
+                                <span class="subtitle">Giảng viên</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Counter  -->
+
+                <!-- Start Single Counter  -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt--60 mt_md--30 mt_sm--30 mt_mobile--60">
+                    <div class="rbt-counterup rbt-hover-03 border-bottom-gradient bg-ga">
+                        <div class="top-circle-shape"></div>
+                        <div class="inner">
+                            <div class="rbt-round-icon">
+                                <img src="https://novaedu.vn/frontend/asset/images/home/counter-04.png"
+                                    alt="Icons Images">
+                            </div>
+                            <div class="content">
+                                <h3 class="counter"><span class="odometer"  id="countDisplay4">200</span>
+                                </h3>
+                                <span class="subtitle">Đối tác</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Counter  -->
+            </div>
+        </div>
+    </div>
+    <div class="container-award-home">
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<div class="container">
+<h3 class="title-text-home text-center">THÀNH TỰU CỦA <span style="color:#F37435;">NOVA</span><span
+        style="color:#70B54B;">EDU</span></h3>
+    <div class="row container-award">
+        <div class="slider autoplay">
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/07f22d6596836bdd3292-3.jpg">
+              <img  src="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/07f22d6596836bdd3292-3.jpg" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/7bafef0954efa9b1f0fe-copy-3.jpg">
+              <img  src="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/7bafef0954efa9b1f0fe-copy-3.jpg" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/8e2bbea20544f81aa155-copy-3-3.jpg">
+              <img  src="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/8e2bbea20544f81aa155-copy-3-3.jpg" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/15f9bb5200b4fdeaa4a5-copy-3.jpg">
+              <img  src="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/15f9bb5200b4fdeaa4a5-copy-3.jpg" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/264edd0561e39cbdc5f2-copy-3.jpg">
+              <img  src="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/264edd0561e39cbdc5f2-copy-3.jpg" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/624badf71611eb4fb200-copy-3.jpg">
+              <img  src="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/624badf71611eb4fb200-copy-3.jpg" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/912522bc995a64043d4b-copy-3.jpg">
+              <img  src="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/912522bc995a64043d4b-copy-3.jpg" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/a7e1af5614b0e9eeb0a1-copy-3.jpg">
+              <img  src="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/a7e1af5614b0e9eeb0a1-copy-3.jpg" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/df859f3524d3d98d80c2-copy-3.jpg">
+              <img  src="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/df859f3524d3d98d80c2-copy-3.jpg" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/eb708cdf3739ca679328-copy-3.jpg">
+              <img  src="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/eb708cdf3739ca679328-copy-3.jpg" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/f02080823b64c63a9f75-3.jpg">
+              <img  src="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/f02080823b64c63a9f75-3.jpg" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/fab4c62b7dcd8093d9dc-3.png">
+              <img  src="https://novaedu.vn/uploads/photos/images/2020/06/thanh-tu-dat-duoc/fab4c62b7dcd8093d9dc-3.png" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2020/07/thanh-tu-dat-duoc/bangkhen1-1.jpg">
+              <img  src="https://novaedu.vn/uploads/photos/images/2020/07/thanh-tu-dat-duoc/bangkhen1-1.jpg" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2020/07/thanh-tu-dat-duoc/bangkhen2.jpg">
+              <img  src="https://novaedu.vn/uploads/photos/images/2020/07/thanh-tu-dat-duoc/bangkhen2.jpg" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2021/01/thanh-tu-dat-duoc/bang.png">
+              <img  src="https://novaedu.vn/uploads/photos/images/2021/01/thanh-tu-dat-duoc/bang.png" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2021/01/thanh-tu-dat-duoc/z2299741481353-7478fbcb2b0eae224e44eb4e6b401db2-1.jpg">
+              <img  src="https://novaedu.vn/uploads/photos/images/2021/01/thanh-tu-dat-duoc/z2299741481353-7478fbcb2b0eae224e44eb4e6b401db2-1.jpg" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2021/01/thanh-tu-dat-duoc/z2299741500667-d67ec1bb07cbc4615d82085303c93d74.jpg">
+              <img  src="https://novaedu.vn/uploads/photos/images/2021/01/thanh-tu-dat-duoc/z2299741500667-d67ec1bb07cbc4615d82085303c93d74.jpg" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2022/12/thanh-tu-dat-duoc/startup-kite.jpg">
+              <img  src="https://novaedu.vn/uploads/photos/images/2022/12/thanh-tu-dat-duoc/startup-kite.jpg" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2023/04/thanh-tu-dat-duoc/z4234525309724-27f3893a91ea5ab673e3cab7b54e43f5-1.jpg">
+              <img  src="https://novaedu.vn/uploads/photos/images/2023/04/thanh-tu-dat-duoc/z4234525309724-27f3893a91ea5ab673e3cab7b54e43f5-1.jpg" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2023/05/thanh-tu-dat-duoc/z4374408334217-c1ba780a7941e7bff82becdab149eea2.png">
+              <img  src="https://novaedu.vn/uploads/photos/images/2023/05/thanh-tu-dat-duoc/z4374408334217-c1ba780a7941e7bff82becdab149eea2.png" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/photos/images/2023/05/thanh-tu-dat-duoc/1111.png">
+              <img  src="https://novaedu.vn/uploads/photos/images/2023/05/thanh-tu-dat-duoc/1111.png" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/images/1703045868_1.png">
+              <img  src="https://novaedu.vn/uploads/images/1703045868_1.png" alt="">
+          </a>
+          </div>
+                    <div class="carousel-item">
+            <a data-fslightbox="gallery" href="https://novaedu.vn/uploads/images/1717389513_z5502538615808_335c486a050eb38284afac8fdb5ab601.jpg">
+              <img  src="https://novaedu.vn/uploads/images/1717389513_z5502538615808_335c486a050eb38284afac8fdb5ab601.jpg" alt="">
+          </a>
+          </div>
+                      
+          </div>
+    </div>
+    <div id="imageModalAward" class="modal w-100">
+      <div class="d-flex justify-content-center align-items-center w-100 h-100">
+          <div class="d-flex justify-content-center align-items-center w-50">
+              <span class="close">&times;</span>
+              <img id="modalImage" class="modal-content-img">
+          </div>
+      </div>
+  </div>
+  <script src="https://novaedu.vn/frontend/asset/js/linh.js"></script>
+  <script src="https://novaedu.vn/frontend/asset/js/fslightbox.js"></script>
+</div>
+    </div> 
+    <!-- End Counterup Area  -->
+    <div class="container-news-home">
+        <div class="container new-home reveal">
+            <h3 class="title-text-home text-center">TRUYỀN HÌNH THÔNG TIN VỀ <span style="color:#F37435;">NOVA</span><span
+                    style="color:#70B54B;">EDU</span></h3>
+            <div class="list-new-home">
+                <div id="demo_new_home" class="carousel slide" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo_new_home" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo_new_home" data-slide-to="1"></li>
+                    </ul>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class=" row-new-home">
+                                                                    <div class="new-home-item container_card_video box_vid">
+                                        <div class="new-home-item-img">
+                                            <a href="https://novaedu.vn/video-clip/chuyen-gia-do-manh-hung-chia-se-ve-chu-de-lam-chu-cam-xuc-54.html"
+                                                title="Chuyên gia Đỗ Mạnh Hùng chia sẻ về chủ đề Làm chủ cảm xúc"><img src="https://novaedu.vn/uploads/video-clip/images/anh-lam-chu-cam-xuc.png"
+                                                    alt="Chuyên gia Đỗ Mạnh Hùng chia sẻ về chủ đề Làm chủ cảm xúc"></a>
+                                        </div>
+                                        <div class="new-home-item-content">
+                                            <div class="common-box-date">
+                                                <p><i class="fa-solid fa-calendar-days"></i>&nbsp; 2020-07-30 09:02:13
+                                                </p>
+                                                <p><i class="fa-solid fa-user"></i>&nbsp; by Admin</p>
+                                            </div>
+                                            <div class="common-box-content">
+                                                <p class=""><a
+                                                        href="https://novaedu.vn/video-clip/chuyen-gia-do-manh-hung-chia-se-ve-chu-de-lam-chu-cam-xuc-54.html"
+                                                        title="Chuyên gia Đỗ Mạnh Hùng chia sẻ về chủ đề Làm chủ cảm xúc">Chuyên gia Đỗ Mạnh Hùng chia sẻ về chủ đề Làm chủ cảm xúc</a></p>
+                                            </div>
+                                            <div class="common-box-link vid_btn">
+                                                <a
+                                                    href="https://novaedu.vn/video-clip/chuyen-gia-do-manh-hung-chia-se-ve-chu-de-lam-chu-cam-xuc-54.html">Xem
+                                                    ngay <i class="fa-solid fa-arrow-right-long"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    <div class="new-home-item container_card_video box_vid">
+                                        <div class="new-home-item-img">
+                                            <a href="https://novaedu.vn/video-clip/ceo-do-manh-hung-chia-se-ve-ky-nang-thich-ung-1-53.html"
+                                                title="CEO Đỗ Mạnh Hùng chia sẻ về Kỹ năng thích ứng"><img src="https://novaedu.vn/uploads/video-clip/images/anh-truyen-hinh.png"
+                                                    alt="CEO Đỗ Mạnh Hùng chia sẻ về Kỹ năng thích ứng"></a>
+                                        </div>
+                                        <div class="new-home-item-content">
+                                            <div class="common-box-date">
+                                                <p><i class="fa-solid fa-calendar-days"></i>&nbsp; 2020-07-29 06:49:53
+                                                </p>
+                                                <p><i class="fa-solid fa-user"></i>&nbsp; by Admin</p>
+                                            </div>
+                                            <div class="common-box-content">
+                                                <p class=""><a
+                                                        href="https://novaedu.vn/video-clip/ceo-do-manh-hung-chia-se-ve-ky-nang-thich-ung-1-53.html"
+                                                        title="CEO Đỗ Mạnh Hùng chia sẻ về Kỹ năng thích ứng">CEO Đỗ Mạnh Hùng chia sẻ về Kỹ năng thích ứng</a></p>
+                                            </div>
+                                            <div class="common-box-link vid_btn">
+                                                <a
+                                                    href="https://novaedu.vn/video-clip/ceo-do-manh-hung-chia-se-ve-ky-nang-thich-ung-1-53.html">Xem
+                                                    ngay <i class="fa-solid fa-arrow-right-long"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    <div class="new-home-item container_card_video box_vid">
+                                        <div class="new-home-item-img">
+                                            <a href="https://novaedu.vn/video-clip/ceo-do-manh-hung-chia-se-ve-chu-de-gioi-tre-va-su-vo-cam-voi-cuoc-song-52.html"
+                                                title="CEO Đỗ Mạnh Hùng chia sẻ về chủ đề &quot;Giới trẻ và sự vô cảm với cuộc sống&quot;"><img src="https://novaedu.vn/uploads/video-clip/images/1.jpg"
+                                                    alt="CEO Đỗ Mạnh Hùng chia sẻ về chủ đề &quot;Giới trẻ và sự vô cảm với cuộc sống&quot;"></a>
+                                        </div>
+                                        <div class="new-home-item-content">
+                                            <div class="common-box-date">
+                                                <p><i class="fa-solid fa-calendar-days"></i>&nbsp; 2020-05-26 11:38:45
+                                                </p>
+                                                <p><i class="fa-solid fa-user"></i>&nbsp; by Admin</p>
+                                            </div>
+                                            <div class="common-box-content">
+                                                <p class=""><a
+                                                        href="https://novaedu.vn/video-clip/ceo-do-manh-hung-chia-se-ve-chu-de-gioi-tre-va-su-vo-cam-voi-cuoc-song-52.html"
+                                                        title="CEO Đỗ Mạnh Hùng chia sẻ về chủ đề &quot;Giới trẻ và sự vô cảm với cuộc sống&quot;">CEO Đỗ Mạnh Hùng chia sẻ về chủ đề &quot;Giới trẻ và sự vô cảm với cuộc sống&quot;</a></p>
+                                            </div>
+                                            <div class="common-box-link vid_btn">
+                                                <a
+                                                    href="https://novaedu.vn/video-clip/ceo-do-manh-hung-chia-se-ve-chu-de-gioi-tre-va-su-vo-cam-voi-cuoc-song-52.html">Xem
+                                                    ngay <i class="fa-solid fa-arrow-right-long"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    <div class="new-home-item container_card_video box_vid">
+                                        <div class="new-home-item-img">
+                                            <a href="https://novaedu.vn/video-clip/ceo-do-manh-hung-chia-se-ve-nghe-thuat-thoa-hiep-voi-cam-xuc-51.html"
+                                                title="CEO Đỗ Mạnh Hùng chia sẻ về Nghệ thuật Thỏa hiệp với cảm xúc"><img src="https://novaedu.vn/uploads/video-clip/images/tai-xuong-2.jpg"
+                                                    alt="CEO Đỗ Mạnh Hùng chia sẻ về Nghệ thuật Thỏa hiệp với cảm xúc"></a>
+                                        </div>
+                                        <div class="new-home-item-content">
+                                            <div class="common-box-date">
+                                                <p><i class="fa-solid fa-calendar-days"></i>&nbsp; 2020-05-26 11:36:04
+                                                </p>
+                                                <p><i class="fa-solid fa-user"></i>&nbsp; by Admin</p>
+                                            </div>
+                                            <div class="common-box-content">
+                                                <p class=""><a
+                                                        href="https://novaedu.vn/video-clip/ceo-do-manh-hung-chia-se-ve-nghe-thuat-thoa-hiep-voi-cam-xuc-51.html"
+                                                        title="CEO Đỗ Mạnh Hùng chia sẻ về Nghệ thuật Thỏa hiệp với cảm xúc">CEO Đỗ Mạnh Hùng chia sẻ về Nghệ thuật Thỏa hiệp với cảm xúc</a></p>
+                                            </div>
+                                            <div class="common-box-link vid_btn">
+                                                <a
+                                                    href="https://novaedu.vn/video-clip/ceo-do-manh-hung-chia-se-ve-nghe-thuat-thoa-hiep-voi-cam-xuc-51.html">Xem
+                                                    ngay <i class="fa-solid fa-arrow-right-long"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class=" row-new-home">
+                                                                    <div class="new-home-item container_card_video box_vid">
+                                        <div class="new-home-item-img">
+                                            <img src="https://novaedu.vn/uploads/video-clip/images/top04478.jpg" alt="">
+                                        </div>
+                                        <div class="new-home-item-content">
+                                            <div class="common-box-date">
+                                                <p><i class="fa-solid fa-calendar-days"></i>&nbsp; 2023-04-01 02:30:38
+                                                </p>
+                                                <p><i class="fa-solid fa-user"></i>&nbsp; by Admin</p>
+                                            </div>
+                                            <div class="common-box-content">
+                                                <p class="">Toàn cảnh Ngày hội Khởi nghiệp Quốc gia của HSSV lần thứ V - SV Startup 2023</p>
+                                            </div>
+                                            <div class="common-box-link">
+                                                <a
+                                                    href="https://novaedu.vn/video-clip/toan-canh-ngay-hoi-khoi-nghiep-quoc-gia-cua-hssv-lan-thu-v-sv-startup-2023-96.html">Xem
+                                                    ngay <i class="fa-solid fa-arrow-right-long"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    <div class="new-home-item container_card_video box_vid">
+                                        <div class="new-home-item-img">
+                                            <img src="https://novaedu.vn/uploads/video-clip/images/img-0821.jpg" alt="">
+                                        </div>
+                                        <div class="new-home-item-content">
+                                            <div class="common-box-date">
+                                                <p><i class="fa-solid fa-calendar-days"></i>&nbsp; 2021-03-16 06:53:46
+                                                </p>
+                                                <p><i class="fa-solid fa-user"></i>&nbsp; by Admin</p>
+                                            </div>
+                                            <div class="common-box-content">
+                                                <p class="">Toàn cảnh Ngày hội Khởi nghiệp Quốc gia của HSSV 2020 &#40;SV.STARTUP 2020&#41;</p>
+                                            </div>
+                                            <div class="common-box-link">
+                                                <a
+                                                    href="https://novaedu.vn/video-clip/toan-canh-ngay-hoi-khoi-nghiep-quoc-gia-cua-hssv-2020-sv-startup-2020-79.html">Xem
+                                                    ngay <i class="fa-solid fa-arrow-right-long"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    <div class="new-home-item container_card_video box_vid">
+                                        <div class="new-home-item-img">
+                                            <img src="https://novaedu.vn/uploads/video-clip/images/3k5a2590.jpg" alt="">
+                                        </div>
+                                        <div class="new-home-item-content">
+                                            <div class="common-box-date">
+                                                <p><i class="fa-solid fa-calendar-days"></i>&nbsp; 2021-03-16 06:48:48
+                                                </p>
+                                                <p><i class="fa-solid fa-user"></i>&nbsp; by Admin</p>
+                                            </div>
+                                            <div class="common-box-content">
+                                                <p class="">Video Lễ Khai mạc Ngày hội Khởi nghiệp Quốc gia của HSSV &#40;SV.STARTUP 2020&#41;</p>
+                                            </div>
+                                            <div class="common-box-link">
+                                                <a
+                                                    href="https://novaedu.vn/video-clip/video-le-khai-mac-ngay-hoi-khoi-nghiep-quoc-gia-cua-hssv-sv-startup-2020-78.html">Xem
+                                                    ngay <i class="fa-solid fa-arrow-right-long"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    <div class="new-home-item container_card_video box_vid">
+                                        <div class="new-home-item-img">
+                                            <img src="https://novaedu.vn/uploads/video-clip/images/layout-gian-hang.jpg" alt="">
+                                        </div>
+                                        <div class="new-home-item-content">
+                                            <div class="common-box-date">
+                                                <p><i class="fa-solid fa-calendar-days"></i>&nbsp; 2020-12-12 05:19:40
+                                                </p>
+                                                <p><i class="fa-solid fa-user"></i>&nbsp; by Admin</p>
+                                            </div>
+                                            <div class="common-box-content">
+                                                <p class="">MỜI THAM GIA GIAN HÀNG TẠI NGÀY HỘI KHỞI NGHIỆP SV.START UP-2020 TẠI ĐẠI HỌC THUỶ LỢI</p>
+                                            </div>
+                                            <div class="common-box-link">
+                                                <a
+                                                    href="https://novaedu.vn/video-clip/moi-tham-gia-gian-hang-tai-ngay-hoi-khoi-nghiep-sv-start-up-2020-tai-dai-hoc-thuy-loi-1-77.html">Xem
+                                                    ngay <i class="fa-solid fa-arrow-right-long"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                    <a class="carousel-control-prev custom-link"  href="#demo_new_home" data-slide="prev">
+                        <span class="carousel-control-prev-icon ">
+                        </span>
+                    </a>
+                    <a class="carousel-control-next custom-link" href="#demo_new_home" data-slide="next">
+                        <span class="carousel-control-next-icon  ">
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    <div class="container-highlights-home">
+        <div class="container reveal">
+    <h3 class="title-text-home text-center">TIN TỨC NỔI BẬT</h3>
+    <div class="container-new-highlight-home">
+                <div class="new-highlight-item common-shadow">
+            <div class="box-new-highlight-img">
+                <a href="https://novaedu.vn/Tin-tuc/dien-dan-hop-tac-va-phat-trien-nam-2025-1028.html">
+                <img src="https://novaedu.vn/uploads/news/1747648520_z6617495722356_78e5a741d89395651d14d5c92d154cd3.jpg" alt="">
+                </a>
+            </div>
+            <div class="common-box-date new-highlight-home">
+                <p><i class="fa-solid fa-calendar-days"></i>&nbsp; 2025-05-19 02:55:20</p>
+                <p><i class="fa-solid fa-user"></i>&nbsp; by Admin</p>
+            </div>
+            <div class="common-box-content">
+                <a href="https://novaedu.vn/Tin-tuc/dien-dan-hop-tac-va-phat-trien-nam-2025-1028.html" title="DIỄN ĐÀN HỢP TÁC VÀ PHÁT TRIỂN NĂM 2025">
+                <p class="m-0">DIỄN ĐÀN HỢP TÁC VÀ PHÁT TRIỂN NĂM 2025</p>
+                </a>
+            </div>
+            <div class="common-box-des">
+                <p class="m-0"><p><strong>NOVAEDU TIẾP TỤC K&Yacute; KẾT HỢP T&Aacute;C THỎA THUẬN VỚI HỌC VIỆN T&Agrave;I CH&Iacute;NH GIAI ĐOẠN 2025 - 20230.</strong></p></p>
+            </div>
+            <div class="swper-content-link new-highlight-link">
+                <a href="https://novaedu.vn/Tin-tuc/dien-dan-hop-tac-va-phat-trien-nam-2025-1028.html" title="DIỄN ĐÀN HỢP TÁC VÀ PHÁT TRIỂN NĂM 2025">Xem thêm <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+        </div>
+                <div class="new-highlight-item common-shadow">
+            <div class="box-new-highlight-img">
+                <a href="https://novaedu.vn/Tin-tuc/thu-tuong-can-day-khoi-nghiep-trong-chuong-trinh-chinh-khoa-1027.html">
+                <img src="https://novaedu.vn/uploads/news/1745308165_493225700_1094537646042302_5324479177072506720_n.jpg" alt="">
+                </a>
+            </div>
+            <div class="common-box-date new-highlight-home">
+                <p><i class="fa-solid fa-calendar-days"></i>&nbsp; 2025-04-22 00:49:25</p>
+                <p><i class="fa-solid fa-user"></i>&nbsp; by Admin</p>
+            </div>
+            <div class="common-box-content">
+                <a href="https://novaedu.vn/Tin-tuc/thu-tuong-can-day-khoi-nghiep-trong-chuong-trinh-chinh-khoa-1027.html" title="THỦ TƯỚNG: CẦN DẠY KHỞI NGHIỆP TRONG CHƯƠNG TRÌNH CHÍNH KHÓA">
+                <p class="m-0">THỦ TƯỚNG: CẦN DẠY KHỞI NGHIỆP TRONG CHƯƠNG TRÌNH CHÍNH KHÓA</p>
+                </a>
+            </div>
+            <div class="common-box-des">
+                <p class="m-0"><p><strong>S&aacute;ng ng&agrave;y 20/4/2025, Thủ tướng Phạm Minh Ch&iacute;nh tham dự lễ khai mạc Ng&agrave;y hội khởi nghiệp Quốc gia của học sinh, sinh vi&ecirc;n - SV_STARTUP lần thứ VII.</strong></p></p>
+            </div>
+            <div class="swper-content-link new-highlight-link">
+                <a href="https://novaedu.vn/Tin-tuc/thu-tuong-can-day-khoi-nghiep-trong-chuong-trinh-chinh-khoa-1027.html" title="THỦ TƯỚNG: CẦN DẠY KHỞI NGHIỆP TRONG CHƯƠNG TRÌNH CHÍNH KHÓA">Xem thêm <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+        </div>
+                <div class="new-highlight-item common-shadow">
+            <div class="box-new-highlight-img">
+                <a href="https://novaedu.vn/Tin-tuc/novaedu-x-nuae-ung-dung-cong-nghe-buoc-tien-doi-moi-trong-hoat-dong-lop-hoc-1026.html">
+                <img src="https://novaedu.vn/uploads/news/1740380778_okkkkk.jpg" alt="">
+                </a>
+            </div>
+            <div class="common-box-date new-highlight-home">
+                <p><i class="fa-solid fa-calendar-days"></i>&nbsp; 2025-02-24 00:06:18</p>
+                <p><i class="fa-solid fa-user"></i>&nbsp; by Admin</p>
+            </div>
+            <div class="common-box-content">
+                <a href="https://novaedu.vn/Tin-tuc/novaedu-x-nuae-ung-dung-cong-nghe-buoc-tien-doi-moi-trong-hoat-dong-lop-hoc-1026.html" title="[NOVAEDU x NUAE] ỨNG DỤNG CÔNG NGHỆ – BƯỚC TIẾN ĐỔI MỚI TRONG HOẠT ĐỘNG LỚP HỌC 🚀">
+                <p class="m-0">[NOVAEDU x NUAE] ỨNG DỤNG CÔNG NGHỆ – BƯỚC TIẾN ĐỔI MỚI TRONG HOẠT ĐỘNG LỚP HỌC 🚀</p>
+                </a>
+            </div>
+            <div class="common-box-des">
+                <p class="m-0"><p dir="ltr"><span style="font-size:16px"><strong>C&ocirc;ng nghệ trong gi&aacute;o dục &ndash; Xu hướng tất yếu của thời đại</strong></span></p>
+
+<p dir="ltr"><span style="font-size:14px">Trong bối cảnh chuyển đổi số mạnh mẽ hiện nay, việc ứng dụng c&ocirc;ng nghệ v&agrave;o hoạt động lớp học kh&ocirc;ng chỉ gi&uacute;p n&acirc;ng cao hiệu quả giảng dạy m&agrave; c&ograve;n th&uacute;c đẩy sự s&aacute;ng tạo v&agrave; chủ động trong học tập của sinh vi&ecirc;n. Đặc biệt, với sự ph&aacute;t triển vượt bậc của tr&iacute; tuệ nh&acirc;n tạo (AI), gi&aacute;o dục đang bước v&agrave;o một kỷ nguy&ecirc;n mới, nơi c&ocirc;ng nghệ đ&oacute;ng vai tr&ograve; quan trọng trong việc x&acirc;y dựng những b&agrave;i thuyết tr&igrave;nh trực quan, s&aacute;ng tạo v&agrave; c&aacute;c sản phẩm học tập sinh động.</span></p>
+
+<p dir="ltr"><span style="font-size:16px"><strong>Vậy l&agrave;m thế n&agrave;o để sinh vi&ecirc;n c&oacute; thể tận dụng c&ocirc;ng nghệ một c&aacute;ch tối ưu trong học tập?</strong></span></p>
+
+<p dir="ltr"><span style="font-size:14px">Đ&oacute; ch&iacute;nh l&agrave; mục ti&ecirc;u của buổi đ&agrave;o tạo trực tuyến &quot;Ứng dụng c&ocirc;ng nghệ trong hoạt động lớp học&quot; diễn ra v&agrave;o s&aacute;ng ng&agrave;y 16/02, với sự tham gia của Ban c&aacute;n sự chủ chốt c&aacute;c lớp SPRO NUAE kh&oacute;a 5 thuộc học phần &quot;Kỹ năng khởi nghiệp&quot;. Chương tr&igrave;nh do Trường Đại học Sư phạm Nghệ thuật Trung ương (NUAE) phối hợp c&ugrave;ng NovaEdu tổ chức, mang đến những kiến thức v&agrave; c&ocirc;ng cụ c&ocirc;ng nghệ ti&ecirc;n tiến, hỗ trợ sinh vi&ecirc;n học tập hiệu quả hơn.</span></p></p>
+            </div>
+            <div class="swper-content-link new-highlight-link">
+                <a href="https://novaedu.vn/Tin-tuc/novaedu-x-nuae-ung-dung-cong-nghe-buoc-tien-doi-moi-trong-hoat-dong-lop-hoc-1026.html" title="[NOVAEDU x NUAE] ỨNG DỤNG CÔNG NGHỆ – BƯỚC TIẾN ĐỔI MỚI TRONG HOẠT ĐỘNG LỚP HỌC 🚀">Xem thêm <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+        </div>
+            </div>
+</div>    </div>
+    <div class="container-partner-home">
+        <div class="bg-container-partner reveal">
+    <div class="container ">
+        <h3 class="title-text-home text-center">ĐỐI TÁC TIÊU BIỂU CỦA <span style="color:#F37435;">NOVA</span><span
+            style="color:#70B54B;">EDU</span></h3>
+        <div class="list-partner-home">
+                        <div class="partner-home-item img-fix-home">
+               <a href="https://www.hou.edu.vn/">
+                  <img src="https://novaedu.vn/uploads/partners/1698231600_logo-dai-hoc-mo-ha-noi-inkythuatso-01-23-08-58-23.jpg" alt="Đại học Mở Hà Nội">
+               </a>
+            </div>
+                        <div class="partner-home-item img-fix-home">
+               <a href="http://www.spnttw.edu.vn/">
+                  <img src="https://novaedu.vn/uploads/partners/1698208606_partner7.jpg" alt="Trường sư phạm nghệ thuật trung ương">
+               </a>
+            </div>
+                        <div class="partner-home-item img-fix-home">
+               <a href="https://moet.gov.vn/Pages/home.aspx">
+                  <img src="https://novaedu.vn/uploads/partners/1698231450_bo-giao-duc-va-dao-tao-tiep-tuc-xay-dung-va-hoan-thien-co-so-du-lieu-nganh-giao-duc.jpg" alt="Bộ giáo dục và đào tạo">
+               </a>
+            </div>
+                        <div class="partner-home-item img-fix-home">
+               <a href="https://hbcg.vn/">
+                  <img src="https://novaedu.vn/uploads/partners/1698208735_partner6.png" alt="Công ty Hòa Bình">
+               </a>
+            </div>
+                        <div class="partner-home-item img-fix-home">
+               <a href="https://hubt.edu.vn/">
+                  <img src="https://novaedu.vn/uploads/partners/1698208783_partner3.jpg" alt="Trường đại học Kinh doanh và công nghệ Hà Nội">
+               </a>
+            </div>
+                        <div class="partner-home-item img-fix-home">
+               <a href="https://www.neu.edu.vn/">
+                  <img src="https://novaedu.vn/uploads/partners/1698208898_partner10.png" alt="Trường đại học Kinh tế quốc dân">
+               </a>
+            </div>
+                        <div class="partner-home-item img-fix-home">
+               <a href="https://www.dav.edu.vn/">
+                  <img src="https://novaedu.vn/uploads/partners/1698208947_partner9.png" alt="Học viện học ngoại giao">
+               </a>
+            </div>
+                        <div class="partner-home-item img-fix-home">
+               <a href="https://www.hvnh.edu.vn/">
+                  <img src="https://novaedu.vn/uploads/partners/1698209011_Logo HVNH.png" alt="Học viện ngân hàng">
+               </a>
+            </div>
+                        <div class="partner-home-item img-fix-home">
+               <a href="https://hcmute.edu.vn/">
+                  <img src="https://novaedu.vn/uploads/partners/1698231050_1200px-hcmute.svg.png" alt="Trường đại học sư phạm kỹ thuật Thành phố Hồ Chí Minh">
+               </a>
+            </div>
+                       
+        </div>
+    </div>
+</div>    </div>
+    <script>
+        function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  
+  window.addEventListener("scroll", reveal);
+    </script>
+<script>
+    var targetElements = [
+        document.getElementById('countDisplay1'),
+        document.getElementById('countDisplay2'),
+        document.getElementById('countDisplay3'),
+        document.getElementById('countDisplay4')
+    ];
+    var targetValues = targetElements.map(function(element) {
+        return parseInt(element.textContent);
+    });
+    var interval = 1; // Thời gian (milliseconds) giữa mỗi lần cập nhật
+    var currentValues = [0, 0, 0, 0, 0, 0];
+    var isCounting = false;
+
+    function updateCounters() {
+        var allReached = true;
+
+        for (var i = 0; i < targetElements.length; i++) {
+            if (currentValues[i] < targetValues[i]) {
+                currentValues[i] += Math.floor(Math.random() * 10); // Tăng giá trị lên một giá trị ngẫu nhiên
+                if (currentValues[i] >= targetValues[i]) {
+                    currentValues[i] = targetValues[i]; // Đặt giá trị hiện tại thành giá trị mục tiêu nếu nó vượt quá
+                }
+                targetElements[i].textContent = currentValues[i];
+                allReached = false;
+            }
+        }
+
+        if (allReached) {
+            clearInterval(counterInterval); // Dừng việc cập nhật khi tất cả giá trị đạt giá trị cố định
+        }
+    }
+
+    function startCounting() {
+        if (isCounting) return; // Đã đang đếm, không cần bắt đầu lại
+
+        var windowHeight = window.innerHeight; // Chiều cao cửa sổ trình duyệt
+        var elementOffsets = targetElements.map(function(element) {
+            return element.getBoundingClientRect().top;
+        });
+
+        if (elementOffsets.some(function(offset) {
+            return offset - windowHeight <= 0;
+        })) {
+            isCounting = true; // Bắt đầu đếm khi có ít nhất một phần tử hiển thị trên cửa sổ
+            counterInterval = setInterval(updateCounters, interval);
+
+            // Đặt một hàm dừng sau 4 giây
+            setTimeout(stopCounting, 1000);
+        }
+    }
+
+    function stopCounting() {
+        clearInterval(counterInterval); // Dừng việc cập nhật
+        // Đảm bảo rằng giá trị cuối cùng được hiển thị chính xác
+        for (var i = 0; i < targetElements.length; i++) {
+            targetElements[i].textContent = targetValues[i];
+        }
+    }
+
+    // Theo dõi sự kiện cuộn trang
+    window.addEventListener('scroll', startCounting);
+</script>
+
+    <div id="search-results">
+        <!-- Kết quả tìm kiếm sẽ được cập nhật ở đây -->
+    </div>
+    <!-- ------------------------------------footer-------------------------- -->
+    <div class="footer ">
+    <div class="container-footer container">
+        <div class="row">
+            <div class="col-md-4 p-0 footer-left">
+                <div class="ft-logo">
+                    <img src="https://novaedu.vn/frontend/asset/images/logo_ver_new.png" alt="Nova Logo">
+                    <h5>CÔNG TY CP CÔNG NGHỆ GIÁO DỤC NOVA</h5>
+                </div>
+                <ul>
+                    <li><i class="fa-solid fa-map-location-dot"></i>&nbsp; Số 22 Thành Công, Quận Ba Đình, Hà Nội</li>
+                    <li><i class="fa-solid fa-envelope"></i>&nbsp; lienhe@novaedu.vn</li>
+                    <li><i class="fa-solid fa-phone"></i>&nbsp; 0989.49.20.20</li>
+                </ul>
+                <ul class="box-icon-media">
+                    <li><a href="https://www.facebook.com/NovaEdu.vn/"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.youtube.com/@NovaeduNhanlucthoiky40"><i class="fa-brands fa-youtube" style="color: red;"></i></a></li>
+                    <li><a href="https://www.tiktok.com/@nova_edu"><i class="fa-brands fa-tiktok text-dark"></i></a></li>
+                </ul>
+                <div class="footer-center">
+                    <img src="https://novaedu.vn/frontend/asset/images/cnbcth.png" alt="bct">
+                </div>
+                <!-- <div class="map-nova">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.257902782137!2d105.81558597621627!3d21.02236425428293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab656bd1543d%3A0x44dda9a91361540a!2zQ8O0bmcgdHkgQ-G7lSBwaOG6p24gQ8O0bmcgbmdo4buHIEdpw6FvIGThu6VjIE5vdmE!5e0!3m2!1svi!2s!4v1697385022651!5m2!1svi!2s"
+                     style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div> -->
+            </div>
+            <div class="col-md-4  footer-center">
+                <p>
+                    Hệ thống được xây dựng và vận hành bởi Novaedu, Đơn vị chính thức đồng hành cùng với Bộ Giáo dục và Đào tạo trong việc triển khai <span>đề án 1665</span> về việc hỗ trợ học sinh – sinh viên khởi nghiệp của Thủ tướng chính phủ. Novaedu cũng là đơn vị đầu tiên và duy nhất được Bộ GD&ĐT phê duyệt triển khai chương trình “Kỹ năng toàn diện-Nền tảng cốt lõi để khởi nghiệp thành công” đối với Hệ thống các trường CĐ,ĐH trên cả nước.
+                </p>
+                
+            </div>
+            <div class="col-md-4 p-0 footer-right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.1774635479887!2d105.81376207510495!3d21.022314180625383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab656bd1543d%3A0x44dda9a91361540a!2zQ8O0bmcgdHkgQ-G7lSBwaOG6p24gQ8O0bmcgbmdo4buHIEdpw6FvIGThu6VjIE5vdmE!5e1!3m2!1svi!2s!4v1758960925521!5m2!1svi!2s" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer-eand ">
+    <div class="common-width">
+        <h5>2023 All Right Reserved by NOVAEDU</h5>
+    </div>
+</div>
+    <!-- <div class="hero" style="background-image: url('images/hero_1.jpg');"></div> -->
+    <a href="#" id="scrollUpButton"><i class="fas fa-arrow-up"></i></a>
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://novaedu.vn/frontend/asset/js/popper.min.js"></script>
+    <script src="https://novaedu.vn/frontend/asset/js/bootstrap.min.js"></script>
+    <script src="https://novaedu.vn/frontend/asset/js/jquery.sticky.js"></script>
+    <script src="https://novaedu.vn/frontend/asset/js/jquery-appear.js"></script>
+    <script src="https://novaedu.vn/frontend/asset/js/main.js"></script>
+    <script src="https://novaedu.vn/frontend/asset/js/swiper-bundle.min.js"></script>
+    <script src="https://novaedu.vn/frontend/asset/js/slick-1.8.1/slick/slick.js"></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon='{"rayId":"81648ceccec56593","version":"2023.8.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}' crossorigin="anonymous"></script>
+    <script>
+        var swiper = new Swiper('.banner-swiper-active', {
+            effect: 'cards',
+            grabCursor: true,
+            pagination: {
+                el: '.rbt-swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 4000,
+            },
+            loop: true,
+        });
+        var odo = $('.odometer');
+        odo.each(function() {
+            $('.odometer').appear(function(e) {
+                var countNumber = $(this).attr('data-count');
+                $(this).html(countNumber);
+            });
+        });
+    </script>
+    <script>
+        $('.autoplay').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+        });
+    </script>
+    <script>
+        window.onload = function() {
+            var scrollUpButton = document.getElementById('scrollUpButton');
+
+            // Khi người dùng cuộn trang xuống một khoảng cố định (ví dụ: 200px), hiển thị nút
+            window.onscroll = function() {
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    scrollUpButton.style.display = 'block';
+                } else {
+                    scrollUpButton.style.display = 'none';
+                }
+            };
+
+            // Xử lý sự kiện khi người dùng click vào nút scrollUp
+            scrollUpButton.onclick = function() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            };
+        };
+    </script>
+</body>
+
+<!-- Mirrored from preview.colorlib.com/theme/bootstrap/website-menu-07/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Oct 2023 02:14:49 GMT -->
+
+</html>

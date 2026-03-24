@@ -23,6 +23,7 @@ import { Profile } from "./pages/Profile";
 import { CareerProcess } from "./pages/CareerProcess";
 import { UsageGuide } from "./pages/UsageGuide";
 import { Faq } from "./pages/Faq";
+import { Pricing } from "./pages/Pricing";
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +40,7 @@ export const router = createBrowserRouter([
       { path: "process", Component: CareerProcess },
       { path: "guide", Component: UsageGuide },
       { path: "faq", Component: Faq },
+      { path: "pricing", Component: Pricing },
       { path: "mbti-test", Component: MbtiTest },
       { path: "disc-test", Component: DiscTest },
       { path: "intel-test", Component: IntelTest },

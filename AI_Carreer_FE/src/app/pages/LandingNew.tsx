@@ -17,7 +17,7 @@ export function LandingNew() {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-5xl mb-6 text-blue-700">
-                Hành Trang Số – Chọn đúng ngành, học đúng trường
+                Hành Trang Số – Chọn ngành, chọn trường, định hướng tương lai
               </h1>
               <p className="text-xl text-gray-600 mb-8">
                 Hành Trang Số giúp bạn định hướng nghề nghiệp bằng dữ liệu và AI. 
