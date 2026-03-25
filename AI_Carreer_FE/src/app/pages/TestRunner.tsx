@@ -38,6 +38,7 @@ export function TestRunner() {
   const [error, setError] = useState("");
   const [started, setStarted] = useState(false);
   const [answers, setAnswers] = useState<Record<number, string>>({});
+  const [mbtiScores, setMbtiScores] = useState<Record<number, { a: number; b: number }>>({});
   const [currentIndex, setCurrentIndex] = useState(0);
   const [timeLeft, setTimeLeft] = useState(40 * 60);
 
@@ -101,6 +102,16 @@ export function TestRunner() {
     if (q.option_e) options.push({ key: "e", label: q.option_e });
     return options;
   };
+
+  const answeredCount = useMemo(() => {
+    return questions.reduce((count, q) => {
+      const isAnswered =
+        Boolean(answers[q.id]) || (testType?.toLowerCase() === "mbti" && mbtiScores[q.id]);
+      return count + (isAnswered ? 1 : 0);
+    }, 0);
+  }, [questions, answers, mbtiScores, testType]);
+
+  const isComplete = questionCount > 0 && answeredCount === questionCount;
 
   useEffect(() => {
     if (!started) return;
@@ -184,6 +195,9 @@ export function TestRunner() {
                   const q = questions[currentIndex];
                   if (!q) return null;
                   const selected = answers[q.id];
+                  const isMbtiAnswered = Boolean(
+                    testType?.toLowerCase() === "mbti" && mbtiScores[q.id] && typeof mbtiScores[q.id].a === "number"
+                  );
                   const options = getOptions(q);
                   return (
                     <div className="rounded-xl border border-slate-200 p-4">
@@ -191,23 +205,61 @@ export function TestRunner() {
                         Câu {q.id} / {questionCount}
                       </div>
                       {q.question && <div className="mt-2 text-base text-slate-800">{q.question}</div>}
-                      <div className="mt-3 grid gap-3 sm:grid-cols-2">
-                        {options.map((opt) => (
-                          <button
-                            key={opt.key}
-                            type="button"
-                            onClick={() => setAnswers({ ...answers, [q.id]: opt.key })}
-                            className={`rounded-lg border px-4 py-3 text-left text-sm transition ${
-                              selected === opt.key
-                                ? "border-orange-500 bg-orange-50 text-orange-700"
-                                : "border-slate-200 hover:border-slate-400"
-                            }`}
-                          >
-                            <span className="block font-semibold text-slate-700">{opt.key.toUpperCase()}.</span>
-                            <span className="text-slate-600">{opt.label}</span>
-                          </button>
-                        ))}
-                      </div>
+                      {testType?.toLowerCase() === "mbti" ? (
+                        <div className="mt-4 space-y-6">
+                          {(["a", "b"] as const).map((key) => {
+                            const label = key === "a" ? q.option_a : q.option_b;
+                            const current = mbtiScores[q.id];
+                            const selectedScore = current?.[key];
+                            return (
+                              <div key={key}>
+                                <div className="text-sm font-semibold text-slate-800">
+                                  {key}. {label}
+                                </div>
+                                <div className="mt-2 flex items-center gap-4 text-sm">
+                                  <span className="text-green-600">✓ Đánh giá</span>
+                                  <div className="flex flex-wrap items-center gap-4">
+                                    {[0, 1, 2, 3, 4, 5].map((score) => (
+                                      <label key={score} className="flex items-center gap-2 cursor-pointer">
+                                        <input
+                                          type="radio"
+                                          name={`q-${q.id}-${key}`}
+                                          checked={selectedScore === score}
+                                          onChange={() => {
+                                            const a = key === "a" ? score : 5 - score;
+                                            const b = key === "b" ? score : 5 - score;
+                                            setMbtiScores({ ...mbtiScores, [q.id]: { a, b } });
+                                            setAnswers({ ...answers, [q.id]: "mbti" });
+                                          }}
+                                        />
+                                        <span>{score} điểm</span>
+                                      </label>
+                                    ))}
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      ) : (
+                        <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                          {options.map((opt) => (
+                            <button
+                              key={opt.key}
+                              type="button"
+                              onClick={() => setAnswers({ ...answers, [q.id]: opt.key })}
+                              className={`rounded-lg border px-4 py-3 text-left text-sm transition ${
+                                selected === opt.key
+                                  ? "border-orange-500 bg-orange-50 text-orange-700"
+                                  : "border-slate-200 hover:border-slate-400"
+                              }`}
+                            >
+                              <span className="block font-semibold text-slate-700">{opt.key.toUpperCase()}.</span>
+                              <span className="text-slate-600">{opt.label}</span>
+                            </button>
+                          ))}
+                        </div>
+                      )}
                       <div className="mt-6 flex items-center justify-between">
                         <button
                           type="button"
@@ -226,6 +278,19 @@ export function TestRunner() {
                           Câu tiếp theo
                         </button>
                       </div>
+                      {isComplete && (
+                        <div className="mt-8 space-y-4">
+                          <button
+                            type="button"
+                            className="w-full rounded-md bg-[#7cc251] py-3 text-center font-semibold text-white shadow-sm hover:bg-[#6ab344]"
+                          >
+                            NỘP BÀI
+                          </button>
+                          <div className="text-sm text-green-700 italic">
+                            WOW! Chúc mừng bạn đã hoàn thành bài kiểm tra. Bạn vui lòng nộp bài để xem kết quả.
+                          </div>
+                        </div>
+                      )}
                     </div>
                   );
                 })()}
@@ -241,7 +306,7 @@ export function TestRunner() {
             <div className="max-h-[520px] overflow-y-auto p-4">
               <div className="grid grid-cols-4 gap-3">
                 {questions.map((q, index) => {
-                  const isAnswered = Boolean(answers[q.id]);
+                  const isAnswered = Boolean(answers[q.id]) || (testType?.toLowerCase() === "mbti" && mbtiScores[q.id]);
                   const isCurrent = started && index === currentIndex;
                   return (
                     <button
