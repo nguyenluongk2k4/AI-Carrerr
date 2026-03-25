@@ -1,0 +1,194 @@
+[
+    {
+        "id": 1,
+        "type": "allocate_5_points",
+        "option_a": "Quan tâm đến những điểu người khác nghĩ và tư vấn trước khi ra quyết định",
+        "option_b": "Bỏ qua những gì được tư vấn và mọi người nghĩ, tư ra quyết định theo ý mình"
+    },
+    {
+        "id": 2,
+        "type": "allocate_5_points",
+        "option_a": "Được đánh giá là người hay tưởng tượng, khả năng sáng tạo tốt",
+        "option_b": "Được coi là người thường quan tâm tới hiện tại và thực tế"
+    },
+    {
+        "id": 3,
+        "type": "allocate_5_points",
+        "option_a": "Trong tập thể, ra quyết định dựa trên nguyên tắc, văn bản, số liệu thực tế",
+        "option_b": "Trong tập thể, ra quyết định dựa trên tình cảm, sự thấu hiểu với từng cá nhân"
+    },
+    {
+        "id": 4,
+        "type": "allocate_5_points",
+        "option_a": "Chỉ thiết lập cam kết khi nhận được sự đồng ý của tất cả thành viên",
+        "option_b": "Tự quyết định cam kết, rồi thúc đẩy tối đa việc thực hiện cam kết từ các thành viên khác"
+    },
+    {
+        "id": 5,
+        "type": "allocate_5_points",
+        "option_a": "Trầm tĩnh, lặng lẽ quan sát mọi thứ khi ở môi trường mới",
+        "option_b": "Năng nổ họat bát với mọi người khi ở môi trường mới"
+    },
+    {
+        "id": 6,
+        "type": "allocate_5_points",
+        "option_a": "Sử dụng các giải pháp thông thường, sẵn có để thực hiện công việc",
+        "option_b": "Cố gắng nghiên cứu, tìm tòi 1 phương pháp mới khác với các phương pháp hiện tại để thực hiện công việc"
+    },
+    {
+        "id": 7,
+        "type": "allocate_5_points",
+        "option_a": "Ra quyết định dựa trên sự phân tích vấn đề 1 cách cẩn trọng theo tư duy logic, Ít bị ảnh hưởng của cảm xúc",
+        "option_b": "Ra quyết định dựa theo cảm tính và trực giác được hình thành từ các kinh nghiệm"
+    },
+    {
+        "id": 8,
+        "type": "allocate_5_points",
+        "option_a": "Không muốn bị bó buộc thời gian hoàn thành công việc được giao",
+        "option_b": "Lên kế hoạch, deadline rõ ràng và bằng mọi cách thực hiện nó"
+    },
+    {
+        "id": 9,
+        "type": "allocate_5_points",
+        "option_a": "Luôn suy tính trước các vấn đề có thể xảy ra, cần đối đáp như thế nào trong khi đang nói chuyện với người khác",
+        "option_b": "Nói thoải mái trước rồi cảm thấy hối tiếc vì lời mình nói ngay sau đó, tóm lại là nói xong mới nghĩ được thấu đáo"
+    },
+    {
+        "id": 10,
+        "type": "allocate_5_points",
+        "option_a": "Khi giải quyết các vấn đề luôn suy nghĩ về tất cả những khả năng có thể xảy ra",
+        "option_b": "Đối diện và giải quyết ngay khi các vấn đề phát sinh"
+    },
+    {
+        "id": 11,
+        "type": "allocate_5_points",
+        "option_a": "Là người công bằng, giải quyết mọi chuyện thiên về lý hơn",
+        "option_b": "Là người biết thông cảm, giải quyết mọi chuyện thiên về tình hơn"
+    },
+    {
+        "id": 12,
+        "type": "allocate_5_points",
+        "option_a": "Suy nghĩ mọi khả năng có thể xảy ra về một vấn đề và tình huống một thời gian dài trước khi ra quyết định giải quyết nó",
+        "option_b": "Có thông tin cần thiết, suy nghĩ nhanh, sau đó ra quyết định ngay và kiên quyết (không thay đổi ý định) giải quyết vấn đề"
+    },
+    {
+        "id": 13,
+        "type": "allocate_5_points",
+        "option_a": "Muốn làm việc 1 mình, mọi người khó nhận biết được suy nghĩ hay cảm xúc của bạn",
+        "option_b": "Thể hiện cảm xúc và suy nghĩ của mình, và chia sẻ công việc của mình để mọi người cùng góp ý"
+    },
+    {
+        "id": 14,
+        "type": "allocate_5_points",
+        "option_a": "Hứng thú với các định nghĩa, vấn đề không rõ ràng",
+        "option_b": "Hứng thú với những điều rõ ràng, chính xác và dễ hiểu"
+    },
+    {
+        "id": 15,
+        "type": "allocate_5_points",
+        "option_a": "Giúp mọi người nhìn nhận, giải quyết vấn đề theo cảm nhận của họ",
+        "option_b": "Giúp mọi người nhìn nhận, giải quyết vấn đề theo logic, thiên về lý trí"
+    },
+    {
+        "id": 16,
+        "type": "allocate_5_points",
+        "option_a": "Cho rằng kết quả của các quyết định luôn thay đổi, đến đâu sẽ tính đến đó",
+        "option_b": "Dự đoán kết quả của các vấn đề, chuẩn bị trước phương án đối phó và làm mọi việc để lái nó theo kết quả định trước"
+    },
+    {
+        "id": 17,
+        "type": "allocate_5_points",
+        "option_a": "Hành động 1 mình, tự lên kế hoạch, tự chuẩn bị và tự thực hiện mà không để người khác biết",
+        "option_b": "Nói ra những dự định hoặc kế hoạch của mình với người khác trước khi thực hiện"
+    },
+    {
+        "id": 18,
+        "type": "allocate_5_points",
+        "option_a": "Bạn luôn tìm hiểu các cách nhìn khác nhau về các sự kiện, vấn đề hay tình huống",
+        "option_b": "Bạn cố gắng có thông tin cụ thể, chi tiết về công việc, tình huống hay các vấn đề càng nhiều càng tốt"
+    },
+    {
+        "id": 19,
+        "type": "allocate_5_points",
+        "option_a": "Ra quyết định dựa trên cảm nhận cá nhân và trải nghiệm thực tế",
+        "option_b": "Ra quyết định dựa trên các thông tin, dữ liệu đã được phân tích 1 cách logic"
+    },
+    {
+        "id": 20,
+        "type": "allocate_5_points",
+        "option_a": "Lên kế hoạch dài hạn và thực hiện từng bước để đạt được mục tiêu",
+        "option_b": "Lập kế họach ngắn hạn khi có nhu cầu và hoàn thành ngay"
+    },
+    {
+        "id": 21,
+        "type": "allocate_5_points",
+        "option_a": "Thích gặp gỡ, kết giao với bạn mới",
+        "option_b": "Thích ở một mình hoặc giao tiếp với những người mình đã biết rõ"
+    },
+    {
+        "id": 22,
+        "type": "allocate_5_points",
+        "option_a": "Quan tâm đến các ý tưởng liên quan đến sự tưởng tượng, sáng tạo",
+        "option_b": "Quan tâm đến các thông tin dưới dạng dữ liệu - số liệu"
+    },
+    {
+        "id": 23,
+        "type": "allocate_5_points",
+        "option_a": "Bạn ra quyết định dựa trên các niềm tin cá nhân có sẵn",
+        "option_b": "Bạn cho rằng các quyết định có thể chứng minh sai hay đúng dựa trên số liệu"
+    },
+    {
+        "id": 24,
+        "type": "allocate_5_points",
+        "option_a": "Luôn ghi chú lại các cuộc hẹn hoặc công việc cần làm ra giấy cho khỏi quên",
+        "option_b": "Ghi nhớ những việc đó trong đầu, rất ít ghi chú lại"
+    },
+    {
+        "id": 25,
+        "type": "allocate_5_points",
+        "option_a": "Để giải quyết 1 vấn đề mới, bạn yêu cầu mọi người đóng góp ý kiến trước, cùng thảo luận về từng ý kiến và đi đến quyết định cuối cùng",
+        "option_b": "Để giải quyết 1 vấn đề mới, bạn tự mình suy nghĩ cách giải quyết trước, sau đó chia sẻ ý kiến này với mọi người trong nhóm"
+    },
+    {
+        "id": 26,
+        "type": "allocate_5_points",
+        "option_a": "Lập kế hoạch cẩn thận và chi tiết, thực hiện đầy đủ các công việc trong kế hoạch",
+        "option_b": "Lập kế hoạch chi tiết cho công việc,nhưng đến lúc thực hiện thì không nhất thiết phải thực hiện đầy đủ các công việc trong đó"
+    },
+    {
+        "id": 27,
+        "type": "allocate_5_points",
+        "option_a": "Khi cân nhắc công việc bạn không để ý tới hoàn cảnh của sự vật xẩy ra và tương quan con người trong sự kiện đó",
+        "option_b": "Khi cân nhắc công việc bạn luôn để ý tới hoàn cảnh của sự vật xẩy ra và tương quan con người trong sự kiện đó"
+    },
+    {
+        "id": 28,
+        "type": "allocate_5_points",
+        "option_a": "Cảm thấy sẽ làm tốt công việc nếu bạn có hứng thú với nó",
+        "option_b": "Cảm thấy sẽ làm tốt công việc nếu bạn biết rõ những việc cần làm"
+    },
+    {
+        "id": 29,
+        "type": "allocate_5_points",
+        "option_a": "Bạn có xu hướng trở thành trung tâm trong nhóm hoặc đám đông",
+        "option_b": "Bạn có xu hướng trầm lặng và muốn độc lập trong nhóm hoặc đám đông"
+    },
+    {
+        "id": 30,
+        "type": "allocate_5_points",
+        "option_a": "Bạn luôn tưởng tượng, dự đoán về những gì có thể xảy ra",
+        "option_b": "Đánh giá, nghiên cứu kĩ những gì đang có, đang tồn tại"
+    },
+    {
+        "id": 31,
+        "type": "allocate_5_points",
+        "option_a": "Bạn thường trải qua các tình huống cảm xúc khi xem phim hay đối thoại",
+        "option_b": "Bạn thường sử dụng khả năng để phân tích tình huống"
+    },
+    {
+        "id": 32,
+        "type": "allocate_5_points",
+        "option_a": "Muốn bắt đầu 1 buổi họp theo đúng thời gian đã định",
+        "option_b": "Muốn bắt đầu 1 buổi họp khi mọi người thấy thoải mái, và sẵn sàng tham gia"
+    }
+]

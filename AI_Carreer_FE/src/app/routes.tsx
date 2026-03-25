@@ -8,6 +8,11 @@ import { Universities } from "./pages/Universities";
 import { Roadmap } from "./pages/Roadmap";
 import { Premium } from "./pages/Premium";
 import { NotFound } from "./pages/NotFound";
+import { MbtiTest } from "./pages/MbtiTest";
+import { DiscTest } from "./pages/DiscTest";
+import { TestRunner } from "./pages/TestRunner";
+import { IntelTest } from "./pages/IntelTest";
+import { HollandTest } from "./pages/HollandTest";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +26,11 @@ export const router = createBrowserRouter([
       { path: "premium", Component: Premium },
       { path: "universities", Component: Universities },
       { path: "roadmap", Component: Roadmap },
+      { path: "mbti-test", Component: MbtiTest },
+      { path: "disc-test", Component: DiscTest },
+      { path: "intel-test", Component: IntelTest },
+      { path: "holland-test", Component: HollandTest },
+      { path: "test/:testType", Component: TestRunner },
       { path: "*", Component: NotFound },
     ],
   },

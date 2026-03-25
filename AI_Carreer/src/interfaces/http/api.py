@@ -1,4 +1,6 @@
 from typing import Dict, List, Optional, Tuple
+from pathlib import Path
+import json
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -25,6 +27,14 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+DATA_DIR = Path(__file__).resolve().parents[3] / "data"
+TEST_FILES = {
+    "mbti": "mbti_data_clean.json",
+    "disc": "disc_data_clean.json",
+    "holland": "holland_data_clean.json",
+    "intel": "intel_data_clean.json",
+}
 
 
 class ChatMessage(BaseModel):
@@ -446,6 +456,20 @@ async def startup():
 @app.get("/health")
 async def health():
     return {"status": "ok"}
+
+
+@app.get("/tests/{test_type}")
+async def get_test_data(test_type: str):
+    key = test_type.strip().lower()
+    filename = TEST_FILES.get(key)
+    if not filename:
+        raise HTTPException(status_code=404, detail="test_type not found")
+    file_path = DATA_DIR / filename
+    if not file_path.exists():
+        raise HTTPException(status_code=404, detail="data file not found")
+    with file_path.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+    return {"type": key, "questions": data}
 
 
 @app.get("/chroma/count")

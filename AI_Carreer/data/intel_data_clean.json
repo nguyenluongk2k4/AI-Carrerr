@@ -1,0 +1,812 @@
+[
+    {
+        "id": 1,
+        "type": "multiple_intelligences",
+        "question": "Tôi hay nghĩ ra những ý tưởng tốt nhất khi có sự vận động, như: Khi đi bộ hoặc đi đi lại lại",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "bo",
+        "value_b": "0"
+    },
+    {
+        "id": 2,
+        "type": "multiple_intelligences",
+        "question": "Tôi luôn mơ ước trở thành một nhạc sĩ hay ca sĩ",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "mu",
+        "value_b": "0"
+    },
+    {
+        "id": 3,
+        "type": "multiple_intelligences",
+        "question": "Tôi quan tâm đến các vấn đề về môi trường như tình trạng biến đổi khí hậu hay động vật bị tuyệt chủng",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "na",
+        "value_b": "0"
+    },
+    {
+        "id": 4,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích nhìn thấy các bản vẽ hay biểu đồ về cách mọi thứ hoạt động",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "sp",
+        "value_b": "0"
+    },
+    {
+        "id": 5,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích chụp ảnh, hay ghi lại những gì mà tôi thấy xung quanh",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "sp",
+        "value_b": "0"
+    },
+    {
+        "id": 6,
+        "type": "multiple_intelligences",
+        "question": "Tôi ghi nhớ các sự kiện, số liệu, và công thức một cách dễ dàng",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "lo",
+        "value_b": "0"
+    },
+    {
+        "id": 7,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích hoạt động bằng tay với những công việc mang tính cụ thể như: may, thêu, làm mộc...",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "bo",
+        "value_b": "0"
+    },
+    {
+        "id": 8,
+        "type": "multiple_intelligences",
+        "question": "Tôi hát khi tắm và hay hát một mình",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "mu",
+        "value_b": "0"
+    },
+    {
+        "id": 9,
+        "type": "multiple_intelligences",
+        "question": "Tôi luôn hỏi \"Tại sao,\" thay vì \"Cái gì\" hay \"Thế nào\" thường đối với mọi sự việc",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ex",
+        "value_b": "0"
+    },
+    {
+        "id": 10,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích nghe đài hoặc nghe băng nhiều hơn là xem TV",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "li",
+        "value_b": "0"
+    },
+    {
+        "id": 11,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích đọc, tham gia các phiên tranh biện hay thảo luận",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "li",
+        "value_b": "0"
+    },
+    {
+        "id": 12,
+        "type": "multiple_intelligences",
+        "question": "Mọi người thường tìm đến tôi để trò chuyện",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ie",
+        "value_b": "0"
+    },
+    {
+        "id": 13,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích đi đến các buổi nhạc kịch hay hòa nhạc",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "mu",
+        "value_b": "0"
+    },
+    {
+        "id": 14,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích đến các buổi tiệc hay sự kiện xã hội hơn là ngồi ở nhà một mình",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ie",
+        "value_b": "0"
+    },
+    {
+        "id": 15,
+        "type": "multiple_intelligences",
+        "question": "Tôi có thể tháo lắp các đồ cơ khí, đồ gia dụng và biết cách sửa chúng",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "bo",
+        "value_b": "0"
+    },
+    {
+        "id": 16,
+        "type": "multiple_intelligences",
+        "question": "Tôi hay đưa ra lời giải thích hợp lý cho các sự kiện",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "lo",
+        "value_b": "0"
+    },
+    {
+        "id": 17,
+        "type": "multiple_intelligences",
+        "question": "Tôi có thể hình dung ra các đồ vật từ nhiều góc nhìn khác nhau",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "sp",
+        "value_b": "0"
+    },
+    {
+        "id": 18,
+        "type": "multiple_intelligences",
+        "question": "Trong trường tôi thích học các môn khoa học tự nhiên như sinh học, địa lý, …",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "na",
+        "value_b": "0"
+    },
+    {
+        "id": 19,
+        "type": "multiple_intelligences",
+        "question": "Tôi nhạy cảm với màu sắc và tính thẩm mỹ",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "sp",
+        "value_b": "0"
+    },
+    {
+        "id": 20,
+        "type": "multiple_intelligences",
+        "question": "Trong trường học, tôi học tốt các môn xã hội hơn các môn tự nhiên",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "li",
+        "value_b": "0"
+    },
+    {
+        "id": 21,
+        "type": "multiple_intelligences",
+        "question": "Tôi không thể ngồi yên trong một thời gian dài, luôn phải cử động.",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "bo",
+        "value_b": "0"
+    },
+    {
+        "id": 22,
+        "type": "multiple_intelligences",
+        "question": "Tôi giỏi việc ném và bắt",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "bo",
+        "value_b": "0"
+    },
+    {
+        "id": 23,
+        "type": "multiple_intelligences",
+        "question": "Tôi luôn đọc các hướng dẫn sử dụng",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "lo",
+        "value_b": "0"
+    },
+    {
+        "id": 24,
+        "type": "multiple_intelligences",
+        "question": "Tôi giỏi việc tranh luận và giải quyết tranh chấp",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ie",
+        "value_b": "0"
+    },
+    {
+        "id": 25,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích và luôn suy nghĩ truy vấn về gốc rễ của mọi vấn đề",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ex",
+        "value_b": "0"
+    },
+    {
+        "id": 26,
+        "type": "multiple_intelligences",
+        "question": "Âm nhạc ảnh hưởng tới cảm xúc của tôi (tôi buồn khi nghe những giai điệu buồn)",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "mu",
+        "value_b": "0"
+    },
+    {
+        "id": 27,
+        "type": "multiple_intelligences",
+        "question": "Tôi thấy hứng thú với những vấn đề triết học như \"con người sống để làm gì?\"",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ex",
+        "value_b": "0"
+    },
+    {
+        "id": 28,
+        "type": "multiple_intelligences",
+        "question": "Tôi khéo tay và thích làm những thứ như đồ handmade hay đồ mộc, đồ thủ công, …",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "bo",
+        "value_b": "0"
+    },
+    {
+        "id": 29,
+        "type": "multiple_intelligences",
+        "question": "Tôi chú ý đến ngữ pháp và cân nhắc từ ngữ khi nói chuyện với người khác",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "li",
+        "value_b": "0"
+    },
+    {
+        "id": 30,
+        "type": "multiple_intelligences",
+        "question": "Tôi thường xuyên tái chế và cố gắng tiết kiệm lượng nước và điện",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "na",
+        "value_b": "0"
+    },
+    {
+        "id": 31,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích nghệ thuật và có năng khiếu trong việc bài trí",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "sp",
+        "value_b": "0"
+    },
+    {
+        "id": 32,
+        "type": "multiple_intelligences",
+        "question": "Tôi cảm thấy có sự nhạy cảm và thường quan tâm đến các sự việc kỳ bí của thế giới, như: Kim tự tháp, hố đen vũ trụ, tam giác quỷ...",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ex",
+        "value_b": "0"
+    },
+    {
+        "id": 33,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích tìm hiểu về bản thân và các cảm xúc của mình",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ia",
+        "value_b": "0"
+    },
+    {
+        "id": 34,
+        "type": "multiple_intelligences",
+        "question": "Tôi hay bất chợt viết ra những đoạn văn hay, hoặc những đoạn văn của tôi nhận được sự khen ngợi từ mọi người",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "li",
+        "value_b": "0"
+    },
+    {
+        "id": 35,
+        "type": "multiple_intelligences",
+        "question": "Tôi có cách nhìn thực tế về điểm mạnh, điểm yếu của bản thân mình",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ia",
+        "value_b": "0"
+    },
+    {
+        "id": 36,
+        "type": "multiple_intelligences",
+        "question": "Tôi có ít nhất 3 người bạn thân",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ie",
+        "value_b": "0"
+    },
+    {
+        "id": 37,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích xem các phim tài liệu khoa học/ thiên nhiên",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "na",
+        "value_b": "0"
+    },
+    {
+        "id": 38,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích trò chơi xếp hình và các câu đố dạng hình ảnh",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "sp",
+        "value_b": "0"
+    },
+    {
+        "id": 39,
+        "type": "multiple_intelligences",
+        "question": "Tôi có một tủ sách mà tôi không thể sống nếu thiếu chúng",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "li",
+        "value_b": "0"
+    },
+    {
+        "id": 40,
+        "type": "multiple_intelligences",
+        "question": "Tôi hay tò mò và thích tìm hiểu về các vấn đề tâm linh, như: hồn ma, lên đồng, người ngoài hành tinh...",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ex",
+        "value_b": "0"
+    },
+    {
+        "id": 41,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích các hoạt động và trải nghiệm mang nhiều thách thức",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "bo",
+        "value_b": "0"
+    },
+    {
+        "id": 42,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích tham gia các hoạt động ngoài trời vào thời gian rảnh rỗi",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "bo",
+        "value_b": "0"
+    },
+    {
+        "id": 43,
+        "type": "multiple_intelligences",
+        "question": "Bạn bè nghĩ tôi có một bộ não như máy tính",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "lo",
+        "value_b": "0"
+    },
+    {
+        "id": 44,
+        "type": "multiple_intelligences",
+        "question": "Tôi có khả năng lãnh đạo, có thể khiến mọi người đi theo suy nghĩ của mình",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ie",
+        "value_b": "0"
+    },
+    {
+        "id": 45,
+        "type": "multiple_intelligences",
+        "question": "Tôi có chơi hoặc chắc chắn chơi ít nhất 1 loại nhạc cụ nào đó",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "mu",
+        "value_b": "0"
+    },
+    {
+        "id": 46,
+        "type": "multiple_intelligences",
+        "question": "Tôi có rất nhiều tranh ảnh trong nhà hay trong máy tính cá nhân",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "sp",
+        "value_b": "0"
+    },
+    {
+        "id": 47,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích tìm hiểu những vấn đề về sự tiến hóa, thiên văn học, triết học",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ex",
+        "value_b": "0"
+    },
+    {
+        "id": 48,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích dành thời gian ở một mình",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ia",
+        "value_b": "0"
+    },
+    {
+        "id": 49,
+        "type": "multiple_intelligences",
+        "question": "Tôi có thể làm toán nhẩm trong đầu",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "lo",
+        "value_b": "0"
+    },
+    {
+        "id": 50,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích làm việc theo nhóm và tương tác tốt với mọi người trong nhóm",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ia",
+        "value_b": "0"
+    },
+    {
+        "id": 51,
+        "type": "multiple_intelligences",
+        "question": "Tôi là con người của xã hội (hòa đồng, quảng giao, …)",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ie",
+        "value_b": "0"
+    },
+    {
+        "id": 52,
+        "type": "multiple_intelligences",
+        "question": "Tôi dễ nhớ hay dùng các trích dẫn, châm ngôn khi trò chuyện",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "li",
+        "value_b": "0"
+    },
+    {
+        "id": 53,
+        "type": "multiple_intelligences",
+        "question": "Tôi dễ nhận ra cảm xúc thông qua ngôn ngữ cơ thể của người khác",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ie",
+        "value_b": "0"
+    },
+    {
+        "id": 54,
+        "type": "multiple_intelligences",
+        "question": "Tôi có thể hát theo giai điệu và chỉ ra những nốt bị lệch tông",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "mu",
+        "value_b": "0"
+    },
+    {
+        "id": 55,
+        "type": "multiple_intelligences",
+        "question": "Bạn bè nghĩ tôi trồng cây rất mát tay",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "na",
+        "value_b": "0"
+    },
+    {
+        "id": 56,
+        "type": "multiple_intelligences",
+        "question": "Nếu tôi nghe một bản nhạc được tuyển chọn nào đó, sau một hai lần tôi thường có thể hát lại một cách tương đối chính xác",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "mu",
+        "value_b": "0"
+    },
+    {
+        "id": 57,
+        "type": "multiple_intelligences",
+        "question": "Bạn bè cho rằng tôi hay suy nghĩ \"kỳ quái\" so với mọi người xung quanh",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ex",
+        "value_b": "0"
+    },
+    {
+        "id": 58,
+        "type": "multiple_intelligences",
+        "question": "Tôi yêu thích thể thao và các hoạt động vận động",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "bo",
+        "value_b": "0"
+    },
+    {
+        "id": 59,
+        "type": "multiple_intelligences",
+        "question": "Tôi bịa chuyện rất dễ dàng",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "li",
+        "value_b": "0"
+    },
+    {
+        "id": 60,
+        "type": "multiple_intelligences",
+        "question": "Tôi hiểu cảm xúc của mình và biết mình sẽ phản ứng như thế nào trong các tình huống khác nhau",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ia",
+        "value_b": "0"
+    },
+    {
+        "id": 61,
+        "type": "multiple_intelligences",
+        "question": "Tôi rất trân trọng những khung cảnh, khu vườn hay những góc nhìn đẹp.",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "na",
+        "value_b": "0"
+    },
+    {
+        "id": 62,
+        "type": "multiple_intelligences",
+        "question": "Tôi trân quý những tình bạn thân thiết",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ie",
+        "value_b": "0"
+    },
+    {
+        "id": 63,
+        "type": "multiple_intelligences",
+        "question": "Tôi thường nhìn thấy các hình ảnh khi tôi mơ hay nhắm mắt lại",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "sp",
+        "value_b": "0"
+    },
+    {
+        "id": 64,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích làm việc một mình hơn là làm theo nhóm",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ia",
+        "value_b": "0"
+    },
+    {
+        "id": 65,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích xem phim về các chủ đề viễn tưởng, vĩ nhân hoặc khám phá thế giới xa xôi",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ex",
+        "value_b": "0"
+    },
+    {
+        "id": 66,
+        "type": "multiple_intelligences",
+        "question": "Tôi tự coi mình là người có ý chí mạnh mẽ hoặc người có khuynh hướng độc lập",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ia",
+        "value_b": "0"
+    },
+    {
+        "id": 67,
+        "type": "multiple_intelligences",
+        "question": "Tôi chơi giỏi các trò logic, như cờ vua, cờ vây, Sudoku",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "lo",
+        "value_b": "0"
+    },
+    {
+        "id": 68,
+        "type": "multiple_intelligences",
+        "question": "Trong trường học tôi học giỏi Toán và Vật lý",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "lo",
+        "value_b": "0"
+    },
+    {
+        "id": 69,
+        "type": "multiple_intelligences",
+        "question": "Tôi nghĩ rất nhiều về cuộc sống và tương lai",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ia",
+        "value_b": "0"
+    },
+    {
+        "id": 70,
+        "type": "multiple_intelligences",
+        "question": "Tôi thường dùng toán và logic để giải quyết các vấn đề trong cuộc sống",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "lo",
+        "value_b": "0"
+    },
+    {
+        "id": 71,
+        "type": "multiple_intelligences",
+        "question": "Khi còn bé tôi rất thích bắt bướm, bắt ếch và xem các con côn trùng",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "na",
+        "value_b": "0"
+    },
+    {
+        "id": 72,
+        "type": "multiple_intelligences",
+        "question": "Tôi thường xuyên viết nhật ký hay sổ lịch trình",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ia",
+        "value_b": "0"
+    },
+    {
+        "id": 73,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích tìm hiểu về cách mà mọi thứ hoạt động ra sao",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "lo",
+        "value_b": "0"
+    },
+    {
+        "id": 74,
+        "type": "multiple_intelligences",
+        "question": "Mọi người nghĩ rằng tôi thích nhận được sự chú ý, thích là trung tâm",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ie",
+        "value_b": "0"
+    },
+    {
+        "id": 75,
+        "type": "multiple_intelligences",
+        "question": "Tôi thường bật nhạc làm nền cho các hoạt động khác",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "mu",
+        "value_b": "0"
+    },
+    {
+        "id": 76,
+        "type": "multiple_intelligences",
+        "question": "Tôi có thể dễ dàng dành thời gian để nghe một đoạn nhạc được chơi chỉ với một dụng cụ gõ đơn giản",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "mu",
+        "value_b": "0"
+    },
+    {
+        "id": 77,
+        "type": "multiple_intelligences",
+        "question": "Tôi có thể dễ dàng phân biệt các loại cây và động vật khác nhau",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "na",
+        "value_b": "0"
+    },
+    {
+        "id": 78,
+        "type": "multiple_intelligences",
+        "question": "Tôi hay vẽ linh tinh",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "sp",
+        "value_b": "0"
+    },
+    {
+        "id": 79,
+        "type": "multiple_intelligences",
+        "question": "Tôi cảm thấy mình có cách nghĩ khác và hiểu biết không giống với những gì mà xã hội đang cho là \"hiển nhiên\" như thế",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ex",
+        "value_b": "0"
+    },
+    {
+        "id": 80,
+        "type": "multiple_intelligences",
+        "question": "Tôi giải quyết vấn đề theo một trình tự có hệ thống",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "lo",
+        "value_b": "0"
+    },
+    {
+        "id": 81,
+        "type": "multiple_intelligences",
+        "question": "Tôi có thể học ngoại ngữ dễ dàng",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "li",
+        "value_b": "0"
+    },
+    {
+        "id": 82,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích làm việc theo nhóm hơn là tự làm một mình",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ie",
+        "value_b": "0"
+    },
+    {
+        "id": 83,
+        "type": "multiple_intelligences",
+        "question": "Trong trường học môn học ưa thích của tôi là Âm nhạc",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "mu",
+        "value_b": "0"
+    },
+    {
+        "id": 84,
+        "type": "multiple_intelligences",
+        "question": "Tôi có mơ ước trở thành một bác sĩ thú y, nhà thực vật học, nhà địa chất học, nhà khảo cổ, v.v…",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "na",
+        "value_b": "0"
+    },
+    {
+        "id": 85,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích môn hình học hơn môn đại số",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "sp",
+        "value_b": "0"
+    },
+    {
+        "id": 86,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích đi ra ngoài và còn thích hơn khi đi xa, ra khỏi thành phố",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "na",
+        "value_b": "0"
+    },
+    {
+        "id": 87,
+        "type": "multiple_intelligences",
+        "question": "Tôi luôn mơ ước được trở thành nhà văn hay biên tập viên",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "li",
+        "value_b": "0"
+    },
+    {
+        "id": 88,
+        "type": "multiple_intelligences",
+        "question": "Tôi có thể tự vận động tốt cũng như dễ dàng phối hợp với người khác",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "bo",
+        "value_b": "0"
+    },
+    {
+        "id": 89,
+        "type": "multiple_intelligences",
+        "question": "Tôi thích những nơi yên tĩnh hơn là những nơi náo nhiệt",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ia",
+        "value_b": "0"
+    },
+    {
+        "id": 90,
+        "type": "multiple_intelligences",
+        "question": "Thi thoảng tôi hay suy nghĩ về việc mình tại sao được sinh ra, và chết xong thì sao?",
+        "option_a": "Đúng",
+        "option_b": "Sai",
+        "value_a": "ex",
+        "value_b": "0"
+    }
+]
