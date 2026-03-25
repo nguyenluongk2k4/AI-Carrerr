@@ -13,6 +13,7 @@ import { DiscTest } from "./pages/DiscTest";
 import { TestRunner } from "./pages/TestRunner";
 import { IntelTest } from "./pages/IntelTest";
 import { HollandTest } from "./pages/HollandTest";
+import { MbtiResult } from "./pages/MbtiResult";
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +32,7 @@ export const router = createBrowserRouter([
       { path: "intel-test", Component: IntelTest },
       { path: "holland-test", Component: HollandTest },
       { path: "test/:testType", Component: TestRunner },
+      { path: "mbti-result", Component: MbtiResult },
       { path: "*", Component: NotFound },
     ],
   },

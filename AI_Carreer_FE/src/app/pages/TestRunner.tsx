@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 type TestQuestion = {
   id: number;
@@ -33,6 +33,7 @@ const TEST_SUMMARY_TITLES: Record<string, string> = {
 
 export function TestRunner() {
   const { testType } = useParams();
+  const navigate = useNavigate();
   const [questions, setQuestions] = useState<TestQuestion[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -41,6 +42,8 @@ export function TestRunner() {
   const [mbtiScores, setMbtiScores] = useState<Record<number, { a: number; b: number }>>({});
   const [currentIndex, setCurrentIndex] = useState(0);
   const [timeLeft, setTimeLeft] = useState(40 * 60);
+
+  const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
 
   const title = useMemo(() => {
     const key = (testType || "").toLowerCase();
@@ -112,6 +115,25 @@ export function TestRunner() {
   }, [questions, answers, mbtiScores, testType]);
 
   const isComplete = questionCount > 0 && answeredCount === questionCount;
+
+  const handleSubmit = async () => {
+    if (testType?.toLowerCase() !== "mbti") return;
+    const scores = Object.entries(mbtiScores).map(([id, value]) => ({
+      id: Number(id),
+      a: value.a,
+      b: value.b,
+    }));
+    if (scores.length === 0) return;
+    const response = await fetch(`${API_BASE}/mbti/analyze`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ scores }),
+    });
+    if (!response.ok) return;
+    const data = await response.json();
+    localStorage.setItem("mbtiResult", JSON.stringify(data));
+    navigate("/mbti-result");
+  };
 
   useEffect(() => {
     if (!started) return;
@@ -282,6 +304,7 @@ export function TestRunner() {
                         <div className="mt-8 space-y-4">
                           <button
                             type="button"
+                            onClick={handleSubmit}
                             className="w-full rounded-md bg-[#7cc251] py-3 text-center font-semibold text-white shadow-sm hover:bg-[#6ab344]"
                           >
                             NỘP BÀI

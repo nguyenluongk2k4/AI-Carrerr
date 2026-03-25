@@ -113,6 +113,41 @@ class RoadmapResponse(BaseModel):
     roadmap: List[str]
     courses: List[TutorRecommendation]
 
+
+class MbtiScoreItem(BaseModel):
+    id: int
+    a: int
+    b: int
+
+
+class MbtiAnalyzeRequest(BaseModel):
+    scores: List[MbtiScoreItem]
+
+
+class MbtiAxisScore(BaseModel):
+    axis: str
+    left: str
+    right: str
+    left_score: int
+    right_score: int
+    left_percent: int
+    right_percent: int
+
+
+class MbtiAnalyzeResponse(BaseModel):
+    mbti_type: str
+    group: str
+    axes: List[MbtiAxisScore]
+    totals: Dict[str, int]
+
+
+class MbtiDescribeRequest(BaseModel):
+    mbti_type: str
+
+
+class MbtiDescribeResponse(BaseModel):
+    description: str
+
 def _build_assessment_prompt(summary: List[AssessmentSummaryItem]) -> str:
     lines = []
     for item in summary:
@@ -436,21 +471,54 @@ def _family_bucket(condition: Optional[str]) -> Optional[str]:
     return None
 
 
+def _mbti_axis_for_question(q_id: int) -> Tuple[str, str]:
+    # Default mapping: 32 questions split into 4 axes (8 each)
+    # Q1-8: I/E, Q9-16: N/S, Q17-24: T/F, Q25-32: J/P
+    if 1 <= q_id <= 8:
+        return ("I", "E")
+    if 9 <= q_id <= 16:
+        return ("N", "S")
+    if 17 <= q_id <= 24:
+        return ("T", "F")
+    return ("J", "P")
+
+
+def _mbti_group(mbti_type: str) -> str:
+    if len(mbti_type) != 4:
+        return "Unknown"
+    if mbti_type[1] == "N" and mbti_type[2] == "T":
+        return "Analyst (NT)"
+    if mbti_type[1] == "N" and mbti_type[2] == "F":
+        return "Diplomat (NF)"
+    if mbti_type[1] == "S" and mbti_type[2] == "J":
+        return "Sentinel (SJ)"
+    if mbti_type[1] == "S" and mbti_type[2] == "P":
+        return "Explorer (SP)"
+    return "Unknown"
+
+
 @app.on_event("startup")
 async def startup():
     cfg = get_config()
     if not cfg.google_api_key:
         raise RuntimeError("GOOGLE_API_KEY is missing")
 
-    embeddings = build_embeddings(cfg.embed_model)
-    store = load_chroma(cfg.chroma_db_path, embeddings)
     llm = build_llm(cfg.google_api_key, cfg.gemini_model)
-    chain = build_rag_chain(store, llm)
-    assessment_chain = build_rag_chain(store, llm, search_filter={"source": "data.json"})
+    app.state.llm = llm
+    try:
+        embeddings = build_embeddings(cfg.embed_model)
+        store = load_chroma(cfg.chroma_db_path, embeddings)
+        chain = build_rag_chain(store, llm)
+        assessment_chain = build_rag_chain(store, llm, search_filter={"source": "data.json"})
 
-    app.state.store = store
-    app.state.chain = chain
-    app.state.assessment_chain = assessment_chain
+        app.state.store = store
+        app.state.chain = chain
+        app.state.assessment_chain = assessment_chain
+    except Exception as exc:
+        print("WARNING: Failed to initialize embeddings/chroma:", exc)
+        app.state.store = None
+        app.state.chain = None
+        app.state.assessment_chain = None
 
 
 @app.get("/health")
@@ -480,6 +548,8 @@ async def chroma_count():
 
 @app.post("/chroma/search", response_model=SearchResponse)
 async def chroma_search(payload: SearchRequest):
+    if not app.state.store:
+        raise HTTPException(status_code=503, detail="vector store not initialized")
     results = await search_knowledge(app.state.store, payload.query, payload.k)
     return {
         "results": [
@@ -490,6 +560,8 @@ async def chroma_search(payload: SearchRequest):
 
 @app.post("/advisor/ask", response_model=AskAdvisorResponse)
 async def advisor_ask(payload: AskAdvisorRequest):
+    if not app.state.chain:
+        raise HTTPException(status_code=503, detail="advisor chain not initialized")
     messages = payload.chat_history or []
     domain_messages = [AdvisorMessage(role=m.role, content=m.content) for m in messages]
     answer = await ask_advisor(app.state.chain, payload.question, domain_messages)
@@ -498,6 +570,8 @@ async def advisor_ask(payload: AskAdvisorRequest):
 
 @app.post("/assessment/analyze", response_model=AssessmentAnalyzeResponse)
 async def assessment_analyze(payload: AssessmentAnalyzeRequest):
+    if not app.state.assessment_chain:
+        raise HTTPException(status_code=503, detail="assessment chain not initialized")
     if not payload.summary:
         raise HTTPException(status_code=400, detail="summary is required")
 
@@ -689,6 +763,8 @@ async def assessment_analyze(payload: AssessmentAnalyzeRequest):
 
 @app.post("/roadmap/school", response_model=RoadmapResponse)
 async def roadmap_school(payload: RoadmapRequest):
+    if not app.state.store:
+        raise HTTPException(status_code=503, detail="vector store not initialized")
     if not payload.school:
         raise HTTPException(status_code=400, detail="school is required")
 
@@ -754,3 +830,70 @@ async def roadmap_school(payload: RoadmapRequest):
             )
 
     return {"roadmap": roadmap_items, "courses": courses}
+
+
+@app.post("/mbti/analyze", response_model=MbtiAnalyzeResponse)
+async def mbti_analyze(payload: MbtiAnalyzeRequest):
+    if not payload.scores:
+        raise HTTPException(status_code=400, detail="scores is required")
+
+    totals: Dict[str, int] = {"I": 0, "E": 0, "N": 0, "S": 0, "T": 0, "F": 0, "J": 0, "P": 0}
+    for item in payload.scores:
+        left, right = _mbti_axis_for_question(item.id)
+        totals[left] += int(item.a)
+        totals[right] += int(item.b)
+
+    axes: List[MbtiAxisScore] = []
+    mbti_type = ""
+    for left, right in [("I", "E"), ("N", "S"), ("T", "F"), ("J", "P")]:
+        left_score = totals[left]
+        right_score = totals[right]
+        total = left_score + right_score
+        if total == 0:
+            left_percent = right_percent = 50
+        else:
+            left_percent = int(round((left_score / total) * 100))
+            right_percent = 100 - left_percent
+        axes.append(
+            MbtiAxisScore(
+                axis=f"{left}/{right}",
+                left=left,
+                right=right,
+                left_score=left_score,
+                right_score=right_score,
+                left_percent=left_percent,
+                right_percent=right_percent,
+            )
+        )
+        mbti_type += left if left_score >= right_score else right
+
+    return {
+        "mbti_type": mbti_type,
+        "group": _mbti_group(mbti_type),
+        "axes": axes,
+        "totals": totals,
+    }
+
+
+@app.post("/mbti/describe", response_model=MbtiDescribeResponse)
+async def mbti_describe(payload: MbtiDescribeRequest):
+    mbti_type = (payload.mbti_type or "").strip().upper()
+    if len(mbti_type) != 4:
+        raise HTTPException(status_code=400, detail="mbti_type is invalid")
+    prompt = (
+        "Bạn là chuyên gia tư vấn tính cách và hướng nghiệp.\n"
+        f"Hãy mô tả chi tiết về nhóm tính cách MBTI {mbti_type} bằng tiếng Việt.\n"
+        "Yêu cầu:\n"
+        "- Độ dài 2-3 đoạn, khoảng 10-14 câu.\n"
+        "- Nêu: điểm mạnh nổi bật, điểm cần lưu ý, phong cách học tập/làm việc, môi trường phù hợp,\n"
+        "  cách giao tiếp/quan hệ, và 3-5 gợi ý nghề nghiệp.\n"
+        "- Viết tự nhiên, dễ hiểu, không phán xét, không quá học thuật.\n"
+        "- Tránh liệt kê khô khan, ưu tiên diễn giải có ví dụ ngắn."
+    )
+    llm = getattr(app.state, "llm", None)
+    if llm is None:
+        raise HTTPException(status_code=503, detail="llm not initialized")
+    answer = llm.invoke(prompt)
+    if hasattr(answer, "content"):
+        answer = answer.content
+    return {"description": answer}
