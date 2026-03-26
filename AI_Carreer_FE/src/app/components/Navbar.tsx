@@ -14,7 +14,7 @@ const navItems: NavItemConfig[] = [
   {
     label: "Giới thiệu",
     items: [
-      "Giới thiệu về Nova Eguide",
+      "Giới thiệu về Hành Trang Số",
       "Hành trình lan tỏa giá trị",
       "Quy trình hướng nghiệp",
       "Sự khác biệt tạo nên điều đặc biệt",
@@ -26,7 +26,7 @@ const navItems: NavItemConfig[] = [
       { label: "Kiểm tra tính cách", to: "/mbti-test" },
       { label: "Kiểm tra đa trí thông minh", to: "/intel-test" },
       { label: "Kiểm tra mật mã Holland", to: "/holland-test" },
-      "Kiểm tra năng lực",
+      { label: "Kiểm tra năng lực", to: "/ability" },
       { label: "Kiểm tra tính cách D.I.S.C", to: "/disc-test" },
     ],
   },
@@ -176,6 +176,12 @@ export function Navbar() {
                     <User className="size-4 text-slate-400" />
                   )}
                   <span>{user?.displayName}</span>
+                  <Link
+                    to="/profile"
+                    className="ml-2 rounded-full border border-slate-200 px-3 py-1 text-xs text-slate-600 hover:border-orange-300 hover:text-orange-600"
+                  >
+                    Hồ sơ
+                  </Link>
                   <button
                     onClick={handleLogout}
                     className="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-all"

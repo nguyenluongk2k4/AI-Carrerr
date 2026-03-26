@@ -1,6 +1,7 @@
 from typing import Dict, List, Optional, Tuple
 from pathlib import Path
 import json
+from datetime import datetime
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -29,11 +30,24 @@ app.add_middleware(
 )
 
 DATA_DIR = Path(__file__).resolve().parents[3] / "data"
+RESULTS_DIR = DATA_DIR / "results"
 TEST_FILES = {
     "mbti": "mbti_data_clean.json",
     "disc": "disc_data_clean.json",
     "holland": "holland_data_clean.json",
     "intel": "intel_data_clean.json",
+}
+
+ABILITY_FILES = {
+    "dialy": "dialy_clean.json",
+    "hoahoc": "hoahoc_clean.json",
+    "tinhoc": "tinhoc_clean.json",
+    "history": "history_clean.json",
+    "biology": "biology_clean.json",
+    "literature": "literature_clean.json",
+    "iq": "iq_clean.json",
+    "general": "general_knowledge_clean.json",
+    "culture": "culture_arts_clean.json",
 }
 
 
@@ -146,6 +160,97 @@ class MbtiDescribeRequest(BaseModel):
 
 
 class MbtiDescribeResponse(BaseModel):
+    description: str
+
+
+class MiAnswerItem(BaseModel):
+    id: int
+    answer: str
+
+
+class MiAnalyzeRequest(BaseModel):
+    answers: List[MiAnswerItem]
+
+
+class MiScoreItem(BaseModel):
+    key: str
+    name: str
+    score: int
+    max_score: int
+    percent: int
+
+
+class MiAnalyzeResponse(BaseModel):
+    scores: List[MiScoreItem]
+
+
+class MiDescribeRequest(BaseModel):
+    scores: List[MiScoreItem]
+
+
+class MiDescribeResponse(BaseModel):
+    description: str
+
+
+class HollandAnswerItem(BaseModel):
+    id: int
+    value: Optional[int] = 0
+
+
+class HollandAnalyzeRequest(BaseModel):
+    answers: List[HollandAnswerItem]
+
+
+class HollandScoreItem(BaseModel):
+    key: str
+    name: str
+    score: int
+    max_score: int
+    percent: int
+
+
+class HollandAnalyzeResponse(BaseModel):
+    scores: List[HollandScoreItem]
+    top_code: str
+
+
+class HollandDescribeRequest(BaseModel):
+    scores: List[HollandScoreItem]
+    top_code: str
+
+
+class HollandDescribeResponse(BaseModel):
+    description: str
+
+
+class DiscAnswerItem(BaseModel):
+    id: int
+    value: int
+
+
+class DiscAnalyzeRequest(BaseModel):
+    answers: List[DiscAnswerItem]
+
+
+class DiscScoreItem(BaseModel):
+    key: str
+    name: str
+    score: int
+    max_score: int
+    percent: int
+
+
+class DiscAnalyzeResponse(BaseModel):
+    scores: List[DiscScoreItem]
+    top_code: str
+
+
+class DiscDescribeRequest(BaseModel):
+    scores: List[DiscScoreItem]
+    top_code: str
+
+
+class DiscDescribeResponse(BaseModel):
     description: str
 
 def _build_assessment_prompt(summary: List[AssessmentSummaryItem]) -> str:
@@ -497,6 +602,131 @@ def _mbti_group(mbti_type: str) -> str:
     return "Unknown"
 
 
+MI_CODE_MAP = {
+    "li": "Linguistic (Ngôn ngữ)",
+    "lo": "Logical (Logic - Toán)",
+    "sp": "Spatial (Không gian - hình ảnh)",
+    "mu": "Musical (Âm nhạc)",
+    "bo": "Bodily (Vận động)",
+    "ie": "Interpersonal (Hiểu người khác)",
+    "ia": "Intrapersonal (Hiểu bản thân)",
+    "na": "Naturalistic (Thiên nhiên)",
+    "ex": "Existential (Tư duy hiện sinh)",
+}
+
+HOLLAND_CODE_MAP = {
+    "R": "Realistic (Kỹ thuật)",
+    "I": "Investigative (Nghiên cứu)",
+    "A": "Artistic (Nghệ thuật)",
+    "S": "Social (Xã hội)",
+    "E": "Enterprising (Quản lý / Kinh doanh)",
+    "C": "Conventional (Nghiệp vụ)",
+}
+
+HOLLAND_MAPPING = {
+    # I
+    1: "I",
+    7: "I",
+    23: "I",
+    29: "I",
+    43: "I",
+    55: "I",
+    56: "I",
+    71: "I",
+    # A
+    2: "A",
+    11: "A",
+    16: "A",
+    45: "A",
+    50: "A",
+    57: "A",
+    # C
+    3: "C",
+    9: "C",
+    14: "C",
+    25: "C",
+    26: "C",
+    37: "C",
+    39: "C",
+    47: "C",
+    48: "C",
+    52: "C",
+    67: "C",
+    68: "C",
+    # S
+    4: "S",
+    10: "S",
+    24: "S",
+    44: "S",
+    46: "S",
+    51: "S",
+    60: "S",
+    61: "S",
+    62: "S",
+    72: "S",
+    # E
+    5: "E",
+    8: "E",
+    13: "E",
+    27: "E",
+    36: "E",
+    38: "E",
+    41: "E",
+    66: "E",
+    70: "E",
+    # R
+    12: "R",
+    17: "R",
+    18: "R",
+    19: "R",
+    20: "R",
+    33: "R",
+    34: "R",
+    35: "R",
+    63: "R",
+    64: "R",
+    65: "R",
+}
+
+DISC_CODE_MAP = {
+    "D": "Dominance (Thống trị / quyết đoán)",
+    "I": "Influence (Ảnh hưởng / giao tiếp)",
+    "S": "Steadiness (Ổn định / kiên định)",
+    "C": "Compliance (Tuân thủ / chi tiết)",
+}
+
+DISC_MAPPING = {
+    # D
+    1: "D",
+    5: "D",
+    9: "D",
+    13: "D",
+    17: "D",
+    21: "D",
+    # I
+    2: "I",
+    6: "I",
+    10: "I",
+    14: "I",
+    18: "I",
+    22: "I",
+    # S
+    3: "S",
+    7: "S",
+    11: "S",
+    15: "S",
+    19: "S",
+    23: "S",
+    # C
+    4: "C",
+    8: "C",
+    12: "C",
+    16: "C",
+    20: "C",
+    24: "C",
+}
+
+
 @app.on_event("startup")
 async def startup():
     cfg = get_config()
@@ -538,6 +768,220 @@ async def get_test_data(test_type: str):
     with file_path.open("r", encoding="utf-8") as f:
         data = json.load(f)
     return {"type": key, "questions": data}
+
+
+@app.get("/ability/subjects")
+async def ability_subjects():
+    return {
+        "subjects": [
+            {"key": key, "file": filename} for key, filename in ABILITY_FILES.items()
+        ]
+    }
+
+
+@app.get("/ability/{subject}")
+async def get_ability_data(subject: str):
+    key = subject.strip().lower()
+    filename = ABILITY_FILES.get(key)
+    if not filename:
+        raise HTTPException(status_code=404, detail="subject not found")
+    file_path = DATA_DIR / filename
+    if not file_path.exists():
+        raise HTTPException(status_code=404, detail="data file not found")
+    with file_path.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+    return {"subject": key, "questions": data}
+
+
+@app.post("/ability/grade")
+async def grade_ability(payload: dict):
+    subject = (payload.get("subject") or "").strip().lower()
+    answers = payload.get("answers") or []
+    filename = ABILITY_FILES.get(subject)
+    if not filename:
+        raise HTTPException(status_code=404, detail="subject not found")
+    file_path = DATA_DIR / filename
+    if not file_path.exists():
+        raise HTTPException(status_code=404, detail="data file not found")
+    with file_path.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+    answer_map = {int(item.get("id")): str(item.get("answer_key", "")).lower() for item in data}
+    total = 0
+    for item in answers:
+        try:
+            qid = int(item.get("id"))
+        except Exception:
+            continue
+        ans = str(item.get("answer", "")).lower()
+        if ans and answer_map.get(qid) == ans:
+            total += 1
+    return {"score": total, "total": len(data)}
+
+
+@app.post("/chat/ask")
+async def chat_ask(payload: dict):
+    message = (payload.get("message") or "").strip()
+    history = payload.get("history") or []
+    username = (payload.get("username") or "").strip().lower()
+    if not message:
+        raise HTTPException(status_code=400, detail="message is required")
+    llm = getattr(app.state, "llm", None)
+    if llm is None:
+        raise HTTPException(status_code=503, detail="llm not initialized")
+
+    results_context = ""
+    if username:
+        try:
+            RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+            user_file = RESULTS_DIR / f"{username}.json"
+            if user_file.exists():
+                with user_file.open("r", encoding="utf-8") as f:
+                    user_data = json.load(f)
+                tests = user_data.get("tests", {})
+                if isinstance(tests, dict) and tests:
+                    lines = []
+                    for key, entry in tests.items():
+                        result = entry.get("result") if isinstance(entry, dict) else entry
+                        if not isinstance(result, dict):
+                            lines.append(f"- {key}: {result}")
+                            continue
+                        if key == "mbti":
+                            axes = result.get("axes") or []
+                            axes_summary = ", ".join(
+                                [
+                                    f"{a.get('left')}{a.get('left_percent')}%/{a.get('right')}{a.get('right_percent')}%"
+                                    for a in axes
+                                    if isinstance(a, dict)
+                                ]
+                            )
+                            lines.append(f"- MBTI: {result.get('mbti_type')} ({result.get('group')})")
+                            if axes_summary:
+                                lines.append(f"- MBTI chart: {axes_summary}")
+                        elif key == "intel":
+                            scores = result.get("scores") or []
+                            scores_summary = ", ".join(
+                                [
+                                    f"{s.get('key')} {s.get('percent')}%"
+                                    for s in scores
+                                    if isinstance(s, dict)
+                                ]
+                            )
+                            lines.append(f"- Đa trí thông minh: {scores_summary}")
+                        elif key == "holland":
+                            scores = result.get("scores") or []
+                            scores_summary = ", ".join(
+                                [
+                                    f"{s.get('key')} {s.get('percent')}%"
+                                    for s in scores
+                                    if isinstance(s, dict)
+                                ]
+                            )
+                            lines.append(f"- Holland: {result.get('top_code')}")
+                            if scores_summary:
+                                lines.append(f"- Holland chart: {scores_summary}")
+                        elif key == "disc":
+                            scores = result.get("scores") or []
+                            scores_summary = ", ".join(
+                                [
+                                    f"{s.get('key')} {s.get('percent')}%"
+                                    for s in scores
+                                    if isinstance(s, dict)
+                                ]
+                            )
+                            lines.append(f"- DISC: {result.get('top_code')}")
+                            if scores_summary:
+                                lines.append(f"- DISC chart: {scores_summary}")
+                        elif key == "ability":
+                            lines.append(f"- Năng lực: {result.get('subject')} {result.get('score')}/{result.get('total')}")
+                        else:
+                            lines.append(f"- {key}: {result}")
+                    results_context = "Kết quả đã lưu:\n" + "\n".join(lines) + "\n"
+        except Exception:
+            results_context = ""
+
+    history_text = "\n".join(
+        [
+            f"{item.get('role','user')}: {item.get('content','')}"
+            for item in history[-6:]
+            if isinstance(item, dict)
+        ]
+    )
+
+    prompt = (
+        "Bạn là trợ lý tư vấn hướng nghiệp/tuyển sinh. "
+        "Trả lời ngắn gọn, thực tế, đi thẳng vào kết quả.\n"
+        "Bắt buộc định dạng gạch đầu dòng, mỗi dòng bắt đầu bằng \"- \". "
+        "Không dùng đánh số, không dùng in đậm, không chào hỏi rườm rà.\n"
+        "Nếu thiếu thông tin, hãy đưa ra giả định hợp lý và hỏi 1 câu cuối cùng.\n"
+        f"Ngữ cảnh:\n{history_text}\n"
+        f"{results_context}"
+        f"Câu hỏi: {message}\n"
+        "Trả lời:\n"
+    )
+
+    answer = llm.invoke(prompt)
+    if hasattr(answer, "content"):
+        answer = answer.content
+    answer = str(answer).strip()
+    if not answer:
+        return {"answer": "", "bullets": []}
+
+    lines = [line.strip() for line in answer.replace("\r", "").split("\n") if line.strip()]
+    bullets = []
+    for line in lines:
+        if line.startswith("- "):
+            bullets.append(line[2:].strip())
+        else:
+            bullets.append(line.lstrip("-• ").strip())
+    if not bullets:
+        bullets = [answer]
+    return {"answer": answer, "bullets": bullets}
+
+
+@app.post("/results/save")
+async def save_results(payload: dict):
+    username = (payload.get("username") or "").strip().lower()
+    test_type = (payload.get("test_type") or "").strip().lower()
+    result = payload.get("result")
+    if not username or not test_type or result is None:
+        raise HTTPException(status_code=400, detail="username, test_type, result are required")
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    user_file = RESULTS_DIR / f"{username}.json"
+    data = {"username": username, "tests": {}, "history": []}
+    if user_file.exists():
+        with user_file.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+            if not isinstance(data, dict):
+                data = {"username": username, "tests": {}, "history": []}
+    tests = data.get("tests") if isinstance(data.get("tests"), dict) else {}
+    tests[test_type] = {"result": result, "savedAt": datetime.utcnow().isoformat()}
+    history = data.get("history") if isinstance(data.get("history"), list) else []
+    history.append({"test_type": test_type, "savedAt": datetime.utcnow().isoformat()})
+    data["tests"] = tests
+    # keep lightweight history without duplicating results
+    data["history"] = [
+        {"test_type": h.get("test_type"), "savedAt": h.get("savedAt")}
+        for h in history
+        if isinstance(h, dict)
+    ][-50:]
+    data["updatedAt"] = datetime.utcnow().isoformat()
+    with user_file.open("w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    return {"status": "ok"}
+
+
+@app.get("/results/{username}")
+async def get_results(username: str):
+    user = username.strip().lower()
+    if not user:
+        raise HTTPException(status_code=400, detail="username is required")
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    user_file = RESULTS_DIR / f"{user}.json"
+    if not user_file.exists():
+        raise HTTPException(status_code=404, detail="not found")
+    with user_file.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+    return data
 
 
 @app.get("/chroma/count")
@@ -893,6 +1337,205 @@ async def mbti_describe(payload: MbtiDescribeRequest):
     llm = getattr(app.state, "llm", None)
     if llm is None:
         raise HTTPException(status_code=503, detail="llm not initialized")
+    answer = llm.invoke(prompt)
+    if hasattr(answer, "content"):
+        answer = answer.content
+    return {"description": answer}
+
+
+@app.post("/mi/analyze", response_model=MiAnalyzeResponse)
+async def mi_analyze(payload: MiAnalyzeRequest):
+    if not payload.answers:
+        raise HTTPException(status_code=400, detail="answers is required")
+
+    data_path = DATA_DIR / "intel_data_clean.json"
+    if not data_path.exists():
+        raise HTTPException(status_code=404, detail="intel_data_clean.json not found")
+    with data_path.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    id_to_code: Dict[int, str] = {}
+    for item in data:
+        try:
+            qid = int(item.get("id"))
+            code = str(item.get("value_a", "")).strip().lower()
+            if qid and code:
+                id_to_code[qid] = code
+        except Exception:
+            continue
+
+    totals: Dict[str, int] = {code: 0 for code in MI_CODE_MAP.keys()}
+    max_scores: Dict[str, int] = {code: 0 for code in MI_CODE_MAP.keys()}
+
+    for qid, code in id_to_code.items():
+        if code in max_scores:
+            max_scores[code] += 1
+
+    for ans in payload.answers:
+        code = id_to_code.get(ans.id)
+        if not code or code not in totals:
+            continue
+        value = ans.answer.strip().upper()
+        if value in {"A", "D", "TRUE", "YES", "Y"}:
+            totals[code] += 1
+
+    scores: List[MiScoreItem] = []
+    for code, name in MI_CODE_MAP.items():
+        max_score = max_scores.get(code, 0)
+        score = totals.get(code, 0)
+        percent = int(round((score / max_score) * 100)) if max_score else 0
+        scores.append(
+            MiScoreItem(
+                key=code,
+                name=name,
+                score=score,
+                max_score=max_score,
+                percent=percent,
+            )
+        )
+
+    scores.sort(key=lambda item: item.percent, reverse=True)
+    return {"scores": scores}
+
+
+@app.post("/mi/describe", response_model=MiDescribeResponse)
+async def mi_describe(payload: MiDescribeRequest):
+    if not payload.scores:
+        raise HTTPException(status_code=400, detail="scores is required")
+    llm = getattr(app.state, "llm", None)
+    if llm is None:
+        raise HTTPException(status_code=503, detail="llm not initialized")
+    top = sorted(payload.scores, key=lambda s: s.percent, reverse=True)[:3]
+    summary = ", ".join([f"{item.name} {item.percent}%" for item in top])
+    prompt = (
+        "Bạn là chuyên gia tư vấn hướng nghiệp theo thuyết Đa trí thông minh (MI).\n"
+        "Dựa trên kết quả top 3 dưới đây, hãy viết 2-3 đoạn (10-14 câu) mô tả điểm mạnh, "
+        "cách học hiệu quả, môi trường phù hợp và 3-5 gợi ý nghề nghiệp.\n"
+        "Giọng điệu thân thiện, dễ hiểu, không phán xét.\n"
+        f"Top 3: {summary}"
+    )
+    answer = llm.invoke(prompt)
+    if hasattr(answer, "content"):
+        answer = answer.content
+    return {"description": answer}
+
+
+@app.post("/holland/analyze", response_model=HollandAnalyzeResponse)
+async def holland_analyze(payload: HollandAnalyzeRequest):
+    if not payload.answers:
+        raise HTTPException(status_code=400, detail="answers is required")
+
+    totals: Dict[str, int] = {code: 0 for code in HOLLAND_CODE_MAP.keys()}
+    max_scores: Dict[str, int] = {code: 0 for code in HOLLAND_CODE_MAP.keys()}
+
+    for qid, code in HOLLAND_MAPPING.items():
+        if code in max_scores:
+            max_scores[code] += 4
+
+    for ans in payload.answers:
+        code = HOLLAND_MAPPING.get(ans.id)
+        if not code:
+            continue
+        value = 0 if ans.value is None else max(0, min(int(ans.value), 4))
+        totals[code] += value
+
+    scores: List[HollandScoreItem] = []
+    for code, name in HOLLAND_CODE_MAP.items():
+        max_score = max_scores.get(code, 0)
+        score = totals.get(code, 0)
+        percent = int(round((score / max_score) * 100)) if max_score else 0
+        scores.append(
+            HollandScoreItem(
+                key=code,
+                name=name,
+                score=score,
+                max_score=max_score,
+                percent=percent,
+            )
+        )
+
+    scores.sort(key=lambda item: item.percent, reverse=True)
+    top_code = "".join([item.key for item in scores[:3]])
+    return {"scores": scores, "top_code": top_code}
+
+
+@app.post("/holland/describe", response_model=HollandDescribeResponse)
+async def holland_describe(payload: HollandDescribeRequest):
+    if not payload.scores:
+        raise HTTPException(status_code=400, detail="scores is required")
+    llm = getattr(app.state, "llm", None)
+    if llm is None:
+        raise HTTPException(status_code=503, detail="llm not initialized")
+    top = sorted(payload.scores, key=lambda s: s.percent, reverse=True)[:3]
+    summary = ", ".join([f"{item.name} {item.percent}%" for item in top])
+    prompt = (
+        "Bạn là chuyên gia tư vấn hướng nghiệp theo thuyết Holland (RIASEC).\n"
+        "Dựa trên top 3 nhóm dưới đây, hãy viết 2-3 đoạn (10-14 câu) mô tả điểm mạnh, "
+        "môi trường phù hợp và 3-5 gợi ý nghề nghiệp cụ thể.\n"
+        "Giọng điệu thân thiện, dễ hiểu, không phán xét.\n"
+        f"Top 3: {summary}. Mã tổ hợp: {payload.top_code}."
+    )
+    answer = llm.invoke(prompt)
+    if hasattr(answer, "content"):
+        answer = answer.content
+    return {"description": answer}
+
+
+@app.post("/disc/analyze", response_model=DiscAnalyzeResponse)
+async def disc_analyze(payload: DiscAnalyzeRequest):
+    if not payload.answers:
+        raise HTTPException(status_code=400, detail="answers is required")
+
+    totals: Dict[str, int] = {code: 0 for code in DISC_CODE_MAP.keys()}
+    max_scores: Dict[str, int] = {code: 0 for code in DISC_CODE_MAP.keys()}
+
+    for qid, code in DISC_MAPPING.items():
+        if code in max_scores:
+            max_scores[code] += 4
+
+    for ans in payload.answers:
+        code = DISC_MAPPING.get(ans.id)
+        if not code:
+            continue
+        value = max(0, min(int(ans.value), 4))
+        totals[code] += value
+
+    scores: List[DiscScoreItem] = []
+    for code, name in DISC_CODE_MAP.items():
+        max_score = max_scores.get(code, 0)
+        score = totals.get(code, 0)
+        percent = int(round((score / max_score) * 100)) if max_score else 0
+        scores.append(
+            DiscScoreItem(
+                key=code,
+                name=name,
+                score=score,
+                max_score=max_score,
+                percent=percent,
+            )
+        )
+
+    scores.sort(key=lambda item: item.percent, reverse=True)
+    top_code = "".join([item.key for item in scores[:2]])
+    return {"scores": scores, "top_code": top_code}
+
+
+@app.post("/disc/describe", response_model=DiscDescribeResponse)
+async def disc_describe(payload: DiscDescribeRequest):
+    if not payload.scores:
+        raise HTTPException(status_code=400, detail="scores is required")
+    llm = getattr(app.state, "llm", None)
+    if llm is None:
+        raise HTTPException(status_code=503, detail="llm not initialized")
+    top = sorted(payload.scores, key=lambda s: s.percent, reverse=True)[:2]
+    summary = ", ".join([f"{item.name} {item.percent}%" for item in top])
+    prompt = (
+        "Bạn là chuyên gia tư vấn tính cách DISC.\n"
+        "Dựa trên top 2 nhóm dưới đây, hãy viết 2-3 đoạn (10-14 câu) mô tả "
+        "điểm mạnh, điểm cần lưu ý, phong cách làm việc, giao tiếp và 2-4 gợi ý nghề nghiệp.\n"
+        "Giọng điệu thân thiện, dễ hiểu, không phán xét.\n"
+        f"Top 2: {summary}. Tổ hợp: {payload.top_code}."
+    )
     answer = llm.invoke(prompt)
     if hasattr(answer, "content"):
         answer = answer.content

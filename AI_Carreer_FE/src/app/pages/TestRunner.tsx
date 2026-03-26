@@ -117,22 +117,81 @@ export function TestRunner() {
   const isComplete = questionCount > 0 && answeredCount === questionCount;
 
   const handleSubmit = async () => {
-    if (testType?.toLowerCase() !== "mbti") return;
-    const scores = Object.entries(mbtiScores).map(([id, value]) => ({
-      id: Number(id),
-      a: value.a,
-      b: value.b,
-    }));
-    if (scores.length === 0) return;
-    const response = await fetch(`${API_BASE}/mbti/analyze`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ scores }),
-    });
-    if (!response.ok) return;
-    const data = await response.json();
-    localStorage.setItem("mbtiResult", JSON.stringify(data));
-    navigate("/mbti-result");
+    const mode = testType?.toLowerCase();
+    if (mode === "mbti") {
+      const scores = Object.entries(mbtiScores).map(([id, value]) => ({
+        id: Number(id),
+        a: value.a,
+        b: value.b,
+      }));
+      if (scores.length === 0) return;
+      const response = await fetch(`${API_BASE}/mbti/analyze`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ scores }),
+      });
+      if (!response.ok) return;
+      const data = await response.json();
+      localStorage.setItem("mbtiResult", JSON.stringify(data));
+      navigate("/mbti-result");
+      return;
+    }
+
+    if (mode === "intel") {
+      const answersPayload = Object.entries(answers).map(([id, value]) => ({
+        id: Number(id),
+        answer: value.toUpperCase(),
+      }));
+      const response = await fetch(`${API_BASE}/mi/analyze`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ answers: answersPayload }),
+      });
+      if (!response.ok) return;
+      const data = await response.json();
+      localStorage.setItem("miResult", JSON.stringify(data));
+      navigate("/intel-result");
+      return;
+    }
+
+    if (mode === "holland") {
+      const answersPayload = Object.entries(answers).map(([id, value]) => ({
+        id: Number(id),
+        value: Number(value),
+      }));
+      const response = await fetch(`${API_BASE}/holland/analyze`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ answers: answersPayload }),
+      });
+      if (!response.ok) return;
+      const data = await response.json();
+      localStorage.setItem("hollandResult", JSON.stringify(data));
+      navigate("/holland-result");
+      return;
+    }
+
+    if (mode === "disc") {
+      const answersPayload = Object.entries(answers).map(([id, key]) => {
+        const q = questions.find((item) => item.id === Number(id));
+        if (!q) return null;
+        const valueKey = `value_${key.toLowerCase()}` as keyof TestQuestion;
+        const rawValue = q[valueKey];
+        return {
+          id: Number(id),
+          value: Number(rawValue ?? 0),
+        };
+      }).filter(Boolean);
+      const response = await fetch(`${API_BASE}/disc/analyze`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ answers: answersPayload }),
+      });
+      if (!response.ok) return;
+      const data = await response.json();
+      localStorage.setItem("discResult", JSON.stringify(data));
+      navigate("/disc-result");
+    }
   };
 
   useEffect(() => {
@@ -265,17 +324,25 @@ export function TestRunner() {
                         </div>
                       ) : (
                         <div className="mt-3 grid gap-3 sm:grid-cols-2">
-                          {options.map((opt) => (
-                            <button
-                              key={opt.key}
-                              type="button"
-                              onClick={() => setAnswers({ ...answers, [q.id]: opt.key })}
-                              className={`rounded-lg border px-4 py-3 text-left text-sm transition ${
-                                selected === opt.key
-                                  ? "border-orange-500 bg-orange-50 text-orange-700"
-                                  : "border-slate-200 hover:border-slate-400"
-                              }`}
-                            >
+                        {options.map((opt) => (
+                          <button
+                            key={opt.key}
+                            type="button"
+                            onClick={() => {
+                              if (testType?.toLowerCase() === "holland") {
+                                const valueKey = `value_${opt.key}` as keyof TestQuestion;
+                                const rawValue = q[valueKey];
+                                setAnswers({ ...answers, [q.id]: String(rawValue ?? 0) });
+                              } else {
+                                setAnswers({ ...answers, [q.id]: opt.key });
+                              }
+                            }}
+                            className={`rounded-lg border px-4 py-3 text-left text-sm transition ${
+                              selected === opt.key
+                                ? "border-orange-500 bg-orange-50 text-orange-700"
+                                : "border-slate-200 hover:border-slate-400"
+                            }`}
+                          >
                               <span className="block font-semibold text-slate-700">{opt.key.toUpperCase()}.</span>
                               <span className="text-slate-600">{opt.label}</span>
                             </button>

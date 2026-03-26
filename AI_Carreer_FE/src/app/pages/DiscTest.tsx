@@ -50,7 +50,7 @@ export function DiscTest() {
               triển và thành công.
             </p>
             <p className="mb-3">
-              Cùng NovaSpro khám phá từng đặc trưng tính cách của bản thân nhé!
+              Cùng Hành Trang Số khám phá từng đặc trưng tính cách của bản thân nhé!
             </p>
             <p className="mb-2 font-semibold">Lưu ý:</p>
             <ul className="list-disc pl-5 space-y-2">

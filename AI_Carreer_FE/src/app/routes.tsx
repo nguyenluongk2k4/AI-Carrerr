@@ -14,6 +14,12 @@ import { TestRunner } from "./pages/TestRunner";
 import { IntelTest } from "./pages/IntelTest";
 import { HollandTest } from "./pages/HollandTest";
 import { MbtiResult } from "./pages/MbtiResult";
+import { IntelResult } from "./pages/IntelResult";
+import { HollandResult } from "./pages/HollandResult";
+import { DiscResult } from "./pages/DiscResult";
+import { AbilityTest } from "./pages/AbilityTest";
+import { AbilityRunnerFixed } from "./pages/AbilityRunnerFixed";
+import { Profile } from "./pages/Profile";
 
 export const router = createBrowserRouter([
   {
@@ -32,7 +38,13 @@ export const router = createBrowserRouter([
       { path: "intel-test", Component: IntelTest },
       { path: "holland-test", Component: HollandTest },
       { path: "test/:testType", Component: TestRunner },
+      { path: "ability", Component: AbilityTest },
+      { path: "ability/test/:subject", Component: AbilityRunnerFixed },
+      { path: "profile", Component: Profile },
       { path: "mbti-result", Component: MbtiResult },
+      { path: "intel-result", Component: IntelResult },
+      { path: "holland-result", Component: HollandResult },
+      { path: "disc-result", Component: DiscResult },
       { path: "*", Component: NotFound },
     ],
   },

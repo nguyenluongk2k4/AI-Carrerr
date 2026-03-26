@@ -1,0 +1,67 @@
+{
+  "username": "premium",
+  "tests": {
+    "mbti": {
+      "result": {
+        "mbti_type": "ESFP",
+        "group": "Unknown",
+        "axes": [
+          {
+            "axis": "I/E",
+            "left": "I",
+            "right": "E",
+            "left_score": 15,
+            "right_score": 25,
+            "left_percent": 38,
+            "right_percent": 62
+          },
+          {
+            "axis": "N/S",
+            "left": "N",
+            "right": "S",
+            "left_score": 16,
+            "right_score": 24,
+            "left_percent": 40,
+            "right_percent": 60
+          },
+          {
+            "axis": "T/F",
+            "left": "T",
+            "right": "F",
+            "left_score": 15,
+            "right_score": 25,
+            "left_percent": 38,
+            "right_percent": 62
+          },
+          {
+            "axis": "J/P",
+            "left": "J",
+            "right": "P",
+            "left_score": 16,
+            "right_score": 24,
+            "left_percent": 40,
+            "right_percent": 60
+          }
+        ],
+        "totals": {
+          "I": 15,
+          "E": 25,
+          "N": 16,
+          "S": 24,
+          "T": 15,
+          "F": 25,
+          "J": 16,
+          "P": 24
+        }
+      },
+      "savedAt": "2026-03-26T03:05:24.581640"
+    }
+  },
+  "history": [
+    {
+      "test_type": "mbti",
+      "savedAt": "2026-03-26T03:05:24.581656"
+    }
+  ],
+  "updatedAt": "2026-03-26T03:05:24.581667"
+}
