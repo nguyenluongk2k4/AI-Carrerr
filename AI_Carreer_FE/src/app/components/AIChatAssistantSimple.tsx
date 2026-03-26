@@ -20,11 +20,11 @@ export function AIChatAssistantSimple() {
   const [messages, setMessages] = useState<Message[]>([
     {
       sender: "ai",
-      text: "Bạn có thể hỏi trực tiếp: ngành học, trường, học phí, cơ hội việc làm, phù hợp năng lực...",
+      text: "Chào bạn, mình là trợ lý tư vấn hướng nghiệp. Bạn cứ chia sẻ điều bạn đang băn khoăn nhé.",
       bullets: [
-        "Nêu rõ ngành/trường nếu đã có ý định",
-        "Cho mình biết điểm mạnh/yếu và tài chính gia đình",
-        "Mình sẽ trả lời ngắn gọn theo gạch đầu dòng",
+        "Bạn quan tâm ngành/trường nào (nếu có)",
+        "Điểm mạnh/yếu và mức tài chính gia đình",
+        "Mình sẽ gợi ý ngắn gọn, dễ hiểu",
       ],
     },
   ]);
